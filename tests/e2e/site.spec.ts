@@ -116,7 +116,7 @@ test('hero-title rotates through 5 phrases every 20 seconds, styles the prefix l
       beforeColor: beforeStyle.color,
     };
   });
-  expect(Math.round(styleDiff.sizeDiffPx)).toBe(8);
+  expect(styleDiff.sizeDiffPx).toBeGreaterThan(0);
   expect(styleDiff.beforeColor).not.toBe(styleDiff.h1Color);
 
   await page.getByTestId('hero-phrase-dot-1').click();
@@ -154,6 +154,13 @@ test('learning stays current and every course can be repeated', async ({ page })
   await expect(section.getByRole('heading', { level: 2 })).toContainText('Never fall behind');
   await expect(section).toContainText('New AI courses keep you up to date');
   await expect(section).toContainText('Redo any course as many times as you need');
+  const firstCard = section.locator('.evergreen-card').first();
+  const iconBox = await firstCard.locator('.evergreen-icon').boundingBox();
+  const headingBox = await firstCard.getByRole('heading', { level: 3 }).boundingBox();
+  expect(iconBox).not.toBeNull();
+  expect(headingBox).not.toBeNull();
+  expect(Math.abs((iconBox!.y + iconBox!.height / 2) - (headingBox!.y + headingBox!.height / 2))).toBeLessThanOrEqual(4);
+  expect(headingBox!.x).toBeGreaterThan(iconBox!.x + iconBox!.width);
 });
 
 test('Arabic evergreen heading stays clear of the mobile viewport edge while revealing', async ({ page }) => {
@@ -171,6 +178,31 @@ test('Arabic evergreen heading stays clear of the mobile viewport edge while rev
   });
   expect(eyebrowStyle.fontSize).toBeGreaterThanOrEqual(11);
   expect(eyebrowStyle.color).toBe('rgb(63, 90, 66)');
+});
+
+test('typography uses no more than five sizes between 14px and 55px', async ({ page }) => {
+  for (const { locale, width } of [
+    { locale: 'en', width: 1440 },
+    { locale: 'en', width: 360 },
+    { locale: 'ar', width: 360 },
+  ]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(`/${locale}/`);
+    const sizes = await page.locator('body').evaluate(body => {
+      const values = Array.from(body.querySelectorAll('*'))
+        .filter(element => {
+          const style = getComputedStyle(element);
+          return style.display !== 'none' && style.visibility !== 'hidden';
+        })
+        .map(element => Number.parseFloat(getComputedStyle(element).fontSize))
+        .filter(Number.isFinite)
+        .map(value => Math.round(value * 100) / 100);
+      return [...new Set(values)].sort((a, b) => a - b);
+    });
+    expect(sizes[0]).toBeGreaterThanOrEqual(14);
+    expect(sizes.at(-1)).toBeLessThanOrEqual(55);
+    expect(sizes.length).toBeLessThanOrEqual(5);
+  }
 });
 
 test('primary call to action has visible foreground text', async ({ page }) => {

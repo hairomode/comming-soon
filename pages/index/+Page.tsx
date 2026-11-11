@@ -350,15 +350,17 @@ function HomeContent() {
         <div className="evergreen-grid">
           {(['current', 'repeat'] as const).map((key, index) => (
             <Reveal key={key} delay={index * 0.12} className="evergreen-card card">
-              <motion.span
-                className="evergreen-icon"
-                aria-hidden="true"
-                initial={false}
-                animate={reduce ? {} : { rotate: key === 'current' ? [0, 10, 0] : [0, -14, 0], scale: [1, 1.06, 1] }}
-                transition={{ duration: 4 + index, repeat: Infinity, ease: 'easeInOut' }}
-              >{key === 'current' ? '↗' : '↻'}</motion.span>
+              <div className="evergreen-card-heading">
+                <motion.span
+                  className="evergreen-icon"
+                  aria-hidden="true"
+                  initial={false}
+                  animate={reduce ? {} : { rotate: key === 'current' ? [0, 10, 0] : [0, -14, 0], scale: [1, 1.06, 1] }}
+                  transition={{ duration: 4 + index, repeat: Infinity, ease: 'easeInOut' }}
+                >{key === 'current' ? '↗' : '↻'}</motion.span>
+                <h3>{t(`evergreen.${key}.title`)}</h3>
+              </div>
               <span className="evergreen-index">0{index + 1}</span>
-              <h3>{t(`evergreen.${key}.title`)}</h3>
               <p>{t(`evergreen.${key}.body`)}</p>
             </Reveal>
           ))}
