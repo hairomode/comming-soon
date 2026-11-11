@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "AI Powerup — Less busywork. More possibility.",
+    "description": "Coming soon: practical AI learning built around your real work. Describe a challenge, discover a course, and put new skills into practice."
+  },
+  "nav": {
+    "how": "How it works",
+    "vision": "The bigger picture",
+    "language": "Choose your language",
+    "explore": "Explore the idea",
+    "home": "AI Powerup home"
+  },
+  "hero": {
+    "badge": "A new way to learn AI",
+    "line1": "Less busywork.",
+    "line2": "More",
+    "line3": "possibility.",
+    "description": "Your real work. Your next breakthrough. Turn the tasks that slow you down into practical, step-by-step AI learning.",
+    "cta": "See what’s coming",
+    "note": "In the making. Built around you.",
+    "aside": "Not another course to finish. A way forward."
+  },
+  "preview": {
+    "label": "A glimpse of what’s coming",
+    "tag": "Concept preview",
+    "you": "Your everyday challenge",
+    "task": "I spend hours turning meeting notes into follow-up emails.",
+    "path": "Your personal learning path",
+    "title": "From notes to next steps",
+    "step1": "Find the right AI workflow",
+    "step2": "Make it work with your tools",
+    "step3": "Put it into practice",
+    "footnote": "Real challenges. Practical learning.",
+    "orbit": "A little learning. A real powerup."
+  },
+  "strip": {
+    "first": "Built around your work",
+    "second": "Step-by-step, not overwhelming",
+    "third": "Learning in your language"
+  },
+  "how": {
+    "eyebrow": "FROM “WHAT IF” TO “I CAN”",
+    "title": "Start with the thing\nthat slows you down.",
+    "intro": "Not a catalogue to get lost in. A learning path that starts with your day.",
+    "one": {
+      "title": "Tell us what takes too long.",
+      "body": "Your role, your tools, your everyday challenges. A few focused questions help pinpoint where AI could make a difference."
+    },
+    "two": {
+      "title": "Find your way forward.",
+      "body": "Discover a relevant course from the knowledge base. When nothing fits, the platform is designed to create a course for your specific need."
+    },
+    "three": {
+      "title": "Learn it. Try it. Make it yours.",
+      "body": "Follow practical steps, try prompts and activities, and share what helped. Your feedback makes learning better for the next person."
+    }
+  },
+  "vision": {
+    "eyebrow": "SMALL WINS. BIGGER POSSIBILITIES.",
+    "title": "A powerup for you.\nA step forward for your team.",
+    "body": "We’re building for curious people and the teams they’re part of. Personal learning first. Shared knowledge, team learning and responsible AI adoption on the horizon.",
+    "tag1": "For everyday problem-solvers",
+    "tag2": "For forward-looking teams"
+  },
+  "faq": {
+    "eyebrow": "A FEW THINGS WORTH KNOWING",
+    "title": "Curious? Good.",
+    "one": {
+      "question": "Can I use AI Powerup today?",
+      "answer": "Not yet. The platform is being built. This page is a first look at the idea, not a live learning service. There is no announced launch date."
+    },
+    "two": {
+      "question": "Do I need to be an AI expert?",
+      "answer": "The idea starts with your work, not technical jargon. Learning is designed around your role, tools and experience, with practical steps you can follow."
+    },
+    "three": {
+      "question": "Will it speak my language?",
+      "answer": "We’re planning English, English (India), French, German, Spanish, Italian, Simplified Chinese, Arabic, Hindi, Bengali and Tamil. You can already explore this page in all of them."
+    }
+  },
+  "closing": {
+    "badge": "Coming soon",
+    "title": "Your next “I did that”\nis on its way.",
+    "body": "Less time on the repetitive. More room for what you do best.",
+    "back": "Back to the top"
+  },
+  "footer": {
+    "description": "Practical AI learning. Human possibility.",
+    "status": "Something useful is taking shape.",
+    "privacy": "No sign-up. No tracking. Just a first look."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "menu": "Open navigation",
+    "close": "Close navigation"
+  }
+}

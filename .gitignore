@@ -1,0 +1,9 @@
+/docs/
+node_modules/
+dist/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+public/fonts/

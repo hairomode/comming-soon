@@ -1,0 +1,52 @@
+{
+  "name": "ai-powerup-coming-soon",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "bun@1.4.4",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vike dev --host 0.0.0.0",
+    "build": "bun run fonts && vike build && bun run scripts/postbuild.ts",
+    "preview": "vike preview --host 0.0.0.0",
+    "fonts": "bun run scripts/prepare-fonts.ts",
+    "test": "bun test tests/unit",
+    "check:locales": "bun run scripts/check-locales.ts",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "check": "bun run typecheck && bun run test && bun run check:locales"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "@fontsource-variable/space-grotesk": "5.3.0",
+    "@fontsource/noto-sans-arabic": "5.3.0",
+    "@fontsource/noto-sans-bengali": "5.3.0",
+    "@fontsource/noto-sans-devanagari": "5.3.0",
+    "@fontsource/noto-sans-sc": "5.3.1",
+    "@fontsource/noto-sans-tamil": "5.3.0",
+    "i18next": "27.1.1",
+    "i18next-icu": "2.7.0",
+    "motion": "14.12.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-i18next": "18.0.1",
+    "vike": "0.4.270",
+    "vike-react": "0.6.32"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.0",
+    "@tailwindcss/vite": "4.3.5",
+    "@types/bun": "1.4.4",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "daisyui": "5.7.50",
+    "tailwindcss": "4.3.5",
+    "typescript": "7.0.2",
+    "vite": "8.3.8"
+  }
+}

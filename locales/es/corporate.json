@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "AI Powerup — Menos tareas repetitivas. Más posibilidades.",
+    "description": "Próximamente: aprendizaje práctico de IA basado en tu trabajo real. Describe un reto, descubre un curso y pon en práctica nuevas habilidades."
+  },
+  "nav": {
+    "how": "Cómo funciona",
+    "vision": "Nuestra visión",
+    "language": "Elige tu idioma",
+    "explore": "Explora la idea",
+    "home": "Inicio de AI Powerup"
+  },
+  "hero": {
+    "badge": "Otra forma de aprender IA",
+    "line1": "Menos tareas repetitivas.",
+    "line2": "Más",
+    "line3": "posibilidades.",
+    "description": "Tu trabajo real. Tu próximo gran paso. Convierte las tareas que te frenan en aprendizaje práctico de IA, paso a paso.",
+    "cta": "Descubre lo que viene",
+    "note": "En desarrollo. Pensado para ti.",
+    "aside": "No es otro curso que terminar. Es una forma de avanzar."
+  },
+  "preview": {
+    "label": "Un vistazo a lo que viene",
+    "tag": "Vista previa del concepto",
+    "you": "Tu reto del día a día",
+    "task": "Paso horas convirtiendo notas de reuniones en correos de seguimiento.",
+    "path": "Tu ruta de aprendizaje personal",
+    "title": "De las notas a los próximos pasos",
+    "step1": "Encuentra el flujo de trabajo con IA adecuado",
+    "step2": "Adáptalo a tus herramientas",
+    "step3": "Ponlo en práctica",
+    "footnote": "Retos reales. Aprendizaje práctico.",
+    "orbit": "Un poco de aprendizaje. Un gran impulso."
+  },
+  "strip": {
+    "first": "Pensado para tu trabajo",
+    "second": "Paso a paso, sin agobios",
+    "third": "Aprende en tu idioma"
+  },
+  "how": {
+    "eyebrow": "DEL «¿Y SI…?» AL «YO PUEDO»",
+    "title": "Empieza por eso\nque te frena.",
+    "intro": "No es un catálogo en el que perderse. Es una ruta de aprendizaje que parte de tu día a día.",
+    "one": {
+      "title": "Cuéntanos qué te lleva demasiado tiempo.",
+      "body": "Tu función, tus herramientas, tus retos cotidianos. Unas preguntas concretas ayudan a detectar dónde podría marcar la diferencia la IA."
+    },
+    "two": {
+      "title": "Encuentra tu forma de avanzar.",
+      "body": "Descubre un curso adecuado en la base de conocimientos. Si ninguno encaja, la plataforma está diseñada para crear un curso que responda a tu necesidad específica."
+    },
+    "three": {
+      "title": "Aprende. Prueba. Hazlo tuyo.",
+      "body": "Sigue pasos prácticos, prueba instrucciones para la IA y actividades, y comparte lo que te ayudó. Tus comentarios mejoran el aprendizaje de quienes vengan después."
+    }
+  },
+  "vision": {
+    "eyebrow": "PEQUEÑOS LOGROS. MÁS POSIBILIDADES.",
+    "title": "Un impulso para ti.\nUn paso adelante para tu equipo.",
+    "body": "Estamos creando para personas curiosas y sus equipos. Primero, el aprendizaje personal. En el horizonte: compartir conocimientos, aprender en equipo y adoptar la IA de forma responsable.",
+    "tag1": "Para quienes resuelven retos cotidianos",
+    "tag2": "Para equipos que miran al futuro"
+  },
+  "faq": {
+    "eyebrow": "ALGUNAS COSAS QUE CONVIENE SABER",
+    "title": "¿Tienes curiosidad? Bien.",
+    "one": {
+      "question": "¿Puedo usar AI Powerup hoy?",
+      "answer": "Todavía no. La plataforma está en desarrollo. Esta página es un primer vistazo a la idea, no un servicio de aprendizaje ya disponible. No se ha anunciado una fecha de lanzamiento."
+    },
+    "two": {
+      "question": "¿Necesito saber mucho de IA?",
+      "answer": "La idea parte de tu trabajo, no de la jerga técnica. El aprendizaje está pensado en función de tu papel, tus herramientas y tu experiencia, con pasos prácticos que puedes seguir."
+    },
+    "three": {
+      "question": "¿Estará en mi idioma?",
+      "answer": "Tenemos previstos el inglés, inglés (India), francés, alemán, español, italiano, chino simplificado, árabe, hindi, bengalí y tamil. Ya puedes explorar esta página en todos ellos."
+    }
+  },
+  "closing": {
+    "badge": "Próximamente",
+    "title": "Tu próximo «lo he conseguido»\nestá en camino.",
+    "body": "Menos tiempo en lo repetitivo. Más espacio para lo que mejor se te da.",
+    "back": "Volver arriba"
+  },
+  "footer": {
+    "description": "Aprendizaje práctico de IA. Potencial humano.",
+    "status": "Algo útil está tomando forma.",
+    "privacy": "Sin registro. Sin seguimiento. Solo un primer vistazo."
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "menu": "Abrir navegación",
+    "close": "Cerrar navegación"
+  }
+}

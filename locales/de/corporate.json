@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "AI Powerup — Weniger Routine. Mehr Möglichkeiten.",
+    "description": "Demnächst: praxisnahes KI-Lernen rund um deine Arbeit. Beschreibe eine Herausforderung, entdecke einen Kurs und setze neue Fähigkeiten direkt ein."
+  },
+  "nav": {
+    "how": "So funktioniert’s",
+    "vision": "Unsere Vision",
+    "language": "Sprache wählen",
+    "explore": "Die Idee entdecken",
+    "home": "AI Powerup Startseite"
+  },
+  "hero": {
+    "badge": "KI lernen, neu gedacht",
+    "line1": "Weniger Routine.",
+    "line2": "Mehr",
+    "line3": "Möglichkeiten.",
+    "description": "Deine tägliche Arbeit. Dein nächster Durchbruch. Mach die Aufgaben, die dich aufhalten, zum Ausgangspunkt für praxisnahes KI-Lernen. Schritt für Schritt.",
+    "cta": "Entdecke, was kommt",
+    "note": "Im Aufbau. Um dich herum gedacht.",
+    "aside": "Nicht noch ein Kurs zum Abhaken. Ein Weg nach vorn."
+  },
+  "preview": {
+    "label": "Ein Ausblick auf das, was kommt",
+    "tag": "Konzeptvorschau",
+    "you": "Deine Herausforderung im Alltag",
+    "task": "Ich brauche Stunden, um aus Besprechungsnotizen E-Mails zur Nachbereitung zu machen.",
+    "path": "Dein persönlicher Lernpfad",
+    "title": "Von Notizen zu nächsten Schritten",
+    "step1": "Finde den passenden KI-Workflow",
+    "step2": "Passe ihn an deine Tools an",
+    "step3": "Setze ihn in die Praxis um",
+    "footnote": "Echte Herausforderungen. Praxisnahes Lernen.",
+    "orbit": "Ein bisschen lernen. Wirklich weiterkommen."
+  },
+  "strip": {
+    "first": "Rund um deine Arbeit gedacht",
+    "second": "Schritt für Schritt, ohne Überforderung",
+    "third": "Lernen in deiner Sprache"
+  },
+  "how": {
+    "eyebrow": "VON „WAS WÄRE, WENN“ ZU „ICH KANN DAS“",
+    "title": "Fang mit dem an,\nwas dich aufhält.",
+    "intro": "Kein Katalog, in dem du dich verlierst. Ein Lernpfad, der bei deinem Alltag beginnt.",
+    "one": {
+      "title": "Sag uns, was zu lange dauert.",
+      "body": "Deine Rolle, deine Tools, deine täglichen Herausforderungen. Ein paar gezielte Fragen zeigen, wo KI etwas verändern könnte."
+    },
+    "two": {
+      "title": "Finde deinen Weg nach vorn.",
+      "body": "Entdecke einen passenden Kurs in der Wissensdatenbank. Falls keiner passt, ist die Plattform darauf ausgelegt, einen Kurs für deinen konkreten Bedarf zu erstellen."
+    },
+    "three": {
+      "title": "Lerne. Probiere es aus. Mach es zu deinem.",
+      "body": "Folge praktischen Schritten, teste Prompts und Übungen und teile, was dir geholfen hat. Dein Feedback macht das Lernen für die Nächsten besser."
+    }
+  },
+  "vision": {
+    "eyebrow": "KLEINE ERFOLGE. GRÖSSERE MÖGLICHKEITEN.",
+    "title": "Ein Schub für dich.\nEin Schritt nach vorn für dein Team.",
+    "body": "Wir entwickeln für neugierige Menschen und ihre Teams. Zuerst steht persönliches Lernen im Mittelpunkt. Geteiltes Wissen, gemeinsames Lernen und ein verantwortungsvoller KI-Einsatz sollen folgen.",
+    "tag1": "Für Alltagsproblemlöser",
+    "tag2": "Für Teams, die vorausdenken"
+  },
+  "faq": {
+    "eyebrow": "EIN PAAR DINGE, DIE DU WISSEN SOLLTEST",
+    "title": "Neugierig? Gut so.",
+    "one": {
+      "question": "Kann ich AI Powerup schon heute nutzen?",
+      "answer": "Noch nicht. Die Plattform wird gerade entwickelt. Diese Seite gibt einen ersten Einblick in die Idee und ist noch kein nutzbares Lernangebot. Ein Starttermin wurde nicht angekündigt."
+    },
+    "two": {
+      "question": "Muss ich mich mit KI auskennen?",
+      "answer": "Die Idee beginnt bei deiner Arbeit, nicht bei Fachbegriffen. Das Lernen ist auf deine Rolle, deine Tools und deine Erfahrung ausgerichtet – mit praktischen Schritten zum Mitmachen."
+    },
+    "three": {
+      "question": "Wird meine Sprache dabei sein?",
+      "answer": "Geplant sind Englisch, Englisch (Indien), Französisch, Deutsch, Spanisch, Italienisch, vereinfachtes Chinesisch, Arabisch, Hindi, Bengalisch und Tamil. Diese Seite kannst du schon jetzt in all diesen Sprachen entdecken."
+    }
+  },
+  "closing": {
+    "badge": "Demnächst",
+    "title": "Dein nächstes „Das habe ich geschafft“\nist auf dem Weg.",
+    "body": "Weniger Zeit für Wiederholungen. Mehr Raum für das, was du am besten kannst.",
+    "back": "Zurück nach oben"
+  },
+  "footer": {
+    "description": "KI praxisnah lernen. Menschliche Möglichkeiten entfalten.",
+    "status": "Etwas Nützliches nimmt Gestalt an.",
+    "privacy": "Keine Anmeldung. Kein Tracking. Nur ein erster Einblick."
+  },
+  "a11y": {
+    "skip": "Zum Inhalt springen",
+    "menu": "Navigation öffnen",
+    "close": "Navigation schließen"
+  }
+}
