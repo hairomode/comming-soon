@@ -78,6 +78,13 @@
         "step1": "Structurer le message essentiel",
         "step2": "Préparer les diapositives avec l’IA",
         "step3": "Relire, affiner et présenter"
+      },
+      "four": {
+        "task": "Mon manager m’a demandé à 17 h un rapport sur l’activité du mois dernier. Pour demain matin, 10 h…",
+        "title": "De l’activité brute au rapport prêt",
+        "step1": "Rassembler les chiffres du mois dernier",
+        "step2": "Laisser l’IA rédiger l’analyse",
+        "step3": "Peaufiner et envoyer avant 10 h"
       }
     }
   },

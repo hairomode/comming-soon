@@ -78,6 +78,13 @@
         "step1": "Shape the core message",
         "step2": "Draft the slides with AI",
         "step3": "Review, refine and present"
+      },
+      "four": {
+        "task": "My manager asked me at 5pm: he needs a report on last month’s activity. For tomorrow morning, 10am…",
+        "title": "From raw activity to a ready report",
+        "step1": "Gather last month’s figures",
+        "step2": "Let AI draft the analysis",
+        "step3": "Polish it and send before 10am"
       }
     }
   },

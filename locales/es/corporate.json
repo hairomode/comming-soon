@@ -78,6 +78,13 @@
         "step1": "Define el mensaje principal",
         "step2": "Prepara las diapositivas con IA",
         "step3": "Revisa, mejora y presenta"
+      },
+      "four": {
+        "task": "A las 17:00 mi responsable me pidió un informe sobre la actividad del mes pasado. Para mañana a las 10:00…",
+        "title": "De los datos brutos a un informe listo",
+        "step1": "Reúne las cifras del mes pasado",
+        "step2": "Deja que la IA redacte el análisis",
+        "step3": "Pule y envía antes de las 10:00"
       }
     }
   },

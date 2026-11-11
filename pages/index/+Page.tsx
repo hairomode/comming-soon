@@ -151,7 +151,7 @@ function CertificateCard() {
 
 const HERO_PHRASE_KEYS = ['one', 'two', 'three', 'four', 'five'] as const;
 const HERO_ROTATION_MS = 20_000;
-const PREVIEW_EXAMPLE_KEYS = ['one', 'two', 'three'] as const;
+const PREVIEW_EXAMPLE_KEYS = ['one', 'two', 'three', 'four'] as const;
 const PREVIEW_ROTATION_MS = 60_000;
 
 function HomeContent() {
@@ -193,6 +193,10 @@ function HomeContent() {
   };
   const selectPreview = (index: number) => {
     setPreviewIndex(index);
+    setActivePreviewStep(0);
+  };
+  const movePreview = (delta: number) => {
+    setPreviewIndex(current => (current + delta + PREVIEW_EXAMPLE_KEYS.length) % PREVIEW_EXAMPLE_KEYS.length);
     setActivePreviewStep(0);
   };
   const base = import.meta.env.BASE_URL;
@@ -248,6 +252,14 @@ function HomeContent() {
             initial={false}
             whileInView={reduce ? {} : { scale: [0.98, 1], y: [14, 0] }}
             viewport={{ once: false, amount: 0.25 }}
+            drag="x"
+            dragDirectionLock
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.16}
+            onDragEnd={(_, info) => {
+              if (info.offset.x <= -50) movePreview(1);
+              if (info.offset.x >= 50) movePreview(-1);
+            }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="stage-grid" aria-hidden="true" />

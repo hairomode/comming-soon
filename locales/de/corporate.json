@@ -78,6 +78,13 @@
         "step1": "Die Kernbotschaft strukturieren",
         "step2": "Folien mit KI entwerfen",
         "step3": "Prüfen, verfeinern und präsentieren"
+      },
+      "four": {
+        "task": "Mein Manager wollte um 17 Uhr einen Bericht über die Aktivitäten des letzten Monats. Für morgen früh, 10 Uhr …",
+        "title": "Von Rohdaten zum fertigen Bericht",
+        "step1": "Die Zahlen des letzten Monats sammeln",
+        "step2": "Die Analyse von KI entwerfen lassen",
+        "step3": "Feinschliff und vor 10 Uhr versenden"
       }
     }
   },

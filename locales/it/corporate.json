@@ -78,6 +78,13 @@
         "step1": "Definisci il messaggio centrale",
         "step2": "Prepara le slide con l’IA",
         "step3": "Rivedi, perfeziona e presenta"
+      },
+      "four": {
+        "task": "Alle 17 il mio responsabile mi ha chiesto un report sull’attività del mese scorso. Per domattina alle 10…",
+        "title": "Dai dati grezzi al report pronto",
+        "step1": "Raccogli i dati del mese scorso",
+        "step2": "Lascia che l’IA prepari l’analisi",
+        "step3": "Rifinisci e invia prima delle 10"
       }
     }
   },

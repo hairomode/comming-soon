@@ -90,6 +90,21 @@ test('header shows the job-hero subtitle within the header on desktop and mobile
     expect(taglineBox!.x).toBeGreaterThanOrEqual(0);
     expect(taglineBox!.x + taglineBox!.width).toBeLessThanOrEqual(width);
     expect(taglineBox!.y + taglineBox!.height).toBeLessThanOrEqual(headerBox!.y + headerBox!.height);
+
+    const style = await tagline.evaluate(element => {
+      const computed = getComputedStyle(element);
+      return { fontSize: Number.parseFloat(computed.fontSize), fontStyle: computed.fontStyle };
+    });
+    expect(style.fontSize).toBe(12);
+    expect(style.fontStyle).toBe('italic');
+    const italicFaceLoaded = await page.evaluate(async () => {
+      await document.fonts.ready;
+      return [...document.fonts].some(face => face.family.includes('DM Sans') && face.style === 'italic' && face.status === 'loaded');
+    });
+    expect(italicFaceLoaded).toBe(true);
+    const wordmarkBox = await page.locator('.site-header .wordmark').boundingBox();
+    expect(wordmarkBox).not.toBeNull();
+    expect(Math.abs(taglineBox!.x - wordmarkBox!.x)).toBeLessThanOrEqual(1);
   }
 });
 
@@ -185,13 +200,13 @@ test('mobile hero title and certificate widget are centered with a larger hero t
   await expect(certificate.locator('.cert-qr-box')).toHaveCSS('align-items', 'center');
 });
 
-test('stage carousel offers three examples and rotates every minute', async ({ page }) => {
+test('stage carousel offers four examples and rotates every minute', async ({ page }) => {
   await page.clock.install();
   await page.goto('/en/');
   const stage = page.getByTestId('hero-preview-stage');
   await expect(stage).toHaveAttribute('data-example-index', '0');
   await expect(stage).toHaveAttribute('data-rotation-ms', '60000');
-  await expect(page.locator('[data-testid^="preview-example-dot-"]')).toHaveCount(3);
+  await expect(page.locator('[data-testid^="preview-example-dot-"]')).toHaveCount(4);
   await expect(page.getByTestId('hero-challenge-card')).toContainText('meeting notes');
 
   await page.clock.fastForward(60_000);
@@ -210,7 +225,42 @@ test('stage carousel offers three examples and rotates every minute', async ({ p
   await expect(stage).toHaveAttribute('data-example-index', '2');
   await expect(page.getByTestId('hero-challenge-card')).toContainText('presentation');
   await expect(page.getByTestId('hero-course-card')).toContainText('From blank slide to clear story');
+
+  await page.getByTestId('preview-example-dot-3').click();
+  await expect(stage).toHaveAttribute('data-example-index', '3');
+  await expect(page.getByTestId('hero-challenge-card')).toContainText('My manager asked me at 5pm');
+  await expect(page.getByTestId('hero-challenge-card')).toContainText('tomorrow morning, 10am');
+
+  await page.clock.fastForward(60_000);
+  await expect(stage).toHaveAttribute('data-example-index', '0');
 });
+
+for (const width of [360, 768]) {
+  test(`stage carousel swipes left and right at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto('/en/');
+    const stage = page.getByTestId('hero-preview-stage');
+    await stage.scrollIntoViewIfNeeded();
+    await expect(page.getByTestId('preview-example-dot-0')).toBeEnabled();
+
+    const swipe = async (fromRatio: number, toRatio: number) => {
+      const box = await stage.boundingBox();
+      expect(box).not.toBeNull();
+      const y = box!.y + box!.height * 0.2;
+      await page.mouse.move(box!.x + box!.width * fromRatio, y);
+      await page.mouse.down();
+      await page.mouse.move(box!.x + box!.width * toRatio, y, { steps: 8 });
+      await page.mouse.up();
+    };
+
+    await swipe(0.8, 0.2);
+    await expect(stage).toHaveAttribute('data-example-index', '1');
+    await swipe(0.2, 0.8);
+    await expect(stage).toHaveAttribute('data-example-index', '0');
+    await swipe(0.2, 0.8);
+    await expect(stage).toHaveAttribute('data-example-index', '3');
+  });
+}
 
 test('learning stays current and every course can be repeated', async ({ page }) => {
   await page.goto('/en/');
@@ -256,6 +306,7 @@ test('typography uses no more than five sizes between 14px and 55px', async ({ p
     const sizes = await page.locator('body').evaluate(body => {
       const values = Array.from(body.querySelectorAll('*'))
         .filter(element => {
+          if (element.closest('[data-testid="brand-subtitle"]')) return false;
           const style = getComputedStyle(element);
           return style.display !== 'none' && style.visibility !== 'hidden';
         })
