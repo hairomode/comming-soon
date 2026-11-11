@@ -101,7 +101,7 @@ test('hero-title rotates through 5 phrases every 20 seconds, styles the prefix l
   await expect(page.locator('#hero-title')).toHaveAttribute('data-rotation-ms', '20000');
   await expect(page.locator('#hero-title')).toContainText('Learn AI tools');
   await expect(page.locator('#hero-title')).toContainText('become Employee');
-  await expect(page.locator('#hero-title')).toContainText('of the Year.');
+  await expect(page.locator('#hero-title')).toContainText('of the Year!');
   await expect(page.locator('#hero-title')).not.toContainText('=');
   await expect(page.locator('#hero-title')).not.toContainText('✳');
   await expect(page.locator('[data-testid^="hero-phrase-dot-"]')).toHaveCount(5);
