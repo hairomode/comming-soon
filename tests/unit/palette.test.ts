@@ -11,6 +11,14 @@ describe('palette test rotation', () => {
     }
   });
 
+  test('includes more indigo, jade and amber combinations without removing the originals', () => {
+    expect(PALETTES).toHaveLength(12);
+    for (const id of ['indigo-jade', 'jade-amber', 'midnight-amber', 'aubergine-amber', 'indigo-apricot']) {
+      expect(PALETTES.some(palette => palette.id === id)).toBe(true);
+    }
+    expect(PALETTES.find(palette => palette.id === 'indigo')).toMatchObject({ ink: '#232a5c', accent: '#ffd166' });
+  });
+
   test('boot script embeds every palette', () => {
     for (const palette of PALETTES) expect(paletteBootScript).toContain(palette.id);
   });

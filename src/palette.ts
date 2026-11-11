@@ -13,6 +13,11 @@ export const PALETTES: readonly Palette[] = [
   { id: 'navy', label: 'Navy + Coral', ink: '#172a4f', accent: '#ffab91', paper: '#faf8f6' },
   { id: 'espresso', label: 'Espresso + Orange', ink: '#3b2418', accent: '#ffbf69', paper: '#faf7f2' },
   { id: 'graphite', label: 'Graphite + Lime', ink: '#25282c', accent: '#d8f879', paper: '#f7f8f4' },
+  { id: 'indigo-jade', label: 'Indigo + Jade', ink: '#232a5c', accent: '#8de0bc', paper: '#f6f9f7' },
+  { id: 'jade-amber', label: 'Jade + Amber', ink: '#12483b', accent: '#ffd166', paper: '#faf9f2' },
+  { id: 'midnight-amber', label: 'Midnight + Amber', ink: '#182440', accent: '#ffd166', paper: '#f9f8f3' },
+  { id: 'aubergine-amber', label: 'Aubergine + Amber', ink: '#402743', accent: '#ffd166', paper: '#faf7f4' },
+  { id: 'indigo-apricot', label: 'Indigo + Apricot', ink: '#232a5c', accent: '#ffc499', paper: '#faf7f3' },
 ];
 
 export const PALETTE_STORAGE_KEY = 'hairomode-palette-index';
