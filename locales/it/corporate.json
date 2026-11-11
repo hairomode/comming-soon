@@ -1,14 +1,16 @@
 {
   "meta": {
-    "title": "AI Powerup — Meno incombenze. Più possibilità.",
-    "description": "In arrivo: un modo pratico di imparare l’IA, pensato per il tuo lavoro reale. Descrivi una sfida, scopri un corso e metti in pratica nuove competenze."
+    "title": "hAIroMode — Meno incombenze. Più possibilità.",
+    "description": "In arrivo: un modo pratico di imparare l’IA sul tuo lavoro reale. Descrivi una sfida, scopri un corso e ottieni il Certificato infalsificabile hAIroMode per il tuo CV."
   },
   "nav": {
     "how": "Come funziona",
     "vision": "La nostra visione",
     "language": "Scegli la tua lingua",
     "explore": "Scopri l’idea",
-    "home": "Pagina iniziale di AI Powerup"
+    "home": "Pagina iniziale di hAIroMode",
+    "certificate": "Il certificato",
+    "enterprise": "Per le Aziende"
   },
   "hero": {
     "badge": "Un nuovo modo di imparare l’IA",
@@ -66,7 +68,7 @@
     "eyebrow": "QUALCHE COSA DA SAPERE",
     "title": "Hai curiosità? Bene.",
     "one": {
-      "question": "Posso usare AI Powerup già oggi?",
+      "question": "Posso usare hAIroMode già oggi?",
       "answer": "Non ancora. La piattaforma è in fase di sviluppo. Questa pagina offre un primo sguardo all’idea, non un servizio di apprendimento già disponibile. Non è stata annunciata una data di lancio."
     },
     "two": {
@@ -76,6 +78,10 @@
     "three": {
       "question": "Parlerà la mia lingua?",
       "answer": "Prevediamo inglese, inglese (India), francese, tedesco, spagnolo, italiano, cinese semplificato, arabo, hindi, bengalese e tamil. Puoi già esplorare questa pagina in tutte queste lingue."
+    },
+    "four": {
+      "question": "Come funziona il Certificato infalsificabile hAIroMode?",
+      "answer": "Ogni certificato contiene un codice QR che rimanda a un URL di verifica con il nome del candidato e un codice a 6 cifre per confermare che sia la persona giusta, pensato per accompagnare il tuo CV."
     }
   },
   "closing": {
@@ -93,5 +99,85 @@
     "skip": "Vai al contenuto",
     "menu": "Apri navigazione",
     "close": "Chiudi navigazione"
+  },
+  "certificate": {
+    "eyebrow": "LA CREDENZIALE INFALSIFICABILE",
+    "title": "Un certificato che viaggia\ncon il tuo CV.",
+    "intro": "Ogni percorso completato su hAIroMode rilascia un Certificato infalsificabile da allegare al CV: la prova concreta di competenza IA che le aziende chiederanno nelle selezioni.",
+    "one": {
+      "title": "Scansiona il codice QR.",
+      "body": "Ogni certificato integra un codice QR univoco che apre direttamente un URL ufficiale di verifica su hAIroMode, mai un semplice PDF statico."
+    },
+    "two": {
+      "title": "Controlla nome e codice a 6 cifre.",
+      "body": "L’URL di verifica mostra il nome del candidato e un codice di sicurezza a 6 cifre per garantire che si tratti davvero della persona giusta."
+    },
+    "three": {
+      "title": "Distinguiti in ogni colloquio.",
+      "body": "Portalo con il tuo CV in ogni candidatura. Le aziende richiederanno il Certificato hAIroMode nei processi di assunzione per verificare competenze IA reali."
+    },
+    "card": {
+      "badge": "Credenziale infalsificabile",
+      "title": "Certificato hAIroMode",
+      "candidateLabel": "Candidato/a",
+      "candidateValue": "Alex Rivera",
+      "codeLabel": "Codice di sicurezza a 6 cifre",
+      "codeValue": "482 • 917",
+      "urlLabel": "URL di verifica",
+      "urlValue": "ai.romode.me/v/alex-rivera",
+      "qrCaption": "Scansiona QR → Verifica nome + 6 cifre",
+      "cvTag": "Pronto per il tuo CV e le selezioni aziendali"
+    }
+  },
+  "enterprise": {
+    "meta": {
+      "title": "hAIroMode Enterprise — Assumi i nostri hAIroes o trasforma i tuoi dipendenti in hAIroes.",
+      "description": "Potenzia la tua azienda con hAIroMode: assumi hAIroes certificati con QR infalsificabile o trasforma i tuoi dipendenti in hAIroes sui loro flussi di lavoro reali."
+    },
+    "hero": {
+      "badge": "hAIroMode per le Aziende",
+      "line1": "Assumi i nostri hAIroes.",
+      "line2": "O trasforma il tuo team",
+      "line3": "in hAIroes.",
+      "description": "Fai crescere la tua impresa in due modi: assumi candidati garantiti dal nostro Certificato infalsificabile (QR + codice a 6 cifre) o trasforma i tuoi dipendenti in hAIroes capaci di padroneggiare l’IA.",
+      "ctaPrimary": "Scopri i due pilastri",
+      "ctaSecondary": "Verifica il Certificato",
+      "note": "Pensato per i team HR moderni e le aziende orientate al futuro."
+    },
+    "pillars": {
+      "eyebrow": "DUE MODI PER POTENZIARE LA TUA AZIENDA",
+      "title": "Assumi talenti verificati.\nFai crescere il tuo team.",
+      "intro": "Che tu stia assumendo nuove figure o accelerando i reparti aziendali, hAIroMode trasforma i colli di bottiglia quotidiani in competenze IA misurabili.",
+      "hire": {
+        "tag": "Pilastro 01 · Recruiting",
+        "title": "Assumi i nostri hAIroes",
+        "body": "Basta tirare a indovinare su chi sa davvero usare l’IA. Chiedi il Certificato hAIroMode nel processo di selezione e verifica ogni candidato in pochi secondi.",
+        "point1": "Scansiona il QR sul CV per aprire l’URL ufficiale di verifica",
+        "point2": "Conferma il nome del candidato e il codice a 6 cifre per validare la persona",
+        "point3": "Assumi hAIroes già pronti che hanno risolto veri flussi operativi"
+      },
+      "upskill": {
+        "tag": "Pilastro 02 · Formazione del personale",
+        "title": "Trasforma i tuoi dipendenti in hAIroes",
+        "body": "Inserisci i team tramite modulo, CSV o sincronizzazione SCIM. Ogni collaboratore descrive le attività più lente e segue corsi IA passo dopo passo.",
+        "point1": "Onboarding per ruolo e intervista IA in meno di 5 domande",
+        "point2": "Statistiche di adozione per reparto e monitoraggio trasparente",
+        "point3": "I dipendenti ottengono il proprio Certificato hAIroMode completando i percorsi"
+      }
+    },
+    "verify": {
+      "eyebrow": "VERIFICA ISTANTANEA IN FASE DI ASSUNZIONE",
+      "title": "Perché ogni azienda chiederà\nil Certificato.",
+      "body": "I CV tradizionali elencano parole chiave. Il Certificato hAIroMode offre ai selezionatori una verifica infalsificabile: scansiona il QR, controlla l’URL con il nome del candidato e confronta il codice a 6 cifre.",
+      "step1": "Il candidato allega il Certificato hAIroMode al proprio CV",
+      "step2": "Il recruiter scansiona il codice QR per aprire l’URL di verifica",
+      "step3": "Nome + codice a 6 cifre confermano la persona esatta e le competenze acquisite"
+    },
+    "closing": {
+      "badge": "Aziende · In arrivo",
+      "title": "Pronto a potenziare la tua azienda\ncon gli hAIroes?",
+      "body": "Assumi hAIroes certificati o trasforma i tuoi dipendenti in hAIroes con hAIroMode.",
+      "cta": "Torna alla panoramica"
+    }
   }
 }

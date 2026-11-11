@@ -1,4 +1,4 @@
-# AI Powerup · Coming soon
+# hAIroMode · Coming soon
 
 A multilingual, static product teaser based on the platform stories supplied in `docs/`. This is an independent marketing site, not the learner application or a live course-generation service.
 

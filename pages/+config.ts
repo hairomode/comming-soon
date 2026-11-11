@@ -5,6 +5,6 @@ export default {
   prerender: true,
   clientRouting: false,
   trailingSlash: true,
-  title: 'AI Powerup',
+  title: 'hAIroMode',
   prefetchStaticAssets: false,
 } satisfies Config;

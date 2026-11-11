@@ -15,44 +15,103 @@ function Arrow({ up = false }: { up?: boolean }) {
 function Spark({ className = '' }: { className?: string }) {
   return <svg className={className} viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="m50 0 8 32L85 15 68 42l32 8-32 8 17 27-27-17-8 32-8-32-27 17 17-27L0 50l32-8-17-27 27 17L50 0Z" fill="currentColor" /></svg>;
 }
+function QrMatrix() {
+  return (
+    <svg className="qr-svg" viewBox="0 0 110 110" fill="none" aria-hidden="true">
+      <rect width="110" height="110" rx="10" fill="#fffef9" />
+      <rect x="8" y="8" width="28" height="28" rx="4" stroke="currentColor" strokeWidth="6" />
+      <rect x="16" y="16" width="12" height="12" rx="2" fill="currentColor" />
+      <rect x="74" y="8" width="28" height="28" rx="4" stroke="currentColor" strokeWidth="6" />
+      <rect x="82" y="16" width="12" height="12" rx="2" fill="currentColor" />
+      <rect x="8" y="74" width="28" height="28" rx="4" stroke="currentColor" strokeWidth="6" />
+      <rect x="16" y="82" width="12" height="12" rx="2" fill="currentColor" />
+      <rect x="44" y="10" width="6" height="6" fill="currentColor" />
+      <rect x="54" y="10" width="10" height="6" fill="currentColor" />
+      <rect x="44" y="22" width="12" height="6" fill="currentColor" />
+      <rect x="60" y="22" width="6" height="12" fill="currentColor" />
+      <rect x="10" y="46" width="10" height="6" fill="currentColor" />
+      <rect x="24" y="46" width="8" height="8" fill="currentColor" />
+      <rect x="10" y="58" width="18" height="6" fill="currentColor" />
+      <rect x="42" y="42" width="26" height="26" rx="6" fill="#203e2e" />
+      <path d="M57 46 49 56h5l-1 8 8-11h-5l1-7Z" fill="#d8f879" />
+      <rect x="74" y="44" width="8" height="8" fill="currentColor" />
+      <rect x="88" y="44" width="12" height="6" fill="currentColor" />
+      <rect x="74" y="58" width="16" height="6" fill="currentColor" />
+      <rect x="94" y="56" width="6" height="14" fill="currentColor" />
+      <rect x="44" y="76" width="8" height="10" fill="currentColor" />
+      <rect x="58" y="74" width="12" height="6" fill="currentColor" />
+      <rect x="44" y="92" width="18" height="8" fill="currentColor" />
+      <rect x="74" y="74" width="10" height="10" fill="currentColor" />
+      <rect x="90" y="74" width="10" height="6" fill="currentColor" />
+      <rect x="74" y="90" width="26" height="10" rx="2" fill="currentColor" />
+    </svg>
+  );
+}
 function Reveal({ children, className = '' }: { children: ReactNode; className?: string }) {
   const reduce = useReducedMotion();
   const { locale } = useData<Data>();
   return <motion.div className={className} initial={false} whileInView={reduce ? {} : { y: [locale === 'ar' ? -12 : 12, 0], opacity: [0.8, 1] }} viewport={{ once: true, amount: 0.1 }} transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>{children}</motion.div>;
 }
 function Wordmark() {
-  return <span className="wordmark"><span className="brand-symbol"><Bolt /></span><span>ai{' '}<span className="wordmark-light">powerup</span><span className="brand-period">.</span></span></span>;
+  return <span className="wordmark"><span className="brand-symbol"><Bolt /></span><span>hAIro<span className="wordmark-light">Mode</span><span className="brand-period">.</span></span></span>;
 }
 function LanguageSelect() {
   const hydrated = useHydrated();
   const { t } = useTranslation();
-  const { locale } = useData<Data>();
+  const { locale, page } = useData<Data>();
   return <label className="language-control">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/><ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" strokeWidth="1.5"/><path d="M3 12h18" stroke="currentColor" strokeWidth="1.5"/></svg>
     <select disabled={!hydrated} className="select select-ghost" data-testid="locale-select" aria-label={t('nav.language')} value={locale} onChange={event => {
       const next = event.target.value;
       if (!isLocale(next)) return;
-      try { localStorage.setItem('ai-powerup-locale', next); } catch { /* Navigation still works without storage. */ }
-      window.location.assign(localizedPath(next, import.meta.env.BASE_URL) + window.location.hash);
+      try { localStorage.setItem('hairomode-locale', next); } catch { /* Navigation still works without storage. */ }
+      window.location.assign(localizedPath(next, import.meta.env.BASE_URL, page) + window.location.hash);
     }}>
       {locales.map(({ code, label }) => <option key={code} value={code} lang={code}>{label}</option>)}
     </select>
   </label>;
 }
-export default function Page() {
+function CertificateCard() {
+  const { t } = useTranslation();
+  return (
+    <div className="certificate-card card" data-testid="certificate-card">
+      <div className="cert-card-top">
+        <span className="wordmark cert-wordmark"><span className="brand-symbol"><Bolt /></span><span>hAIro<span className="wordmark-light">Mode</span></span></span>
+        <span className="badge cert-badge">{t('certificate.card.badge')}</span>
+      </div>
+      <h3>{t('certificate.card.title')}</h3>
+      <div className="cert-qr-row">
+        <div className="cert-qr-box">
+          <QrMatrix />
+          <span className="cert-qr-caption">{t('certificate.card.qrCaption')}</span>
+        </div>
+        <div className="cert-fields">
+          <div className="cert-field">
+            <span className="cert-field-label">{t('certificate.card.candidateLabel')}</span>
+            <strong className="cert-field-value">{t('certificate.card.candidateValue')}</strong>
+          </div>
+          <div className="cert-field">
+            <span className="cert-field-label">{t('certificate.card.codeLabel')}</span>
+            <strong className="cert-code-pill" dir="ltr">{t('certificate.card.codeValue')}</strong>
+          </div>
+          <div className="cert-field">
+            <span className="cert-field-label">{t('certificate.card.urlLabel')}</span>
+            <code className="cert-url-pill" dir="ltr">{t('certificate.card.urlValue')}</code>
+          </div>
+        </div>
+      </div>
+      <div className="cert-card-footer">
+        <span className="status-dot" />
+        <span>{t('certificate.card.cvTag')}</span>
+      </div>
+    </div>
+  );
+}
+function HomeContent() {
   const { t } = useTranslation();
   const { locale } = useData<Data>();
-  const hydrated = useHydrated();
-  const [menuOpen, setMenuOpen] = useState(false);
-  return <>
-    <a className="skip-link" href="#main">{t('a11y.skip')}</a>
-    <div id="top" />
-    <header className="site-header shell">
-      <a href={localizedPath(locale, import.meta.env.BASE_URL)} className="brand-link" aria-label={t('nav.home')}><Wordmark /></a>
-      <nav className="desktop-nav" aria-label={t('nav.explore')}><a href="#how-it-works">{t('nav.how')}</a><a href="#vision">{t('nav.vision')}</a></nav>
-      <div className="header-actions"><LanguageSelect /><span className="badge launch-badge"><span className="status-dot" />{t('closing.badge')}</span><button disabled={!hydrated} className="btn btn-ghost mobile-menu" aria-label={t(menuOpen ? 'a11y.close' : 'a11y.menu')} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button></div>
-    </header>
-    {menuOpen && <nav id="mobile-nav" className="mobile-nav shell" aria-label={t('nav.explore')}><a href="#how-it-works" onClick={() => setMenuOpen(false)}>{t('nav.how')}<Arrow /></a><a href="#vision" onClick={() => setMenuOpen(false)}>{t('nav.vision')}<Arrow /></a></nav>}
+  const base = import.meta.env.BASE_URL;
+  return (
     <main id="main">
       <section className="hero-section shell" aria-labelledby="hero-title">
         <div className="hero-copy">
@@ -89,10 +148,117 @@ export default function Page() {
         <Reveal className="section-heading"><p className="eyebrow">{t('how.eyebrow')}</p><h2 id="how-title">{t('how.title')}</h2><p className="section-intro">{t('how.intro')}</p></Reveal>
         <div className="journey">{['one', 'two', 'three'].map((key, index) => <Reveal key={key} className="journey-step"><div className="journey-index"><span>{new Intl.NumberFormat(locale, { minimumIntegerDigits: 2 }).format(index + 1)}</span><div className="journey-line" /></div><h3>{t(`how.${key}.title`)}</h3><p>{t(`how.${key}.body`)}</p></Reveal>)}</div>
       </section>
-      <section className="vision-section shell" id="vision" aria-labelledby="vision-title"><Reveal className="vision-panel"><div className="vision-art" aria-hidden="true"><div className="art-ring ring-a" /><div className="art-ring ring-b" /><div className="art-ring ring-c" /><div className="art-mark"><Bolt /></div><Spark className="art-spark" /><div className="art-dot" /></div><div className="vision-copy"><p className="eyebrow">{t('vision.eyebrow')}</p><h2 id="vision-title">{t('vision.title')}</h2><p>{t('vision.body')}</p><div className="vision-tags"><span className="badge">{t('vision.tag1')}</span><span className="badge">{t('vision.tag2')}</span></div></div></Reveal></section>
-      <section className="faq-section shell section-space" aria-labelledby="faq-title"><div><p className="eyebrow">{t('faq.eyebrow')}</p><h2 id="faq-title">{t('faq.title')}</h2><Spark className="faq-spark" /></div><div className="faq-list">{['one', 'two', 'three'].map(key => <details key={key} className="collapse collapse-plus faq-item" data-testid={`faq-${key}`}><summary className="collapse-title">{t(`faq.${key}.question`)}</summary><div className="collapse-content"><p>{t(`faq.${key}.answer`)}</p></div></details>)}</div></section>
+      <section className="certificate-section shell section-space" id="certificate" data-testid="certificate-section" aria-labelledby="certificate-title">
+        <div className="certificate-grid">
+          <Reveal className="certificate-copy">
+            <p className="eyebrow">{t('certificate.eyebrow')}</p>
+            <h2 id="certificate-title">{t('certificate.title')}</h2>
+            <p className="section-intro">{t('certificate.intro')}</p>
+            <div className="certificate-steps">
+              {(['one', 'two', 'three'] as const).map((key, index) => (
+                <div key={key} className="cert-step-item">
+                  <span className="cert-step-num">{new Intl.NumberFormat(locale, { minimumIntegerDigits: 2 }).format(index + 1)}</span>
+                  <div>
+                    <h3>{t(`certificate.${key}.title`)}</h3>
+                    <p>{t(`certificate.${key}.body`)}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+          <Reveal className="certificate-showcase">
+            <CertificateCard />
+          </Reveal>
+        </div>
+      </section>
+      <section className="vision-section shell" id="vision" aria-labelledby="vision-title"><Reveal className="vision-panel"><div className="vision-art" aria-hidden="true"><div className="art-ring ring-a" /><div className="art-ring ring-b" /><div className="art-ring ring-c" /><div className="art-mark"><Bolt /></div><Spark className="art-spark" /><div className="art-dot" /></div><div className="vision-copy"><p className="eyebrow">{t('vision.eyebrow')}</p><h2 id="vision-title">{t('vision.title')}</h2><p>{t('vision.body')}</p><div className="vision-tags"><span className="badge">{t('vision.tag1')}</span><span className="badge">{t('vision.tag2')}</span></div><div className="vision-cta"><a className="btn btn-primary main-cta" href={localizedPath(locale, base, 'enterprise')}>{t('nav.enterprise')}<Arrow /></a></div></div></Reveal></section>
+      <section className="faq-section shell section-space" aria-labelledby="faq-title"><div><p className="eyebrow">{t('faq.eyebrow')}</p><h2 id="faq-title">{t('faq.title')}</h2><Spark className="faq-spark" /></div><div className="faq-list">{['one', 'two', 'three', 'four'].map(key => <details key={key} className="collapse collapse-plus faq-item" data-testid={`faq-${key}`}><summary className="collapse-title">{t(`faq.${key}.question`)}</summary><div className="collapse-content"><p>{t(`faq.${key}.answer`)}</p></div></details>)}</div></section>
       <section className="closing-section" aria-labelledby="closing-title"><div className="shell closing-inner"><span className="badge closing-badge"><span className="status-dot" />{t('closing.badge')}</span><h2 id="closing-title">{t('closing.title')}</h2><p>{t('closing.body')}</p><a className="btn closing-link" href="#top">{t('closing.back')}<Arrow up /></a><Spark className="closing-spark" /></div></section>
     </main>
-    <footer className="site-footer shell"><div className="footer-top"><a href="#top" className="brand-link" aria-label={t('nav.home')}><Wordmark /></a><p>{t('footer.description')}</p><span className="footer-status"><span className="small-dot" />{t('footer.status')}</span></div><div className="footer-bottom"><span>© {new Intl.DateTimeFormat(locale, { year: 'numeric', timeZone: 'UTC' }).format(new Date('2026-01-01T00:00:00Z'))} AI Powerup</span><span>{t('footer.privacy')}</span></div></footer>
+  );
+}
+function EnterpriseContent() {
+  const { t } = useTranslation();
+  const { locale } = useData<Data>();
+  const base = import.meta.env.BASE_URL;
+  return (
+    <main id="main">
+      <section className="hero-section shell" aria-labelledby="ent-hero-title">
+        <div className="hero-copy">
+          <div className="eyebrow hero-eyebrow"><span className="tiny-spark">✳</span>{t('enterprise.hero.badge')}</div>
+          <h1 id="ent-hero-title"><span>{t('enterprise.hero.line1')}</span><span>{t('enterprise.hero.line2')} <span className="hero-spark" aria-hidden="true">✳</span></span><span className="underlined-word">{t('enterprise.hero.line3')}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span></h1>
+          <p className="hero-description">{t('enterprise.hero.description')}</p>
+          <div className="hero-action"><a className="btn btn-primary main-cta" href="#pillars">{t('enterprise.hero.ctaPrimary')}<Arrow /></a><p><span className="small-dot" />{t('enterprise.hero.note')}</p></div>
+        </div>
+        <div className="preview-wrap">
+          <CertificateCard />
+        </div>
+      </section>
+      <div className="principle-strip"><div className="shell strip-inner">{['first', 'second', 'third'].map(key => <span key={key}><Spark />{t(`strip.${key}`)}</span>)}</div></div>
+      <section className="pillars-section shell section-space" id="pillars" data-testid="enterprise-pillars" aria-labelledby="pillars-title">
+        <Reveal className="section-heading"><p className="eyebrow">{t('enterprise.pillars.eyebrow')}</p><h2 id="pillars-title">{t('enterprise.pillars.title')}</h2><p className="section-intro">{t('enterprise.pillars.intro')}</p></Reveal>
+        <div className="pillars-grid">
+          {(['hire', 'upskill'] as const).map(key => (
+            <Reveal key={key} className="pillar-card card">
+              <span className="badge pillar-tag">{t(`enterprise.pillars.${key}.tag`)}</span>
+              <h3>{t(`enterprise.pillars.${key}.title`)}</h3>
+              <p>{t(`enterprise.pillars.${key}.body`)}</p>
+              <ul className="pillar-points">
+                {(['point1', 'point2', 'point3'] as const).map(pt => (
+                  <li key={pt}><span className="step-mark step-complete" aria-hidden="true">✓</span><span>{t(`enterprise.pillars.${key}.${pt}`)}</span></li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+      <section className="verify-section shell section-space" id="verify" aria-labelledby="verify-title">
+        <Reveal className="vision-panel">
+          <div className="vision-copy">
+            <p className="eyebrow">{t('enterprise.verify.eyebrow')}</p>
+            <h2 id="verify-title">{t('enterprise.verify.title')}</h2>
+            <p>{t('enterprise.verify.body')}</p>
+            <ol className="verify-steps">
+              {(['step1', 'step2', 'step3'] as const).map((st, idx) => (
+                <li key={st}><span className="cert-step-num">{new Intl.NumberFormat(locale, { minimumIntegerDigits: 2 }).format(idx + 1)}</span><span>{t(`enterprise.verify.${st}`)}</span></li>
+              ))}
+            </ol>
+          </div>
+          <div className="vision-art" aria-hidden="true"><div className="art-ring ring-a" /><div className="art-ring ring-b" /><div className="art-ring ring-c" /><div className="art-mark"><Bolt /></div><Spark className="art-spark" /><div className="art-dot" /></div>
+        </Reveal>
+      </section>
+      <section className="closing-section" aria-labelledby="ent-closing-title"><div className="shell closing-inner"><span className="badge closing-badge"><span className="status-dot" />{t('enterprise.closing.badge')}</span><h2 id="ent-closing-title">{t('enterprise.closing.title')}</h2><p>{t('enterprise.closing.body')}</p><a className="btn closing-link" href={localizedPath(locale, base, 'home')}>{t('enterprise.closing.cta')}<Arrow /></a><Spark className="closing-spark" /></div></section>
+    </main>
+  );
+}
+export default function Page() {
+  const { t } = useTranslation();
+  const { locale, page } = useData<Data>();
+  const hydrated = useHydrated();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const base = import.meta.env.BASE_URL;
+  const homeUrl = localizedPath(locale, base, 'home');
+  const entUrl = localizedPath(locale, base, 'enterprise');
+  return <>
+    <a className="skip-link" href="#main">{t('a11y.skip')}</a>
+    <div id="top" />
+    <header className="site-header shell">
+      <a href={homeUrl} className="brand-link" aria-label={t('nav.home')}><Wordmark /></a>
+      <nav className="desktop-nav" aria-label={t('nav.explore')}>
+        <a href={page === 'home' ? '#how-it-works' : `${homeUrl}#how-it-works`}>{t('nav.how')}</a>
+        <a href={page === 'home' ? '#certificate' : `${homeUrl}#certificate`}>{t('nav.certificate')}</a>
+        <a href={entUrl} data-testid="nav-enterprise" aria-current={page === 'enterprise' ? 'page' : undefined}>{t('nav.enterprise')}</a>
+      </nav>
+      <div className="header-actions"><LanguageSelect /><span className="badge launch-badge"><span className="status-dot" />{t('closing.badge')}</span><button disabled={!hydrated} className="btn btn-ghost mobile-menu" aria-label={t(menuOpen ? 'a11y.close' : 'a11y.menu')} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}><span /><span /></button></div>
+    </header>
+    {menuOpen && (
+      <nav id="mobile-nav" className="mobile-nav shell" aria-label={t('nav.explore')}>
+        <a href={page === 'home' ? '#how-it-works' : `${homeUrl}#how-it-works`} onClick={() => setMenuOpen(false)}>{t('nav.how')}<Arrow /></a>
+        <a href={page === 'home' ? '#certificate' : `${homeUrl}#certificate`} onClick={() => setMenuOpen(false)}>{t('nav.certificate')}<Arrow /></a>
+        <a href={entUrl} onClick={() => setMenuOpen(false)}>{t('nav.enterprise')}<Arrow /></a>
+      </nav>
+    )}
+    {page === 'enterprise' ? <EnterpriseContent /> : <HomeContent />}
+    <footer className="site-footer shell"><div className="footer-top"><a href={homeUrl} className="brand-link" aria-label={t('nav.home')}><Wordmark /></a><p>{t('footer.description')}</p><span className="footer-status"><span className="small-dot" />{t('footer.status')}</span></div><div className="footer-bottom"><span>© {new Intl.DateTimeFormat(locale, { year: 'numeric', timeZone: 'UTC' }).format(new Date('2026-01-01T00:00:00Z'))} hAIroMode</span><span>{t('footer.privacy')}</span></div></footer>
   </>;
 }

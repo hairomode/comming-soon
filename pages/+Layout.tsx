@@ -9,7 +9,7 @@ import { detectLocale, isLocale, localizedPath } from '../src/localization';
 import '../src/styles.css';
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const { locale, messages, english } = useData<Data>();
+  const { locale, page, messages, english } = useData<Data>();
   const i18n = useMemo(() => {
     const instance = createInstance().use(ICU);
     void instance.init({
@@ -22,11 +22,12 @@ export default function Layout({ children }: { children: ReactNode }) {
   }, [locale, messages, english]);
   useEffect(() => {
     const base = import.meta.env.BASE_URL;
-    if (window.location.pathname !== base) return;
+    const isRoot = window.location.pathname === base || window.location.pathname === `${base}enterprise/`;
+    if (!isRoot) return;
     let preferred: string | null = null;
-    try { preferred = localStorage.getItem('ai-powerup-locale'); } catch { /* Storage can be disabled. */ }
+    try { preferred = localStorage.getItem('hairomode-locale'); } catch { /* Storage can be disabled. */ }
     const detected = preferred && isLocale(preferred) ? preferred : detectLocale(navigator.languages);
-    if (detected !== 'en') window.location.replace(localizedPath(detected, base) + window.location.hash);
-  }, []);
+    if (detected !== 'en') window.location.replace(localizedPath(detected, base, page) + window.location.hash);
+  }, [page]);
   return <I18nextProvider i18n={i18n}><MotionConfig reducedMotion="user">{children}</MotionConfig></I18nextProvider>;
 }

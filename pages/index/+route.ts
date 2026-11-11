@@ -1,6 +1,7 @@
 import type { PageContext } from 'vike/types';
-import { localeFromPath } from '../../src/localization';
+import { localeFromPath, pageFromPath } from '../../src/localization';
 export function route(pageContext: PageContext) {
   const locale = localeFromPath(pageContext.urlPathname);
-  return locale ? { routeParams: { locale } } : false;
+  const page = pageFromPath(pageContext.urlPathname);
+  return locale && page ? { routeParams: { locale, page } } : false;
 }

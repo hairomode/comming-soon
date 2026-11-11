@@ -1,14 +1,16 @@
 {
   "meta": {
-    "title": "AI Powerup — 少些琐事，多些可能。",
-    "description": "即将推出：围绕真实工作场景的实用 AI 学习。描述你的难题，发现合适的课程，将新技能付诸实践。"
+    "title": "hAIroMode — 少些琐事，多些可能。",
+    "description": "即将推出：围绕真实工作场景的实用 AI 学习。描述你的难题，发现课程，并为你的简历赢取不可伪造的 hAIroMode 证书。"
   },
   "nav": {
     "how": "学习方式",
     "vision": "未来愿景",
     "language": "选择语言",
     "explore": "了解这个想法",
-    "home": "AI Powerup 首页"
+    "home": "hAIroMode 首页",
+    "certificate": "认证证书",
+    "enterprise": "企业方案"
   },
   "hero": {
     "badge": "学习 AI 的新方式",
@@ -66,7 +68,7 @@
     "eyebrow": "你可能想知道",
     "title": "好奇？这就对了。",
     "one": {
-      "question": "现在可以使用 AI Powerup 吗？",
+      "question": "现在可以使用 hAIroMode 吗？",
       "answer": "还不可以。平台正在开发中。这个页面只是对构想的初步展示，并非已经上线的学习服务。目前尚未公布上线日期。"
     },
     "two": {
@@ -76,6 +78,10 @@
     "three": {
       "question": "会支持我的语言吗？",
       "answer": "我们计划支持英语、英语（印度）、法语、德语、西班牙语、意大利语、简体中文、阿拉伯语、印地语、孟加拉语和泰米尔语。你现在就可以用这些语言浏览本页面。"
+    },
+    "four": {
+      "question": "不可伪造的 hAIroMode 证书是如何运作的？",
+      "answer": "每份证书都包含一个二维码，扫码后进入带有候选人姓名与 6 位验证码的专属网址，确保人证合一——可随附在简历中，供企业在招聘时即时查验。"
     }
   },
   "closing": {
@@ -93,5 +99,85 @@
     "skip": "跳转到正文",
     "menu": "打开导航",
     "close": "关闭导航"
+  },
+  "certificate": {
+    "eyebrow": "不可伪造的实力凭证",
+    "title": "随简历同行的\n权威证书。",
+    "intro": "在 hAIroMode 完成每个学习路径后，都会颁发一份不可伪造的证书。将它附在简历上——这将成为各大企业在招聘流程中重点核验的实战 AI 证明。",
+    "one": {
+      "title": "扫描专属二维码。",
+      "body": "每份证书都带有唯一二维码，扫码直达 hAIroMode 官方核验链接，绝非仅是一张静态 PDF。"
+    },
+    "two": {
+      "title": "核对候选人姓名与 6 位安全码。",
+      "body": "核验页面清晰展示候选人姓名及专属 6 位数字验证码，确保证书确属本人無误。"
+    },
+    "three": {
+      "title": "在企业招聘中脱颖而出。",
+      "body": "随简历一起带入每一次面试。企业将在招聘环节要求提供 hAIroMode 证书，以快速核验真实的 AI 实战能力。"
+    },
+    "card": {
+      "badge": "不可伪造凭证",
+      "title": "hAIroMode 认证证书",
+      "candidateLabel": "候选人",
+      "candidateValue": "Alex Rivera",
+      "codeLabel": "6 位安全验证码",
+      "codeValue": "482 • 917",
+      "urlLabel": "官方核验链接",
+      "urlValue": "ai.romode.me/v/alex-rivera",
+      "qrCaption": "扫码 → 核验姓名 + 6 位验证码",
+      "cvTag": "适配个人简历与企业招聘核验"
+    }
+  },
+  "enterprise": {
+    "meta": {
+      "title": "hAIroMode 企业版 — 聘用我们的 hAIroes，或将您的员工培养成 hAIroes。",
+      "description": "用 hAIroMode 为企业赋能：聘用持有不可伪造二维码证书的 hAIroes，或围绕真实日常工作将您的员工转化为高效的 hAIroes。"
+    },
+    "hero": {
+      "badge": "hAIroMode 企业方案",
+      "line1": "聘用我们的 hAIroes。",
+      "line2": "或让您的团队蜕变为",
+      "line3": "hAIroes。",
+      "description": "双轨赋能您的业务：直接招募持有不可伪造二维码与 6 位验证码证书的候选人，或围绕日常工作痛点将现有员工培养成精通 AI 的 hAIroes。",
+      "ctaPrimary": "了解两大核心支柱",
+      "ctaSecondary": "查看证书核验机制",
+      "note": "专为现代招聘团队与前瞻性企业打造。"
+    },
+    "pillars": {
+      "eyebrow": "赋能企业的两大方式",
+      "title": "招募经过验证的人才。\n全面升级现有团队。",
+      "intro": "无论是引进新人才还是提升各业务部门效率，hAIroMode 都能将日常繁琐任务转化为可衡量的 AI 生产力。",
+      "hire": {
+        "tag": "支柱 01 · 人才招聘",
+        "title": "聘用我们的 hAIroes",
+        "body": "无需再凭猜测判断谁真正懂 AI。在招聘流程中要求提供 hAIroMode 证书，几秒钟即可完成候选人核验。",
+        "point1": "扫描简历上的二维码，打开候选人官方核验页面",
+        "point2": "核对候选人姓名与 6 位数字安全码，确保人证一致",
+        "point3": "精准聘用已掌握真实业务工作流的 hAIroes"
+      },
+      "upskill": {
+        "tag": "支柱 02 · 员工赋能",
+        "title": "将您的员工培养成 hAIroes",
+        "body": "支持表单、CSV 或 SCIM 目录同步导入团队。每位员工只需描述日常耗时任务，即可跟随量身定制的 AI 课程循序渐进掌握技能。",
+        "point1": "基于岗位的引导与少于 5 个问题的 AI 诊断访谈",
+        "point2": "按业务部门统计使用成效，透明追踪 AI 普及率",
+        "point3": "员工在掌握实战流程后同样可获得专属 hAIroMode 证书"
+      }
+    },
+    "verify": {
+      "eyebrow": "招聘即时核验",
+      "title": "为什么每家企业都会在招聘中\n要求查看这份证书。",
+      "body": "传统简历堆砌术语，而 hAIroMode 证书为招聘团队提供不可伪造的查验标准：扫描二维码、查看带有候选人姓名的专属链接，并比对 6 位安全码。",
+      "step1": "候选人将 hAIroMode 证书附在个人简历上",
+      "step2": "招聘官扫描二维码打开专属核验网址",
+      "step3": "姓名 + 6 位验证码精准确认候选人身份与实战技能"
+    },
+    "closing": {
+      "badge": "企业版 · 即将推出",
+      "title": "准备好用 hAIroes\n为您的业务加速了吗？",
+      "body": "聘用认证 hAIroes，或将您的员工培养成 hAIroes——尽在 hAIroMode。",
+      "cta": "返回学习者主页"
+    }
   }
 }

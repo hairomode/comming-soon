@@ -1,14 +1,16 @@
 {
   "meta": {
-    "title": "AI Powerup — Less busywork. More possibility.",
-    "description": "Coming soon: practical AI learning built around your real work. Describe a challenge, discover a course, and put new skills into practice."
+    "title": "hAIroMode — Less busywork. More possibility.",
+    "description": "Coming soon: practical AI learning built around your real work. Describe a challenge, discover a course, and earn an unfakable hAIroMode Certificate for your CV."
   },
   "nav": {
     "how": "How it works",
     "vision": "The bigger picture",
     "language": "Choose your language",
     "explore": "Explore the idea",
-    "home": "AI Powerup home"
+    "home": "hAIroMode home",
+    "certificate": "The certificate",
+    "enterprise": "For Enterprise"
   },
   "hero": {
     "badge": "A new way to learn AI",
@@ -66,7 +68,7 @@
     "eyebrow": "A FEW THINGS WORTH KNOWING",
     "title": "Curious? Good.",
     "one": {
-      "question": "Can I use AI Powerup today?",
+      "question": "Can I use hAIroMode today?",
       "answer": "Not yet. The platform is being built. This page is a first look at the idea, not a live learning service. There is no announced launch date."
     },
     "two": {
@@ -76,6 +78,10 @@
     "three": {
       "question": "Will it speak my language?",
       "answer": "We’re planning English, English (India), French, German, Spanish, Italian, Simplified Chinese, Arabic, Hindi, Bengali and Tamil. You can already explore this page in all of them."
+    },
+    "four": {
+      "question": "How does the unfakable hAIroMode Certificate work?",
+      "answer": "Each certificate includes a QR code linking to a dedicated verification URL with the candidate’s name and a 6-digit code to ensure it belongs to the right person—built to travel with your CV and be checked by enterprises during hiring."
     }
   },
   "closing": {
@@ -93,5 +99,85 @@
     "skip": "Skip to content",
     "menu": "Open navigation",
     "close": "Close navigation"
+  },
+  "certificate": {
+    "eyebrow": "THE UNFALSIFIABLE CREDENTIAL",
+    "title": "A certificate that travels\nwith your CV.",
+    "intro": "Every completed path on hAIroMode issues an unfakable Certificate you can attach directly to your CV—the proof of practical AI mastery that enterprises will ask for in their hiring process.",
+    "one": {
+      "title": "Scan the QR code.",
+      "body": "Each certificate carries a unique QR code that resolves directly to an official verification URL on hAIroMode—never just a static PDF."
+    },
+    "two": {
+      "title": "Match candidate name & 6-digit code.",
+      "body": "The verification URL displays the candidate’s full name alongside a unique 6-digit security code to ensure it is genuinely the right person."
+    },
+    "three": {
+      "title": "Stand out in every hiring process.",
+      "body": "Take it with your CV into every interview. Enterprises will ask for the hAIroMode Certificate during hiring to verify real-world AI capability."
+    },
+    "card": {
+      "badge": "Unfakable Credential",
+      "title": "hAIroMode Certificate",
+      "candidateLabel": "Candidate",
+      "candidateValue": "Alex Rivera",
+      "codeLabel": "6-digit security code",
+      "codeValue": "482 • 917",
+      "urlLabel": "Verification URL",
+      "urlValue": "ai.romode.me/v/alex-rivera",
+      "qrCaption": "Scan QR → Verify name + 6-digit code",
+      "cvTag": "Ready for your CV & enterprise hiring"
+    }
+  },
+  "enterprise": {
+    "meta": {
+      "title": "hAIroMode Enterprise — Hire our hAIroes or turn your employees into hAIroes.",
+      "description": "Power up your business with hAIroMode: hire certified hAIroes with unfakable QR-verified credentials, or turn your employees into hAIroes around their real daily workflows."
+    },
+    "hero": {
+      "badge": "hAIroMode for Enterprise",
+      "line1": "Hire our hAIroes.",
+      "line2": "Or turn your team",
+      "line3": "into hAIroes.",
+      "description": "Power up your business two ways: recruit candidates backed by our unfakable QR + 6-digit Certificate, or transform your own employees into AI-powered hAIroes around their real tasks.",
+      "ctaPrimary": "Explore the two pillars",
+      "ctaSecondary": "Verify the Certificate",
+      "note": "Built for modern hiring teams and forward-looking organizations."
+    },
+    "pillars": {
+      "eyebrow": "TWO WAYS TO POWER UP YOUR BUSINESS",
+      "title": "Recruit proven talent.\nUpskill the team you have.",
+      "intro": "Whether you are hiring new people or accelerating every business unit, hAIroMode turns everyday bottlenecks into measurable AI capability.",
+      "hire": {
+        "tag": "Pillar 01 · Recruitment",
+        "title": "Hire our hAIroes",
+        "body": "Stop guessing who actually knows how to use AI at work. Ask for the hAIroMode Certificate in your hiring process and verify any candidate in seconds.",
+        "point1": "Scan the CV QR code to open the candidate’s official verification URL",
+        "point2": "Confirm the candidate’s name and 6-digit code to ensure it’s the right person",
+        "point3": "Hire pre-vetted hAIroes who have solved real operational workflows"
+      },
+      "upskill": {
+        "tag": "Pillar 02 · Workforce Transformation",
+        "title": "Turn your employees into hAIroes",
+        "body": "Onboard your teams by form, CSV, or SCIM directory sync. Every collaborator describes their painful daily tasks and follows tailored, step-by-step AI courses.",
+        "point1": "Role-based onboarding & <5-question AI interviews tailored to your tools",
+        "point2": "Team adoption analytics, business-unit insights & transparent ROI tracking",
+        "point3": "Employees earn their own hAIroMode Certificates as they master workflows"
+      }
+    },
+    "verify": {
+      "eyebrow": "INSTANT HIRING VERIFICATION",
+      "title": "Why every enterprise will ask\nfor the Certificate.",
+      "body": "Traditional resumes list AI buzzwords. The hAIroMode Certificate gives recruiters and hiring managers an unfakable check: scan the QR code, inspect the live URL with the candidate’s name, and match the 6-digit security code.",
+      "step1": "Candidate attaches the hAIroMode Certificate to their CV",
+      "step2": "Recruiter scans the QR code to open the verification URL",
+      "step3": "Name + 6-digit code confirm the exact person and completed skill path"
+    },
+    "closing": {
+      "badge": "Enterprise Coming Soon",
+      "title": "Ready to power up your business\nwith hAIroes?",
+      "body": "Hire certified hAIroes or turn your employees into hAIroes—all on hAIroMode.",
+      "cta": "Back to learner overview"
+    }
   }
 }

@@ -1,4 +1,8 @@
 import { locales } from '../../src/localization';
 export function onBeforePrerenderStart() {
-  return ['/', ...locales.map(({ code }) => `/${code}/`)];
+  return [
+    '/',
+    '/enterprise/',
+    ...locales.flatMap(({ code }) => [`/${code}/`, `/${code}/enterprise/`]),
+  ];
 }

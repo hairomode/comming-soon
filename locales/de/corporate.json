@@ -1,14 +1,16 @@
 {
   "meta": {
-    "title": "AI Powerup — Weniger Routine. Mehr Möglichkeiten.",
-    "description": "Demnächst: praxisnahes KI-Lernen rund um deine Arbeit. Beschreibe eine Herausforderung, entdecke einen Kurs und setze neue Fähigkeiten direkt ein."
+    "title": "hAIroMode — Weniger Routine. Mehr Möglichkeiten.",
+    "description": "Demnächst: praxisnahes KI-Lernen rund um deine Arbeit. Beschreibe eine Herausforderung, entdecke einen Kurs und sichere dir das fälschungssichere hAIroMode-Zertifikat für deinen Lebenslauf."
   },
   "nav": {
     "how": "So funktioniert’s",
     "vision": "Unsere Vision",
     "language": "Sprache wählen",
     "explore": "Die Idee entdecken",
-    "home": "AI Powerup Startseite"
+    "home": "hAIroMode Startseite",
+    "certificate": "Das Zertifikat",
+    "enterprise": "Für Unternehmen"
   },
   "hero": {
     "badge": "KI lernen, neu gedacht",
@@ -66,7 +68,7 @@
     "eyebrow": "EIN PAAR DINGE, DIE DU WISSEN SOLLTEST",
     "title": "Neugierig? Gut so.",
     "one": {
-      "question": "Kann ich AI Powerup schon heute nutzen?",
+      "question": "Kann ich hAIroMode schon heute nutzen?",
       "answer": "Noch nicht. Die Plattform wird gerade entwickelt. Diese Seite gibt einen ersten Einblick in die Idee und ist noch kein nutzbares Lernangebot. Ein Starttermin wurde nicht angekündigt."
     },
     "two": {
@@ -76,6 +78,10 @@
     "three": {
       "question": "Wird meine Sprache dabei sein?",
       "answer": "Geplant sind Englisch, Englisch (Indien), Französisch, Deutsch, Spanisch, Italienisch, vereinfachtes Chinesisch, Arabisch, Hindi, Bengalisch und Tamil. Diese Seite kannst du schon jetzt in all diesen Sprachen entdecken."
+    },
+    "four": {
+      "question": "Wie funktioniert das fälschungssichere hAIroMode-Zertifikat?",
+      "answer": "Jedes Zertifikat besitzt einen QR-Code, der auf eine Verifizierungs-URL mit dem Namen der Person und einem 6-stelligen Code verweist – ideal für deinen Lebenslauf und die Prüfung im Bewerbungsprozess."
     }
   },
   "closing": {
@@ -93,5 +99,85 @@
     "skip": "Zum Inhalt springen",
     "menu": "Navigation öffnen",
     "close": "Navigation schließen"
+  },
+  "certificate": {
+    "eyebrow": "DER FÄLSCHUNGSSICHERE NACHWEIS",
+    "title": "Ein Zertifikat, das deinen\nLebenslauf begleitet.",
+    "intro": "Jeder abgeschlossene Lernpfad auf hAIroMode verleiht ein fälschungssicheres Zertifikat für deinen CV – der Praxisnachweis, nach dem Unternehmen im Bewerbungsprozess fragen werden.",
+    "one": {
+      "title": "QR-Code scannen.",
+      "body": "Jedes Zertifikat trägt einen eindeutigen QR-Code, der direkt zu einer offiziellen Prüf-URL auf hAIroMode führt – niemals nur ein statisches PDF."
+    },
+    "two": {
+      "title": "Name und 6-stelligen Code abgleichen.",
+      "body": "Die Prüf-URL zeigt den Namen des Kandidaten und einen 6-stelligen Sicherheitscode, damit eindeutig feststeht, dass es die richtige Person ist."
+    },
+    "three": {
+      "title": "In jedem Bewerbungsprozess überzeugen.",
+      "body": "Nimm es mit deinem Lebenslauf in jedes Gespräch. Unternehmen werden im Recruiting nach dem hAIroMode-Zertifikat fragen, um echte KI-Praxis zu prüfen."
+    },
+    "card": {
+      "badge": "Fälschungssicher",
+      "title": "hAIroMode-Zertifikat",
+      "candidateLabel": "Kandidat/in",
+      "candidateValue": "Alex Rivera",
+      "codeLabel": "6-stelliger Sicherheitscode",
+      "codeValue": "482 • 917",
+      "urlLabel": "Prüf-URL",
+      "urlValue": "ai.romode.me/v/alex-rivera",
+      "qrCaption": "QR scannen → Name + 6-stelligen Code prüfen",
+      "cvTag": "Bereit für Lebenslauf & Recruiting"
+    }
+  },
+  "enterprise": {
+    "meta": {
+      "title": "hAIroMode Enterprise — Stellen Sie unsere hAIroes ein oder machen Sie Ihre Mitarbeitenden zu hAIroes.",
+      "description": "Stärken Sie Ihr Unternehmen mit hAIroMode: Rekrutieren Sie zertifizierte hAIroes mit QR-Prüfung oder verwandeln Sie Ihr Team rund um echte Arbeitsabläufe in hAIroes."
+    },
+    "hero": {
+      "badge": "hAIroMode für Unternehmen",
+      "line1": "Stellen Sie unsere hAIroes ein.",
+      "line2": "Oder machen Sie Ihr Team",
+      "line3": "zu hAIroes.",
+      "description": "Bringen Sie Ihr Geschäft auf zwei Wegen voran: Rekrutieren Sie Bewerbende mit fälschungssicherem QR- & 6-Stellen-Zertifikat oder verwandeln Sie Ihre Mitarbeitenden in KI-starke hAIroes.",
+      "ctaPrimary": "Beide Säulen entdecken",
+      "ctaSecondary": "Zertifikat-Prüfung ansehen",
+      "note": "Entwickelt für modernes Recruiting und zukunftsorientierte Unternehmen."
+    },
+    "pillars": {
+      "eyebrow": "ZWEI WEGE FÜR IHR UNTERNEHMEN",
+      "title": "Geprüfte Talente einstellen.\nDas eigene Team befähigen.",
+      "intro": "Ob Sie neue Fachkräfte suchen oder ganze Abteilungen beschleunigen: hAIroMode macht aus täglichen Zeitfressern messbare KI-Kompetenz.",
+      "hire": {
+        "tag": "Säule 01 · Recruiting",
+        "title": "Stellen Sie unsere hAIroes ein",
+        "body": "Raten Sie nicht länger, wer KI wirklich im Alltag beherrscht. Fragen Sie im Bewerbungsprozess nach dem hAIroMode-Zertifikat und prüfen Sie es in Sekunden.",
+        "point1": "QR-Code auf dem CV scannen und offizielle Verifizierungs-URL öffnen",
+        "point2": "Kandidatenname und 6-stelligen Code abgleichen, um die Person zu bestätigen",
+        "point3": "Praxiserprobte hAIroes einstellen, die echte Workflows gelöst haben"
+      },
+      "upskill": {
+        "tag": "Säule 02 · Weiterbildung",
+        "title": "Machen Sie Ihre Mitarbeitenden zu hAIroes",
+        "body": "Laden Sie Teams per Formular, CSV oder SCIM ein. Jede Person beschreibt zeitraubende Aufgaben und absolviert passende Schritt-für-Schritt-KI-Kurse.",
+        "point1": "Rollenbasiertes Onboarding & kurzes KI-Interview (< 5 Fragen)",
+        "point2": "Adoptions-Statistiken pro Team und transparente Erfolgsmessung",
+        "point3": "Mitarbeitende erwerben eigene hAIroMode-Zertifikate für gemeisterte Prozesse"
+      }
+    },
+    "verify": {
+      "eyebrow": "SOFORTIGE PRÜFUNG IM RECRUITING",
+      "title": "Warum jedes Unternehmen nach\ndiesem Zertifikat fragen wird.",
+      "body": "Klassische Lebensläufe nennen Schlagworte. Das hAIroMode-Zertifikat liefert Personalteams einen fälschungssicheren Check: QR-Code scannen, Name unter der Live-URL prüfen und den 6-stelligen Code abgleichen.",
+      "step1": "Kandidat/in fügt das hAIroMode-Zertifikat dem Lebenslauf hinzu",
+      "step2": "Recruiting scannt den QR-Code und öffnet die Prüf-URL",
+      "step3": "Name + 6-stelliger Code bestätigen eindeutig Person und Kompetenz"
+    },
+    "closing": {
+      "badge": "Enterprise · Demnächst",
+      "title": "Bereit, Ihr Unternehmen mit\nhAIroes zu stärken?",
+      "body": "Rekrutieren Sie zertifizierte hAIroes oder machen Sie Ihre Mitarbeitenden zu hAIroes – mit hAIroMode.",
+      "cta": "Zurück zur Lern-Übersicht"
+    }
   }
 }
