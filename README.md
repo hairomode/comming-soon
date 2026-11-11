@@ -2,9 +2,9 @@
 
 A multilingual, static product teaser based on the platform stories supplied in `docs/`. This is an independent marketing site, not the learner application or a live course-generation service.
 
-**Production domain:** `https://h.ai.romode.me`
+**Production domain:** `https://ai.romode.me`
 
-**Repository:** `cyrill62/hairomode-comingsoon`
+**Repository:** `hairomode/comming-soon`
 
 ## Stack
 
@@ -28,7 +28,7 @@ Open `http://localhost:3000/en/`. Use `bun x`, not `bunx`, if the latter alias i
 
 ```sh
 bun run check
-VITE_SITE_URL=https://h.ai.romode.me bun run build
+VITE_SITE_URL=https://ai.romode.me bun run build
 PORT=4173 bun run scripts/serve-static.ts
 ```
 
@@ -72,9 +72,9 @@ At the DNS provider for `romode.me`, create:
 
 | Type | Name | Target |
 | --- | --- | --- |
-| CNAME | `h.ai` | `cyrill62.github.io` |
+| CNAME | `ai` | `hairomode.github.io` |
 
-Some providers require the full record name `h.ai.romode.me`. Use DNS-only mode initially if your provider offers an HTTP proxy. Configure `h.ai.romode.me` as the repository's Pages custom domain. Once GitHub provisions its certificate, enable **Enforce HTTPS**. A CNAME record takes a hostname, not a URL or repository path.
+Some providers require the full record name `ai.romode.me`. Use DNS-only mode initially if your provider offers an HTTP proxy. Configure `ai.romode.me` as the repository's Pages custom domain. Once GitHub provisions its certificate, enable **Enforce HTTPS**. A CNAME record takes a hostname, not a URL or repository path.
 
 `public/CNAME` preserves the domain in the deployed artifact, while canonical links, hreflang alternates, Open Graph metadata and the sitemap use the production URL from CI.
 
