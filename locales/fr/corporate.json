@@ -25,7 +25,7 @@
       "one": {
         "line1": "Apprenez les outils IA",
         "line2": "devenez l’Employé",
-        "line3": "de l’Année!"
+        "line3": "de l’Année !"
       },
       "two": {
         "line1": "Éliminez les corvées",
@@ -35,17 +35,17 @@
       "three": {
         "line1": "Automatisez le répétitif",
         "line2": "doublez votre impact",
-        "line3": "au travail!"
+        "line3": "au travail !"
       },
       "four": {
         "line1": "Maîtrisez les vrais prompts",
         "line2": "transformez des heures",
-        "line3": "en minutes!"
+        "line3": "en minutes !"
       },
       "five": {
         "line1": "Obtenez le Certificat",
         "line2": "démarquez-vous sur",
-        "line3": "chaque CV!"
+        "line3": "chaque CV !"
       }
     }
   },
