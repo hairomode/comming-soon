@@ -288,11 +288,26 @@ test('Arabic evergreen heading stays clear of the mobile viewport edge while rev
   expect(heading).not.toBeNull();
   expect(heading!.y).toBeGreaterThanOrEqual(20);
   const eyebrowStyle = await section.locator('.eyebrow').evaluate(element => {
+    const toRgb = (color: string) => {
+      const context = document.createElement('canvas').getContext('2d')!;
+      context.fillStyle = color;
+      context.fillRect(0, 0, 1, 1);
+      return Array.from(context.getImageData(0, 0, 1, 1).data.slice(0, 3));
+    };
+    const luminance = (rgb: number[]) => {
+      const [r, g, b] = rgb.map(value => {
+        const channel = value / 255;
+        return channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
+      });
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
     const style = getComputedStyle(element);
-    return { fontSize: parseFloat(style.fontSize), color: style.color };
+    const text = luminance(toRgb(style.color));
+    const background = luminance(toRgb(getComputedStyle(document.documentElement).backgroundColor));
+    return { fontSize: parseFloat(style.fontSize), contrast: (Math.max(text, background) + 0.05) / (Math.min(text, background) + 0.05) };
   });
   expect(eyebrowStyle.fontSize).toBeGreaterThanOrEqual(11);
-  expect(eyebrowStyle.color).toBe('rgb(63, 90, 66)');
+  expect(eyebrowStyle.contrast).toBeGreaterThanOrEqual(6.5);
 });
 
 test('typography uses no more than five sizes between 14px and 55px', async ({ page }) => {

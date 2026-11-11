@@ -18,7 +18,7 @@ function Spark({ className = '' }: { className?: string }) {
 function QrMatrix() {
   return (
     <svg className="qr-svg" viewBox="0 0 110 110" fill="none" aria-hidden="true">
-      <rect width="110" height="110" rx="10" fill="#fffef9" />
+      <rect width="110" height="110" rx="10" style={{ fill: 'color-mix(in oklab, var(--lime) 4%, #fff)' }} />
       <rect x="8" y="8" width="28" height="28" rx="4" stroke="currentColor" strokeWidth="6" />
       <rect x="16" y="16" width="12" height="12" rx="2" fill="currentColor" />
       <rect x="74" y="8" width="28" height="28" rx="4" stroke="currentColor" strokeWidth="6" />
@@ -32,8 +32,8 @@ function QrMatrix() {
       <rect x="10" y="46" width="10" height="6" fill="currentColor" />
       <rect x="24" y="46" width="8" height="8" fill="currentColor" />
       <rect x="10" y="58" width="18" height="6" fill="currentColor" />
-      <rect x="42" y="42" width="26" height="26" rx="6" fill="#203e2e" />
-      <path d="M57 46 49 56h5l-1 8 8-11h-5l1-7Z" fill="#d8f879" />
+      <rect x="42" y="42" width="26" height="26" rx="6" style={{ fill: 'var(--ink)' }} />
+      <path d="M57 46 49 56h5l-1 8 8-11h-5l1-7Z" style={{ fill: 'var(--lime)' }} />
       <rect x="74" y="44" width="8" height="8" fill="currentColor" />
       <rect x="88" y="44" width="12" height="6" fill="currentColor" />
       <rect x="74" y="58" width="16" height="6" fill="currentColor" />

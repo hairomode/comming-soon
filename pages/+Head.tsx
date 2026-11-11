@@ -1,5 +1,6 @@
 import { useData } from 'vike-react/useData';
 import { locales, localizedPath } from '../src/localization';
+import { paletteBootScript } from '../src/palette';
 import type { Data } from './index/+data';
 
 export default function Head() {
@@ -23,5 +24,6 @@ export default function Head() {
     {locales.map(({ code }) => <link key={code} rel="alternate" hrefLang={code} href={url(code)} />)}
     <link rel="alternate" hrefLang="x-default" href={defaultUrl} />
     {fontLocale && <link rel="stylesheet" href={`${base}fonts/${fontLocale}.css`} />}
+    <script dangerouslySetInnerHTML={{ __html: paletteBootScript }} />
   </>;
 }
