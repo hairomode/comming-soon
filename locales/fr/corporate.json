@@ -29,8 +29,8 @@
       },
       "two": {
         "line1": "Éliminez les corvées",
-        "line2": "finissez à l’heure",
-        "line3": "varnish overtimes !"
+        "line2": "livrez à l’heure",
+        "line3": "faites disparaître les heures sup !"
       },
       "three": {
         "line1": "Automatisez le répétitif",
@@ -205,6 +205,19 @@
       "title": "Prêt à propulser votre entreprise\navec des hAIroes ?",
       "body": "Recrutez nos hAIroes certifiés ou transformez vos collaborateurs en hAIroes sur hAIroMode.",
       "cta": "Retour à l’accueil apprenant"
+    }
+  },
+  "evergreen": {
+    "eyebrow": "TOUJOURS PRÊT POUR LA SUITE",
+    "title": "Ne soyez jamais dépassé.\nProgressez avec l’IA.",
+    "intro": "L’IA évolue sans cesse, et votre apprentissage peut évoluer avec elle. hAIroMode vous propose de nouveaux cours pratiques pour garder des compétences pertinentes.",
+    "current": {
+      "title": "De nouveaux cours d’IA pour rester à jour",
+      "body": "Découvrez de nouveaux parcours à mesure que les outils, les méthodes et les possibilités évoluent, sans devoir repartir ailleurs de zéro."
+    },
+    "repeat": {
+      "title": "Refaites chaque cours autant de fois que nécessaire",
+      "body": "Revenez pour réviser, vous entraîner davantage ou faire une nouvelle tentative. Vos cours restent à votre disposition."
     }
   }
 }

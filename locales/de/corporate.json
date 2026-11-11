@@ -29,8 +29,8 @@
       },
       "two": {
         "line1": "Routine abschaffen",
-        "line2": "jeden Freitag pünktlich",
-        "line3": "varnish overtimes !"
+        "line2": "pünktlich liefern",
+        "line3": "Überstunden verschwinden lassen !"
       },
       "three": {
         "line1": "Langweiliges automatisieren",
@@ -205,6 +205,19 @@
       "title": "Bereit, Ihr Unternehmen mit\nhAIroes zu stärken?",
       "body": "Rekrutieren Sie zertifizierte hAIroes oder machen Sie Ihre Mitarbeitenden zu hAIroes – mit hAIroMode.",
       "cta": "Zurück zur Lern-Übersicht"
+    }
+  },
+  "evergreen": {
+    "eyebrow": "IMMER BEREIT FÜR DAS NÄCHSTE",
+    "title": "Nie den Anschluss verlieren.\nMit KI weiterwachsen.",
+    "intro": "KI entwickelt sich ständig weiter – und dein Lernen ebenso. hAIroMode bietet neue praxisnahe Kurse, damit deine Fähigkeiten relevant bleiben.",
+    "current": {
+      "title": "Neue KI-Kurse halten dich auf dem Laufenden",
+      "body": "Entdecke neue Lernpfade, wenn sich Tools, Arbeitsabläufe und Möglichkeiten verändern – ohne anderswo neu anfangen zu müssen."
+    },
+    "repeat": {
+      "title": "Wiederhole jeden Kurs so oft du möchtest",
+      "body": "Kehre jederzeit zurück, um Wissen aufzufrischen, mehr zu üben oder es erneut zu versuchen. Deine Kurse bleiben verfügbar."
     }
   }
 }

@@ -132,6 +132,16 @@ h2 { font-family: var(--heading); font-weight: 500; letter-spacing: -1.8px; font
 .journey-line { height: 1px; background: #d2dbca; width: 100%; }
 .journey h3 { font-size: 20px; font-weight: 500; font-family: var(--heading); line-height: 1.4; letter-spacing: -.6px; margin-bottom: 15px; }
 .journey p { font-size: 13px; line-height: 1.9; color: var(--muted); }
+.evergreen-section { border-top: 1px solid var(--line); }
+.evergreen-heading { max-width: 720px; }
+.evergreen-heading .section-intro { max-width: 560px; }
+.evergreen-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+.evergreen-card { position: relative; min-height: 265px; padding: 34px; border: 1px solid #cbd6bc; border-radius: 18px; background: linear-gradient(145deg, #f7f9f1 0%, #eaf0dd 100%); overflow: hidden; }
+.evergreen-card::after { content: ''; position: absolute; width: 180px; height: 180px; border: 1px dashed #c1d0ac; border-radius: 50%; inset-inline-end: -65px; bottom: -90px; }
+.evergreen-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 14px; background: var(--ink); color: var(--lime); font-size: 28px; line-height: 1; }
+.evergreen-index { position: absolute; top: 35px; inset-inline-end: 35px; font-family: 'Space Grotesk Variable', sans-serif; color: #6d7d62; font-size: 11px; }
+.evergreen-card h3 { max-width: 440px; margin-block: 34px 12px; font-family: var(--heading); font-size: 24px; line-height: 1.3; font-weight: 500; letter-spacing: -.7px; }
+.evergreen-card p { max-width: 470px; color: var(--muted); font-size: 13px; line-height: 1.85; position: relative; z-index: 1; }
 .vision-panel { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 50px; background: #eaf0dd; border-radius: 18px; overflow: hidden; padding: 55px; }
 .vision-copy h2 { font-size: 32px; margin-block: 18px; }
 .vision-copy > p:not(.eyebrow) { font-size: 13px; color: #596a4e; line-height: 1.9; }
@@ -175,6 +185,7 @@ h2 { font-family: var(--heading); font-weight: 500; letter-spacing: -1.8px; font
 :lang(ar) h1, :lang(hi) h1, :lang(bn) h1, :lang(ta) h1 { font-size: clamp(40px, 4.7vw, 66px); line-height: 1.4; letter-spacing: -1px; }
 :lang(ar) h2, :lang(hi) h2, :lang(bn) h2, :lang(ta) h2 { line-height: 1.5; letter-spacing: -.8px; }
 :lang(ar) .eyebrow, :lang(hi) .eyebrow, :lang(bn) .eyebrow, :lang(ta) .eyebrow { letter-spacing: 0; }
+:lang(ar) .evergreen-heading .eyebrow, :lang(hi) .evergreen-heading .eyebrow, :lang(bn) .evergreen-heading .eyebrow, :lang(ta) .evergreen-heading .eyebrow { font-size: 11px; line-height: 1.8; color: #3f5a42; }
 :lang(zh) h1 { font-size: clamp(48px, 5.5vw, 76px); letter-spacing: -2px; line-height: 1.2; }
 :lang(hi) .preview-stage, :lang(bn) .preview-stage, :lang(ta) .preview-stage, :lang(ar) .preview-stage { min-height: 540px; }
 :lang(hi) .challenge-card p, :lang(bn) .challenge-card p, :lang(ta) .challenge-card p, :lang(ar) .challenge-card p { line-height: 1.9; }
@@ -288,6 +299,9 @@ h2 { font-family: var(--heading); font-weight: 500; letter-spacing: -1.8px; font
   .journey-index { gap: 15px; margin-bottom: 16px; }
   .journey h3 { font-size: 21px; margin-bottom: 9px; }
   .journey p { font-size: 13px; max-width: 440px; }
+  .evergreen-grid { grid-template-columns: 1fr; margin-top: 34px; }
+  .evergreen-card { min-height: 240px; padding: 28px; }
+  .evergreen-card h3 { font-size: 22px; margin-top: 28px; }
   .vision-panel { grid-template-columns: 1fr; gap: 10px; padding: 24px 24px 35px; }
   .vision-art { min-height: 260px; }
   .ring-c { width: 240px; height: 240px; }
@@ -365,7 +379,8 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .scroll-progress-bar { position: fixed; top: 0; inset-inline: 0; height: 4px; background: linear-gradient(90deg, var(--ink), #6e8b24, var(--lime)); transform-origin: 0% 50%; z-index: 60; pointer-events: none; }
 [dir='rtl'] .scroll-progress-bar { transform-origin: 100% 50%; }
 #hero-title { perspective: 900px; min-height: 3.2em; }
-.hero-phrase { display: block; transform-origin: 50% 50%; }
+.hero-phrase { display: block; transform-origin: 50% 50%; touch-action: pan-y; cursor: grab; user-select: none; }
+.hero-phrase:active { cursor: grabbing; }
 .hero-phrase > span { display: block; }
 .hero-before-equals { font-size: calc(1em - 0.5rem); color: #4d6753; font-weight: 400; }
 .hero-phrase-dots { display: flex; align-items: center; gap: 6px; margin-top: 22px; flex-wrap: wrap; }

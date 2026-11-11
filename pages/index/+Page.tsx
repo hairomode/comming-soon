@@ -49,12 +49,11 @@ function QrMatrix() {
 }
 function Reveal({ children, className = '', delay = 0 }: { children: ReactNode; className?: string; delay?: number }) {
   const reduce = useReducedMotion();
-  const { locale } = useData<Data>();
   return (
     <motion.div
       className={className}
       initial={false}
-      whileInView={reduce ? {} : { y: [locale === 'ar' ? -22 : 22, 0], scale: [0.97, 1], opacity: [0.95, 1] }}
+      whileInView={reduce ? {} : { y: [22, 0], scale: [0.97, 1], opacity: [0.95, 1] }}
       viewport={{ once: false, amount: 0.18 }}
       transition={{ duration: 0.65, delay, ease: [0.16, 1, 0.3, 1] }}
     >
@@ -177,6 +176,9 @@ function HomeContent() {
   }, [reduce]);
 
   const activeKey = HERO_PHRASE_KEYS[phraseIndex];
+  const movePhrase = (delta: number) => {
+    setPhraseIndex(current => (current + delta + HERO_PHRASE_KEYS.length) % HERO_PHRASE_KEYS.length);
+  };
   const base = import.meta.env.BASE_URL;
   return (
     <main id="main">
@@ -189,6 +191,13 @@ function HomeContent() {
               className="hero-phrase"
               initial={false}
               animate={reduce ? {} : { y: [14, 0], scale: [0.98, 1] }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.16}
+              onDragEnd={(_, info) => {
+                if (info.offset.x <= -50) movePhrase(1);
+                if (info.offset.x >= 50) movePhrase(-1);
+              }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
               <span><span className="hero-before-equals">{t(`hero.phrases.${activeKey}.line1`)}</span></span>
@@ -331,6 +340,29 @@ function HomeContent() {
       <section className="how-section shell section-space" id="how-it-works" aria-labelledby="how-title">
         <Reveal className="section-heading"><p className="eyebrow">{t('how.eyebrow')}</p><h2 id="how-title">{t('how.title')}</h2><p className="section-intro">{t('how.intro')}</p></Reveal>
         <div className="journey">{['one', 'two', 'three'].map((key, index) => <Reveal key={key} delay={index * 0.12} className="journey-step"><div className="journey-index"><span>{new Intl.NumberFormat(locale, { minimumIntegerDigits: 2 }).format(index + 1)}</span><div className="journey-line" /></div><h3>{t(`how.${key}.title`)}</h3><p>{t(`how.${key}.body`)}</p></Reveal>)}</div>
+      </section>
+      <section className="evergreen-section shell section-space" data-testid="evergreen-learning-section" aria-labelledby="evergreen-title">
+        <Reveal className="section-heading evergreen-heading">
+          <p className="eyebrow">{t('evergreen.eyebrow')}</p>
+          <h2 id="evergreen-title">{t('evergreen.title')}</h2>
+          <p className="section-intro">{t('evergreen.intro')}</p>
+        </Reveal>
+        <div className="evergreen-grid">
+          {(['current', 'repeat'] as const).map((key, index) => (
+            <Reveal key={key} delay={index * 0.12} className="evergreen-card card">
+              <motion.span
+                className="evergreen-icon"
+                aria-hidden="true"
+                initial={false}
+                animate={reduce ? {} : { rotate: key === 'current' ? [0, 10, 0] : [0, -14, 0], scale: [1, 1.06, 1] }}
+                transition={{ duration: 4 + index, repeat: Infinity, ease: 'easeInOut' }}
+              >{key === 'current' ? '↗' : '↻'}</motion.span>
+              <span className="evergreen-index">0{index + 1}</span>
+              <h3>{t(`evergreen.${key}.title`)}</h3>
+              <p>{t(`evergreen.${key}.body`)}</p>
+            </Reveal>
+          ))}
+        </div>
       </section>
       <section className="certificate-section shell section-space" id="certificate" data-testid="certificate-section" aria-labelledby="certificate-title">
         <div className="certificate-grid">

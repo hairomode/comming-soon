@@ -122,10 +122,55 @@ test('hero-title rotates through 5 phrases every 20 seconds, styles the prefix l
   await page.getByTestId('hero-phrase-dot-1').click();
   await expect(page.locator('#hero-title')).toHaveAttribute('data-phrase-index', '1');
   await expect(page.locator('#hero-title')).toContainText('Kill daily busywork');
+  await expect(page.locator('#hero-title')).toContainText('ship on time');
+  await expect(page.locator('#hero-title')).toContainText('vanish overtimes !');
+
+  const heroTitle = page.locator('#hero-title');
+  const box = await heroTitle.boundingBox();
+  expect(box).not.toBeNull();
+  await page.mouse.move(box!.x + box!.width * 0.75, box!.y + box!.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(box!.x + box!.width * 0.25, box!.y + box!.height / 2, { steps: 8 });
+  await page.mouse.up();
+  await expect(heroTitle).toHaveAttribute('data-phrase-index', '2');
+
+  const nextBox = await heroTitle.boundingBox();
+  expect(nextBox).not.toBeNull();
+  await page.mouse.move(nextBox!.x + nextBox!.width * 0.25, nextBox!.y + nextBox!.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(nextBox!.x + nextBox!.width * 0.75, nextBox!.y + nextBox!.height / 2, { steps: 8 });
+  await page.mouse.up();
+  await expect(heroTitle).toHaveAttribute('data-phrase-index', '1');
 
   await page.getByTestId('hero-phrase-dot-4').click();
   await expect(page.locator('#hero-title')).toHaveAttribute('data-phrase-index', '4');
   await expect(page.locator('#hero-title')).toContainText('Earn the Certificate');
+});
+
+test('learning stays current and every course can be repeated', async ({ page }) => {
+  await page.goto('/en/');
+  const section = page.getByTestId('evergreen-learning-section');
+  await expect(section).toBeVisible();
+  await expect(section.getByRole('heading', { level: 2 })).toContainText('Never fall behind');
+  await expect(section).toContainText('New AI courses keep you up to date');
+  await expect(section).toContainText('Redo any course as many times as you need');
+});
+
+test('Arabic evergreen heading stays clear of the mobile viewport edge while revealing', async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+  await page.goto('/ar/');
+  const section = page.getByTestId('evergreen-learning-section');
+  await section.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(100);
+  const heading = await page.locator('#evergreen-title').boundingBox();
+  expect(heading).not.toBeNull();
+  expect(heading!.y).toBeGreaterThanOrEqual(20);
+  const eyebrowStyle = await section.locator('.eyebrow').evaluate(element => {
+    const style = getComputedStyle(element);
+    return { fontSize: parseFloat(style.fontSize), color: style.color };
+  });
+  expect(eyebrowStyle.fontSize).toBeGreaterThanOrEqual(11);
+  expect(eyebrowStyle.color).toBe('rgb(63, 90, 66)');
 });
 
 test('primary call to action has visible foreground text', async ({ page }) => {

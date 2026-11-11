@@ -29,8 +29,8 @@
       },
       "two": {
         "line1": "Elimina la routine",
-        "line2": "esci in orario",
-        "line3": "varnish overtimes !"
+        "line2": "consegna in tempo",
+        "line3": "fai sparire gli straordinari !"
       },
       "three": {
         "line1": "Automatizza il lavoro noioso",
@@ -205,6 +205,19 @@
       "title": "Pronto a potenziare la tua azienda\ncon gli hAIroes?",
       "body": "Assumi hAIroes certificati o trasforma i tuoi dipendenti in hAIroes con hAIroMode.",
       "cta": "Torna alla panoramica"
+    }
+  },
+  "evergreen": {
+    "eyebrow": "SEMPRE PRONTO PER CIÒ CHE VIENE",
+    "title": "Non restare mai indietro.\nContinua a crescere con l’IA.",
+    "intro": "L’IA continua a evolversi e il tuo apprendimento può seguirla. hAIroMode aggiunge nuovi corsi pratici per mantenere attuali le tue competenze.",
+    "current": {
+      "title": "Nuovi corsi di IA per restare aggiornato",
+      "body": "Scopri nuovi percorsi mentre strumenti, flussi di lavoro e possibilità evolvono, senza dover ricominciare altrove."
+    },
+    "repeat": {
+      "title": "Ripeti ogni corso tutte le volte che ti serve",
+      "body": "Torna quando vuoi ripassare, fare più pratica o provare di nuovo. I tuoi corsi restano disponibili."
     }
   }
 }

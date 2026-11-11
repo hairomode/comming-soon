@@ -29,8 +29,8 @@
       },
       "two": {
         "line1": "Kill daily busywork",
-        "line2": "leave on time",
-        "line3": "varnish overtimes !"
+        "line2": "ship on time",
+        "line3": "vanish overtimes !"
       },
       "three": {
         "line1": "Automate the boring",
@@ -205,6 +205,19 @@
       "title": "Ready to power up your business\nwith hAIroes?",
       "body": "Hire certified hAIroes or turn your employees into hAIroes—all on hAIroMode.",
       "cta": "Back to learner overview"
+    }
+  },
+  "evergreen": {
+    "eyebrow": "ALWAYS READY FOR WHAT’S NEXT",
+    "title": "Never fall behind.\nKeep growing with AI.",
+    "intro": "AI keeps moving, and your learning can move with it. hAIroMode brings you new practical courses so your skills stay relevant.",
+    "current": {
+      "title": "New AI courses keep you up to date",
+      "body": "Discover fresh learning paths as tools, workflows and possibilities evolve—without starting over somewhere else."
+    },
+    "repeat": {
+      "title": "Redo any course as many times as you need",
+      "body": "Come back whenever you want a refresher, more practice or another attempt. Your learning stays available to you."
     }
   }
 }
