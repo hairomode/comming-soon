@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "hAIroMode — Weniger Routine. Mehr Möglichkeiten.",
+    "title": "hAIroMode — KI-Tools lernen = Mitarbeiter des Jahres werden.",
     "description": "Demnächst: praxisnahes KI-Lernen rund um deine Arbeit. Beschreibe eine Herausforderung, entdecke einen Kurs und sichere dir das fälschungssichere hAIroMode-Zertifikat für deinen Lebenslauf."
   },
   "nav": {
@@ -14,13 +14,40 @@
   },
   "hero": {
     "badge": "KI lernen, neu gedacht",
-    "line1": "Weniger Routine.",
-    "line2": "Mehr",
-    "line3": "Möglichkeiten.",
+    "line1": "KI-Tools lernen =",
+    "line2": "Mitarbeiter des Jahres",
+    "line3": "werden.",
     "description": "Deine tägliche Arbeit. Dein nächster Durchbruch. Mach die Aufgaben, die dich aufhalten, zum Ausgangspunkt für praxisnahes KI-Lernen. Schritt für Schritt.",
     "cta": "Entdecke, was kommt",
     "note": "Im Aufbau. Um dich herum gedacht.",
-    "aside": "Nicht noch ein Kurs zum Abhaken. Ein Weg nach vorn."
+    "aside": "Nicht noch ein Kurs zum Abhaken. Ein Weg nach vorn.",
+    "phrases": {
+      "one": {
+        "line1": "KI-Tools lernen =",
+        "line2": "Mitarbeiter des Jahres",
+        "line3": "werden."
+      },
+      "two": {
+        "line1": "Routine abschaffen =",
+        "line2": "jeden Freitag pünktlich",
+        "line3": "Feierabend."
+      },
+      "three": {
+        "line1": "Langweiliges automatisieren =",
+        "line2": "deine Wirkung im Job",
+        "line3": "verdoppeln."
+      },
+      "four": {
+        "line1": "Echte Prompts meistern =",
+        "line2": "Stunden an Arbeit",
+        "line3": "in Minuten lösen."
+      },
+      "five": {
+        "line1": "Zertifikat sichern =",
+        "line2": "mit jedem Lebenslauf",
+        "line3": "herausstechen."
+      }
+    }
   },
   "preview": {
     "label": "Ein Ausblick auf das, was kommt",

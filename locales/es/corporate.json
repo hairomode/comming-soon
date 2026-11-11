@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "hAIroMode — Menos tareas repetitivas. Más posibilidades.",
+    "title": "hAIroMode — Aprende herramientas de IA = conviértete en el Empleado del Año.",
     "description": "Próximamente: aprendizaje práctico de IA basado en tu trabajo real. Describe un reto, descubre un curso y obtén el Certificado infalsificable de hAIroMode para tu CV."
   },
   "nav": {
@@ -14,13 +14,40 @@
   },
   "hero": {
     "badge": "Otra forma de aprender IA",
-    "line1": "Menos tareas repetitivas.",
-    "line2": "Más",
-    "line3": "posibilidades.",
+    "line1": "Aprende herramientas de IA =",
+    "line2": "conviértete en el Empleado",
+    "line3": "del Año.",
     "description": "Tu trabajo real. Tu próximo gran paso. Convierte las tareas que te frenan en aprendizaje práctico de IA, paso a paso.",
     "cta": "Descubre lo que viene",
     "note": "En desarrollo. Pensado para ti.",
-    "aside": "No es otro curso que terminar. Es una forma de avanzar."
+    "aside": "No es otro curso que terminar. Es una forma de avanzar.",
+    "phrases": {
+      "one": {
+        "line1": "Aprende herramientas de IA =",
+        "line2": "conviértete en el Empleado",
+        "line3": "del Año."
+      },
+      "two": {
+        "line1": "Elimina la rutina diaria =",
+        "line2": "sal a tu hora",
+        "line3": "cada viernes."
+      },
+      "three": {
+        "line1": "Automatiza lo repetitivo =",
+        "line2": "duplica tu impacto",
+        "line3": "en el trabajo."
+      },
+      "four": {
+        "line1": "Domina prompts reales =",
+        "line2": "convierte horas de trabajo",
+        "line3": "en minutos."
+      },
+      "five": {
+        "line1": "Obtén el Certificado =",
+        "line2": "destaca con",
+        "line3": "tu CV."
+      }
+    }
   },
   "preview": {
     "label": "Un vistazo a lo que viene",

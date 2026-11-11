@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "hAIroMode — Moins de tâches répétitives. Plus de possibilités.",
+    "title": "hAIroMode — Apprenez les outils IA = devenez l’Employé de l’Année.",
     "description": "Bientôt : un apprentissage concret de l’IA, ancré dans votre travail. Décrivez un défi, découvrez un cours et obtenez un Certificat hAIroMode infalsifiable pour votre CV."
   },
   "nav": {
@@ -14,13 +14,40 @@
   },
   "hero": {
     "badge": "Une autre façon d’apprendre l’IA",
-    "line1": "Moins de tâches répétitives.",
-    "line2": "Plus de",
-    "line3": "possibilités.",
+    "line1": "Apprenez les outils IA =",
+    "line2": "devenez l’Employé",
+    "line3": "de l’Année.",
     "description": "Votre travail au quotidien. Votre prochain déclic. Transformez les tâches qui vous ralentissent en un apprentissage concret de l’IA, étape par étape.",
     "cta": "Découvrez ce qui se prépare",
     "note": "En préparation. Pensé pour vous.",
-    "aside": "Pas un cours de plus à terminer. Une façon d’avancer."
+    "aside": "Pas un cours de plus à terminer. Une façon d’avancer.",
+    "phrases": {
+      "one": {
+        "line1": "Apprenez les outils IA =",
+        "line2": "devenez l’Employé",
+        "line3": "de l’Année."
+      },
+      "two": {
+        "line1": "Éliminez les corvées =",
+        "line2": "finissez à l’heure",
+        "line3": "chaque vendredi."
+      },
+      "three": {
+        "line1": "Automatisez le répétitif =",
+        "line2": "doublez votre impact",
+        "line3": "au travail."
+      },
+      "four": {
+        "line1": "Maîtrisez les vrais prompts =",
+        "line2": "transformez des heures",
+        "line3": "en minutes."
+      },
+      "five": {
+        "line1": "Obtenez le Certificat =",
+        "line2": "démarquez-vous sur",
+        "line3": "chaque CV."
+      }
+    }
   },
   "preview": {
     "label": "Un aperçu de ce qui se prépare",

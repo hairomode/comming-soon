@@ -17,6 +17,11 @@ for (const locale of locales) {
     await expect(page.locator('html')).toHaveAttribute('dir', locale.code === 'ar' ? 'rtl' : 'ltr');
     await expect(page.locator('h1')).not.toBeEmpty();
     await expect(page.locator('h1')).not.toContainText('hero.');
+    if (locale.code === 'en' || locale.code === 'en-IN') {
+      await expect(page.locator('#hero-title')).toContainText('Learn AI tools =');
+      await expect(page.locator('#hero-title')).toContainText('become Employee');
+      await expect(page.locator('#hero-title')).toContainText('of the Year');
+    }
     await expect(page.locator('head link[rel="alternate"]')).toHaveCount(12);
     await expect(page).toHaveTitle(/hAIroMode/);
     await expect(page.getByTestId('certificate-section')).toBeVisible();
@@ -86,6 +91,23 @@ for (const locale of ['en', 'ar']) {
     expect(entResults.violations).toEqual([]);
   });
 }
+
+test('hero-title rotates through 5 phrases every 1.5 minutes and via indicator dots', async ({ page }) => {
+  await page.goto('/en/');
+  await expect(page.locator('#hero-title')).toHaveAttribute('data-rotation-ms', '90000');
+  await expect(page.locator('#hero-title')).toContainText('Learn AI tools =');
+  await expect(page.locator('#hero-title')).toContainText('become Employee');
+  await expect(page.locator('#hero-title')).toContainText('of the Year.');
+  await expect(page.locator('[data-testid^="hero-phrase-dot-"]')).toHaveCount(5);
+
+  await page.getByTestId('hero-phrase-dot-1').click();
+  await expect(page.locator('#hero-title')).toHaveAttribute('data-phrase-index', '1');
+  await expect(page.locator('#hero-title')).toContainText('Kill daily busywork =');
+
+  await page.getByTestId('hero-phrase-dot-4').click();
+  await expect(page.locator('#hero-title')).toHaveAttribute('data-phrase-index', '4');
+  await expect(page.locator('#hero-title')).toContainText('Earn the Certificate =');
+});
 
 test('primary call to action has visible foreground text', async ({ page }) => {
   await page.goto('/en/');
