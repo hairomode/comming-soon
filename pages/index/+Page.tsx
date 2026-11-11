@@ -1,6 +1,6 @@
 import { useState, useEffect, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AnimatePresence, motion, useReducedMotion, useScroll, useSpring } from 'motion/react';
+import { motion, useReducedMotion, useScroll, useSpring } from 'motion/react';
 import { useData } from 'vike-react/useData';
 import { useHydrated } from 'vike-react/useHydrated';
 import type { Data } from './+data';
@@ -184,20 +184,17 @@ function HomeContent() {
         <div className="hero-copy">
           <div className="eyebrow hero-eyebrow"><span className="tiny-spark">✳</span>{t('hero.badge')}</div>
           <h1 id="hero-title" data-phrase-index={phraseIndex} data-rotation-ms={HERO_ROTATION_MS}>
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.span
-                key={activeKey}
-                className="hero-phrase"
-                initial={reduce ? false : { opacity: 0, rotateX: -75, y: 18 }}
-                animate={{ opacity: 1, rotateX: 0, y: 0 }}
-                exit={reduce ? {} : { opacity: 0, rotateX: 75, y: -18 }}
-                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              >
-                <span>{t(`hero.phrases.${activeKey}.line1`)}</span>
-                <span>{t(`hero.phrases.${activeKey}.line2`)} <span className="hero-spark" aria-hidden="true">✳</span></span>
-                <span className="underlined-word">{t(`hero.phrases.${activeKey}.line3`)}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span>
-              </motion.span>
-            </AnimatePresence>
+            <motion.span
+              key={activeKey}
+              className="hero-phrase"
+              initial={false}
+              animate={reduce ? {} : { y: [14, 0], scale: [0.98, 1] }}
+              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <span>{t(`hero.phrases.${activeKey}.line1`)}</span>
+              <span>{t(`hero.phrases.${activeKey}.line2`)} <span className="hero-spark" aria-hidden="true">✳</span></span>
+              <span className="underlined-word">{t(`hero.phrases.${activeKey}.line3`)}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span>
+            </motion.span>
           </h1>
           <div className="hero-phrase-dots" role="tablist" aria-label={t('hero.badge')}>
             {HERO_PHRASE_KEYS.map((key, idx) => (
