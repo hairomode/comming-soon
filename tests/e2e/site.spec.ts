@@ -21,6 +21,8 @@ for (const locale of locales) {
       await expect(page.locator('#hero-title')).toContainText('Learn AI tools');
       await expect(page.locator('#hero-title')).toContainText('become Employee');
       await expect(page.locator('#hero-title')).toContainText('of the Year');
+      await expect(page.getByTestId('certificate-section')).toContainText('POWERUP YOUR CV WITH THE HAIROMODE CERTIFICATE');
+      await expect(page.getByTestId('certificate-section')).toContainText('Be hired for your');
     }
     await expect(page.locator('#hero-title')).not.toContainText('=');
     await expect(page.locator('#hero-title')).not.toContainText('✳');
