@@ -10,7 +10,8 @@
     "explore": "Explore the idea",
     "home": "hAIroMode home",
     "certificate": "The certificate",
-    "enterprise": "For Enterprise"
+    "enterprise": "For Enterprise",
+    "subtitle": "turn into the hero of your job"
   },
   "hero": {
     "badge": "A new way to learn AI",
@@ -53,14 +54,32 @@
     "label": "A glimpse of what’s coming",
     "tag": "Concept preview",
     "you": "Your everyday challenge",
-    "task": "I spend hours turning meeting notes into follow-up emails.",
     "path": "Your personal learning path",
-    "title": "From notes to next steps",
-    "step1": "Find the right AI workflow",
-    "step2": "Make it work with your tools",
-    "step3": "Put it into practice",
     "footnote": "Real challenges. Practical learning.",
-    "orbit": "A little learning. A real powerup."
+    "orbit": "A little learning. A real powerup.",
+    "examples": {
+      "one": {
+        "task": "I spend hours turning meeting notes into follow-up emails.",
+        "title": "From notes to next steps",
+        "step1": "Find the right AI workflow",
+        "step2": "Make it work with your tools",
+        "step3": "Put it into practice"
+      },
+      "two": {
+        "task": "I lose time turning spreadsheets into clear updates.",
+        "title": "From rows to decisions",
+        "step1": "Ask the right analysis question",
+        "step2": "Build a reusable workflow",
+        "step3": "Turn findings into a clear brief"
+      },
+      "three": {
+        "task": "I need to create a strong presentation before tomorrow.",
+        "title": "From blank slide to clear story",
+        "step1": "Shape the core message",
+        "step2": "Draft the slides with AI",
+        "step3": "Review, refine and present"
+      }
+    }
   },
   "strip": {
     "first": "Built around your work",

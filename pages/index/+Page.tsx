@@ -151,6 +151,8 @@ function CertificateCard() {
 
 const HERO_PHRASE_KEYS = ['one', 'two', 'three', 'four', 'five'] as const;
 const HERO_ROTATION_MS = 20_000;
+const PREVIEW_EXAMPLE_KEYS = ['one', 'two', 'three'] as const;
+const PREVIEW_ROTATION_MS = 60_000;
 
 function HomeContent() {
   const { t } = useTranslation();
@@ -158,12 +160,21 @@ function HomeContent() {
   const hydrated = useHydrated();
   const reduce = useReducedMotion();
   const [phraseIndex, setPhraseIndex] = useState(0);
+  const [previewIndex, setPreviewIndex] = useState(0);
   const [activePreviewStep, setActivePreviewStep] = useState(0);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
       setPhraseIndex(current => (current + 1) % HERO_PHRASE_KEYS.length);
     }, HERO_ROTATION_MS);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setPreviewIndex(current => (current + 1) % PREVIEW_EXAMPLE_KEYS.length);
+      setActivePreviewStep(0);
+    }, PREVIEW_ROTATION_MS);
     return () => window.clearInterval(timer);
   }, []);
 
@@ -176,8 +187,13 @@ function HomeContent() {
   }, [reduce]);
 
   const activeKey = HERO_PHRASE_KEYS[phraseIndex];
+  const activePreviewKey = PREVIEW_EXAMPLE_KEYS[previewIndex];
   const movePhrase = (delta: number) => {
     setPhraseIndex(current => (current + delta + HERO_PHRASE_KEYS.length) % HERO_PHRASE_KEYS.length);
+  };
+  const selectPreview = (index: number) => {
+    setPreviewIndex(index);
+    setActivePreviewStep(0);
   };
   const base = import.meta.env.BASE_URL;
   return (
@@ -227,6 +243,8 @@ function HomeContent() {
           <motion.div
             className="preview-stage"
             data-testid="hero-preview-stage"
+            data-example-index={previewIndex}
+            data-rotation-ms={PREVIEW_ROTATION_MS}
             initial={false}
             whileInView={reduce ? {} : { scale: [0.98, 1], y: [14, 0] }}
             viewport={{ once: false, amount: 0.25 }}
@@ -271,6 +289,7 @@ function HomeContent() {
               <Bolt />
             </motion.div>
             <motion.div
+              key={`challenge-${activePreviewKey}`}
               className="challenge-card card"
               data-testid="hero-challenge-card"
               initial={false}
@@ -279,7 +298,7 @@ function HomeContent() {
               transition={{ duration: 5.2, repeat: Infinity, ease: 'easeInOut' }}
             >
               <span className="card-eyebrow"><span className="outline-dot" />{t('preview.you')}</span>
-              <p>“{t('preview.task')}”<motion.span className="live-typing-caret" aria-hidden="true" initial={false} animate={reduce ? {} : { opacity: [1, 0.15, 1] }} transition={{ duration: 1.05, repeat: Infinity }} /></p>
+              <p>“{t(`preview.examples.${activePreviewKey}.task`)}”<motion.span className="live-typing-caret" aria-hidden="true" initial={false} animate={reduce ? {} : { opacity: [1, 0.15, 1] }} transition={{ duration: 1.05, repeat: Infinity }} /></p>
               <span className="challenge-cursor" aria-hidden="true" />
             </motion.div>
             <motion.div
@@ -293,6 +312,7 @@ function HomeContent() {
               <svg viewBox="0 0 18 22"><path d="M9 0v19m-6-6 6 6 6-6" fill="none" stroke="currentColor" strokeWidth="1.5" /></svg>
             </motion.div>
             <motion.div
+              key={`course-${activePreviewKey}`}
               className="course-card card"
               data-testid="hero-course-card"
               initial={false}
@@ -301,7 +321,7 @@ function HomeContent() {
               transition={{ duration: 5.8, repeat: Infinity, ease: 'easeInOut' }}
             >
               <div className="course-meta"><span className="course-icon"><Bolt /></span><span>{t('preview.path')}</span><span className="preview-tag badge">{t('preview.tag')}</span></div>
-              <h2>{t('preview.title')}</h2>
+              <h2>{t(`preview.examples.${activePreviewKey}.title`)}</h2>
               <ol>
                 {(['step1', 'step2', 'step3'] as const).map((key, index) => {
                   const isActive = activePreviewStep === index;
@@ -314,7 +334,7 @@ function HomeContent() {
                       transition={{ duration: 0.35 }}
                     >
                       <span className={`step-mark ${isActive ? 'step-complete' : ''}`} aria-hidden="true">{isActive ? '✓' : index + 1}</span>
-                      <span>{t(`preview.${key}`)}</span>
+                      <span>{t(`preview.examples.${activePreviewKey}.${key}`)}</span>
                       {isActive && <span className="mini-arrow" aria-hidden="true">↗</span>}
                     </motion.li>
                   );
@@ -333,6 +353,21 @@ function HomeContent() {
               <Spark className="bottom-spark" />
             </motion.span>
           </motion.div>
+          <div className="preview-example-dots" role="tablist" aria-label={t('preview.label')}>
+            {PREVIEW_EXAMPLE_KEYS.map((key, index) => (
+              <button
+                key={key}
+                type="button"
+                role="tab"
+                disabled={!hydrated}
+                data-testid={`preview-example-dot-${index}`}
+                aria-selected={previewIndex === index}
+                aria-label={`${index + 1} / ${PREVIEW_EXAMPLE_KEYS.length}: ${t(`preview.examples.${key}.title`)}`}
+                className={`preview-dot ${previewIndex === index ? 'preview-dot-active' : ''}`}
+                onClick={() => selectPreview(index)}
+              />
+            ))}
+          </div>
           <p className="preview-caption"><span aria-hidden="true">↳</span>{t('hero.aside')}</p>
         </div>
       </section>
@@ -482,7 +517,10 @@ export default function Page() {
     <a className="skip-link" href="#main">{t('a11y.skip')}</a>
     <div id="top" />
     <header className="site-header shell">
-      <a href={homeUrl} className="brand-link" aria-label={t('nav.home')}><Wordmark /></a>
+      <a href={homeUrl} className="brand-link header-brand-link" aria-label={t('nav.home')}>
+        <Wordmark />
+        <span className="brand-subtitle" data-testid="brand-subtitle">{t('nav.subtitle')}</span>
+      </a>
       <nav className="desktop-nav" aria-label={t('nav.explore')}>
         <a href={page === 'home' ? '#how-it-works' : `${homeUrl}#how-it-works`}>{t('nav.how')}</a>
         <a href={page === 'home' ? '#certificate' : `${homeUrl}#certificate`}>{t('nav.certificate')}</a>

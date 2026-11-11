@@ -17,7 +17,10 @@ for (const locale of locales) {
     await expect(page.locator('html')).toHaveAttribute('dir', locale.code === 'ar' ? 'rtl' : 'ltr');
     await expect(page.locator('h1')).not.toBeEmpty();
     await expect(page.locator('h1')).not.toContainText('hero.');
+    await expect(page.getByTestId('brand-subtitle')).not.toBeEmpty();
+    await expect(page.getByTestId('brand-subtitle')).not.toContainText('nav.');
     if (locale.code === 'en' || locale.code === 'en-IN') {
+      await expect(page.getByTestId('brand-subtitle')).toHaveText('turn into the hero of your job');
       await expect(page.locator('#hero-title')).toContainText('Learn AI tools');
       await expect(page.locator('#hero-title')).toContainText('become Employee');
       await expect(page.locator('#hero-title')).toContainText('of the Year');
@@ -71,6 +74,23 @@ test('language selection navigates to a prerendered locale and stays selected on
   await page.getByTestId('locale-select').selectOption('de');
   await expect(page).toHaveURL(/\/de\/enterprise\/$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'de');
+});
+
+test('header shows the job-hero subtitle within the header on desktop and mobile', async ({ page }) => {
+  for (const width of [1440, 360]) {
+    await page.setViewportSize({ width, height: 800 });
+    await page.goto('/en/');
+    const tagline = page.getByTestId('brand-subtitle');
+    await expect(tagline).toBeVisible();
+    await expect(tagline).toHaveText('turn into the hero of your job');
+    const taglineBox = await tagline.boundingBox();
+    const headerBox = await page.locator('.site-header').boundingBox();
+    expect(taglineBox).not.toBeNull();
+    expect(headerBox).not.toBeNull();
+    expect(taglineBox!.x).toBeGreaterThanOrEqual(0);
+    expect(taglineBox!.x + taglineBox!.width).toBeLessThanOrEqual(width);
+    expect(taglineBox!.y + taglineBox!.height).toBeLessThanOrEqual(headerBox!.y + headerBox!.height);
+  }
 });
 
 test('mobile navigation and anchors work', async ({ page }) => {
@@ -145,6 +165,51 @@ test('hero-title rotates through 5 phrases every 20 seconds, styles the prefix l
   await page.getByTestId('hero-phrase-dot-4').click();
   await expect(page.locator('#hero-title')).toHaveAttribute('data-phrase-index', '4');
   await expect(page.locator('#hero-title')).toContainText('Earn the Certificate');
+});
+
+test('mobile hero title and certificate widget are centered with a larger hero title', async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+  await page.goto('/en/');
+
+  const heroStyle = await page.locator('#hero-title').evaluate(element => {
+    const style = getComputedStyle(element);
+    return { textAlign: style.textAlign, fontSize: Number.parseFloat(style.fontSize) };
+  });
+  expect(heroStyle.textAlign).toBe('center');
+  expect(heroStyle.fontSize).toBeGreaterThan(32);
+
+  const certificate = page.getByTestId('certificate-card');
+  await certificate.scrollIntoViewIfNeeded();
+  await expect(certificate).toHaveCSS('text-align', 'center');
+  await expect(certificate.locator('.cert-card-top')).toHaveCSS('justify-content', 'center');
+  await expect(certificate.locator('.cert-qr-box')).toHaveCSS('align-items', 'center');
+});
+
+test('stage carousel offers three examples and rotates every minute', async ({ page }) => {
+  await page.clock.install();
+  await page.goto('/en/');
+  const stage = page.getByTestId('hero-preview-stage');
+  await expect(stage).toHaveAttribute('data-example-index', '0');
+  await expect(stage).toHaveAttribute('data-rotation-ms', '60000');
+  await expect(page.locator('[data-testid^="preview-example-dot-"]')).toHaveCount(3);
+  await expect(page.getByTestId('hero-challenge-card')).toContainText('meeting notes');
+
+  await page.clock.fastForward(60_000);
+  await expect(stage).toHaveAttribute('data-example-index', '1');
+  await expect(page.getByTestId('hero-challenge-card')).toContainText('spreadsheets');
+
+  await page.getByTestId('preview-example-dot-0').click();
+  await expect(stage).toHaveAttribute('data-example-index', '0');
+
+  await page.getByTestId('preview-example-dot-1').click();
+  await expect(stage).toHaveAttribute('data-example-index', '1');
+  await expect(page.getByTestId('hero-challenge-card')).toContainText('spreadsheets');
+  await expect(page.getByTestId('hero-course-card')).toContainText('From rows to decisions');
+
+  await page.getByTestId('preview-example-dot-2').click();
+  await expect(stage).toHaveAttribute('data-example-index', '2');
+  await expect(page.getByTestId('hero-challenge-card')).toContainText('presentation');
+  await expect(page.getByTestId('hero-course-card')).toContainText('From blank slide to clear story');
 });
 
 test('learning stays current and every course can be repeated', async ({ page }) => {

@@ -10,7 +10,8 @@
     "explore": "Die Idee entdecken",
     "home": "hAIroMode Startseite",
     "certificate": "Das Zertifikat",
-    "enterprise": "Für Unternehmen"
+    "enterprise": "Für Unternehmen",
+    "subtitle": "werde zum Helden in deinem Job"
   },
   "hero": {
     "badge": "KI lernen, neu gedacht",
@@ -53,14 +54,32 @@
     "label": "Ein Ausblick auf das, was kommt",
     "tag": "Konzeptvorschau",
     "you": "Deine Herausforderung im Alltag",
-    "task": "Ich brauche Stunden, um aus Besprechungsnotizen E-Mails zur Nachbereitung zu machen.",
     "path": "Dein persönlicher Lernpfad",
-    "title": "Von Notizen zu nächsten Schritten",
-    "step1": "Finde den passenden KI-Workflow",
-    "step2": "Passe ihn an deine Tools an",
-    "step3": "Setze ihn in die Praxis um",
     "footnote": "Echte Herausforderungen. Praxisnahes Lernen.",
-    "orbit": "Ein bisschen lernen. Wirklich weiterkommen."
+    "orbit": "Ein bisschen lernen. Wirklich weiterkommen.",
+    "examples": {
+      "one": {
+        "task": "Ich brauche Stunden, um aus Besprechungsnotizen E-Mails zur Nachbereitung zu machen.",
+        "title": "Von Notizen zu nächsten Schritten",
+        "step1": "Finde den passenden KI-Workflow",
+        "step2": "Passe ihn an deine Tools an",
+        "step3": "Setze ihn in die Praxis um"
+      },
+      "two": {
+        "task": "Ich verliere Zeit damit, Tabellen in klare Updates zu verwandeln.",
+        "title": "Von Zeilen zu Entscheidungen",
+        "step1": "Die richtige Analysefrage stellen",
+        "step2": "Einen wiederverwendbaren Ablauf erstellen",
+        "step3": "Erkenntnisse in eine klare Zusammenfassung verwandeln"
+      },
+      "three": {
+        "task": "Ich muss bis morgen eine überzeugende Präsentation erstellen.",
+        "title": "Von der leeren Folie zur klaren Geschichte",
+        "step1": "Die Kernbotschaft strukturieren",
+        "step2": "Folien mit KI entwerfen",
+        "step3": "Prüfen, verfeinern und präsentieren"
+      }
+    }
   },
   "strip": {
     "first": "Rund um deine Arbeit gedacht",

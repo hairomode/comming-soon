@@ -10,7 +10,8 @@
     "explore": "Découvrez l’idée",
     "home": "Accueil hAIroMode",
     "certificate": "Le certificat",
-    "enterprise": "Entreprise"
+    "enterprise": "Entreprise",
+    "subtitle": "devenez le héros de votre travail"
   },
   "hero": {
     "badge": "Une autre façon d’apprendre l’IA",
@@ -53,14 +54,32 @@
     "label": "Un aperçu de ce qui se prépare",
     "tag": "Aperçu du concept",
     "you": "Votre défi au quotidien",
-    "task": "Je passe des heures à transformer mes notes de réunion en e-mails de suivi.",
     "path": "Votre parcours personnalisé",
-    "title": "Des notes aux prochaines actions",
-    "step1": "Trouvez la bonne méthode avec l’IA",
-    "step2": "Adaptez-la à vos outils",
-    "step3": "Passez à la pratique",
     "footnote": "Des défis réels. Un apprentissage concret.",
-    "orbit": "Un peu d’apprentissage. Un vrai coup de pouce."
+    "orbit": "Un peu d’apprentissage. Un vrai coup de pouce.",
+    "examples": {
+      "one": {
+        "task": "Je passe des heures à transformer mes notes de réunion en e-mails de suivi.",
+        "title": "Des notes aux prochaines actions",
+        "step1": "Trouvez la bonne méthode avec l’IA",
+        "step2": "Adaptez-la à vos outils",
+        "step3": "Passez à la pratique"
+      },
+      "two": {
+        "task": "Je perds du temps à transformer des feuilles de calcul en mises à jour claires.",
+        "title": "Des lignes aux décisions",
+        "step1": "Poser la bonne question d’analyse",
+        "step2": "Créer un processus réutilisable",
+        "step3": "Transformer les résultats en synthèse claire"
+      },
+      "three": {
+        "task": "Je dois créer une présentation convaincante avant demain.",
+        "title": "De la diapositive vide au récit clair",
+        "step1": "Structurer le message essentiel",
+        "step2": "Préparer les diapositives avec l’IA",
+        "step3": "Relire, affiner et présenter"
+      }
+    }
   },
   "strip": {
     "first": "Pensé pour votre travail",

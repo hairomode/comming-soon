@@ -10,7 +10,8 @@
     "explore": "Scopri l’idea",
     "home": "Pagina iniziale di hAIroMode",
     "certificate": "Il certificato",
-    "enterprise": "Per le Aziende"
+    "enterprise": "Per le Aziende",
+    "subtitle": "diventa l’eroe del tuo lavoro"
   },
   "hero": {
     "badge": "Un nuovo modo di imparare l’IA",
@@ -53,14 +54,32 @@
     "label": "Un assaggio di ciò che arriverà",
     "tag": "Anteprima del progetto",
     "you": "La tua sfida quotidiana",
-    "task": "Passo ore a trasformare gli appunti delle riunioni in email di riepilogo e aggiornamento.",
     "path": "Il tuo percorso personale",
-    "title": "Dagli appunti ai prossimi passi",
-    "step1": "Trova il flusso di lavoro giusto con l’IA",
-    "step2": "Adattalo ai tuoi strumenti",
-    "step3": "Mettilo in pratica",
     "footnote": "Sfide reali. Apprendimento pratico.",
-    "orbit": "Impari un po’. Fai un vero passo avanti."
+    "orbit": "Impari un po’. Fai un vero passo avanti.",
+    "examples": {
+      "one": {
+        "task": "Passo ore a trasformare gli appunti delle riunioni in email di riepilogo e aggiornamento.",
+        "title": "Dagli appunti ai prossimi passi",
+        "step1": "Trova il flusso di lavoro giusto con l’IA",
+        "step2": "Adattalo ai tuoi strumenti",
+        "step3": "Mettilo in pratica"
+      },
+      "two": {
+        "task": "Perdo tempo a trasformare i fogli di calcolo in aggiornamenti chiari.",
+        "title": "Dalle righe alle decisioni",
+        "step1": "Formula la domanda di analisi giusta",
+        "step2": "Crea un flusso di lavoro riutilizzabile",
+        "step3": "Trasforma i risultati in una sintesi chiara"
+      },
+      "three": {
+        "task": "Devo creare una presentazione efficace entro domani.",
+        "title": "Dalla slide vuota a una storia chiara",
+        "step1": "Definisci il messaggio centrale",
+        "step2": "Prepara le slide con l’IA",
+        "step3": "Rivedi, perfeziona e presenta"
+      }
+    }
   },
   "strip": {
     "first": "Pensato per il tuo lavoro",

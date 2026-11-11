@@ -10,7 +10,8 @@
     "explore": "Explora la idea",
     "home": "Inicio de hAIroMode",
     "certificate": "El certificado",
-    "enterprise": "Empresas"
+    "enterprise": "Empresas",
+    "subtitle": "conviértete en el héroe de tu trabajo"
   },
   "hero": {
     "badge": "Otra forma de aprender IA",
@@ -53,14 +54,32 @@
     "label": "Un vistazo a lo que viene",
     "tag": "Vista previa del concepto",
     "you": "Tu reto del día a día",
-    "task": "Paso horas convirtiendo notas de reuniones en correos de seguimiento.",
     "path": "Tu ruta de aprendizaje personal",
-    "title": "De las notas a los próximos pasos",
-    "step1": "Encuentra el flujo de trabajo con IA adecuado",
-    "step2": "Adáptalo a tus herramientas",
-    "step3": "Ponlo en práctica",
     "footnote": "Retos reales. Aprendizaje práctico.",
-    "orbit": "Un poco de aprendizaje. Un gran impulso."
+    "orbit": "Un poco de aprendizaje. Un gran impulso.",
+    "examples": {
+      "one": {
+        "task": "Paso horas convirtiendo notas de reuniones en correos de seguimiento.",
+        "title": "De las notas a los próximos pasos",
+        "step1": "Encuentra el flujo de trabajo con IA adecuado",
+        "step2": "Adáptalo a tus herramientas",
+        "step3": "Ponlo en práctica"
+      },
+      "two": {
+        "task": "Pierdo tiempo convirtiendo hojas de cálculo en actualizaciones claras.",
+        "title": "De filas a decisiones",
+        "step1": "Plantea la pregunta de análisis adecuada",
+        "step2": "Crea un flujo de trabajo reutilizable",
+        "step3": "Convierte los hallazgos en un informe claro"
+      },
+      "three": {
+        "task": "Necesito crear una presentación convincente antes de mañana.",
+        "title": "De una diapositiva en blanco a una historia clara",
+        "step1": "Define el mensaje principal",
+        "step2": "Prepara las diapositivas con IA",
+        "step3": "Revisa, mejora y presenta"
+      }
+    }
   },
   "strip": {
     "first": "Pensado para tu trabajo",
