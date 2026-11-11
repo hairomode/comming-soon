@@ -153,14 +153,6 @@ function CertificateCard() {
 const HERO_PHRASE_KEYS = ['one', 'two', 'three', 'four', 'five'] as const;
 const HERO_ROTATION_MS = 20_000;
 
-function renderBeforeEquals(line: string) {
-  const idx = line.indexOf('=');
-  if (idx === -1) return <span className="hero-before-equals">{line}</span>;
-  const before = line.slice(0, idx);
-  const after = line.slice(idx);
-  return <><span className="hero-before-equals">{before}</span><span>{after}</span></>;
-}
-
 function HomeContent() {
   const { t } = useTranslation();
   const { locale } = useData<Data>();
@@ -199,8 +191,8 @@ function HomeContent() {
               animate={reduce ? {} : { y: [14, 0], scale: [0.98, 1] }}
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             >
-              <span>{renderBeforeEquals(t(`hero.phrases.${activeKey}.line1`))}</span>
-              <span>{t(`hero.phrases.${activeKey}.line2`)} <span className="hero-spark" aria-hidden="true">✳</span></span>
+              <span><span className="hero-before-equals">{t(`hero.phrases.${activeKey}.line1`)}</span></span>
+              <span>{t(`hero.phrases.${activeKey}.line2`)}</span>
               <span className="underlined-word">{t(`hero.phrases.${activeKey}.line3`)}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span>
             </motion.span>
           </h1>

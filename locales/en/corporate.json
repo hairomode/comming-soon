@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "hAIroMode — Learn AI tools = become Employee of the Year.",
+    "title": "hAIroMode — Learn AI tools — become Employee of the Year.",
     "description": "Coming soon: practical AI learning built around your real work. Describe a challenge, discover a course, and earn an unfakable hAIroMode Certificate for your CV."
   },
   "nav": {
@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "A new way to learn AI",
-    "line1": "Learn AI tools =",
+    "line1": "Learn AI tools",
     "line2": "become Employee",
     "line3": "of the Year.",
     "description": "Your real work. Your next breakthrough. Turn the tasks that slow you down into practical, step-by-step AI learning.",
@@ -23,27 +23,27 @@
     "aside": "Not another course to finish. A way forward.",
     "phrases": {
       "one": {
-        "line1": "Learn AI tools =",
+        "line1": "Learn AI tools",
         "line2": "become Employee",
         "line3": "of the Year."
       },
       "two": {
-        "line1": "Kill daily busywork =",
+        "line1": "Kill daily busywork",
         "line2": "leave on time",
         "line3": "every Friday."
       },
       "three": {
-        "line1": "Automate the boring =",
+        "line1": "Automate the boring",
         "line2": "double your impact",
         "line3": "at work."
       },
       "four": {
-        "line1": "Master real prompts =",
+        "line1": "Master real prompts",
         "line2": "turn hours of work",
         "line3": "into minutes."
       },
       "five": {
-        "line1": "Earn the Certificate =",
+        "line1": "Earn the Certificate",
         "line2": "stand out on",
         "line3": "every CV."
       }

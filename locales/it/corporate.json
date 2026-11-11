@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "hAIroMode — Impara gli strumenti IA = diventa il Dipendente dell’Anno.",
+    "title": "hAIroMode — Impara gli strumenti IA — diventa il Dipendente dell’Anno.",
     "description": "In arrivo: un modo pratico di imparare l’IA sul tuo lavoro reale. Descrivi una sfida, scopri un corso e ottieni il Certificato infalsificabile hAIroMode per il tuo CV."
   },
   "nav": {
@@ -14,7 +14,7 @@
   },
   "hero": {
     "badge": "Un nuovo modo di imparare l’IA",
-    "line1": "Impara gli strumenti IA =",
+    "line1": "Impara gli strumenti IA",
     "line2": "diventa il Dipendente",
     "line3": "dell’Anno.",
     "description": "Il tuo lavoro reale. Il tuo prossimo salto di qualità. Trasforma le attività che ti rallentano in un percorso pratico di apprendimento dell’IA, passo dopo passo.",
@@ -23,27 +23,27 @@
     "aside": "Non un altro corso da finire. Un modo per andare avanti.",
     "phrases": {
       "one": {
-        "line1": "Impara gli strumenti IA =",
+        "line1": "Impara gli strumenti IA",
         "line2": "diventa il Dipendente",
         "line3": "dell’Anno."
       },
       "two": {
-        "line1": "Elimina la routine =",
+        "line1": "Elimina la routine",
         "line2": "esci in orario",
         "line3": "ogni venerdì."
       },
       "three": {
-        "line1": "Automatizza il lavoro noioso =",
+        "line1": "Automatizza il lavoro noioso",
         "line2": "raddoppia il tuo impatto",
         "line3": "al lavoro."
       },
       "four": {
-        "line1": "Padroneggia prompt reali =",
+        "line1": "Padroneggia prompt reali",
         "line2": "trasforma ore di lavoro",
         "line3": "in minuti."
       },
       "five": {
-        "line1": "Ottieni il Certificato =",
+        "line1": "Ottieni il Certificato",
         "line2": "distinguiti con",
         "line3": "il tuo CV."
       }
