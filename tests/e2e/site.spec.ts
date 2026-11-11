@@ -92,13 +92,26 @@ for (const locale of ['en', 'ar']) {
   });
 }
 
-test('hero-title rotates through 5 phrases every 1.5 minutes and via indicator dots', async ({ page }) => {
+test('hero-title rotates through 5 phrases every 20 seconds, styles the part before "=", and switches via indicator dots', async ({ page }) => {
   await page.goto('/en/');
-  await expect(page.locator('#hero-title')).toHaveAttribute('data-rotation-ms', '90000');
+  await expect(page.locator('#hero-title')).toHaveAttribute('data-rotation-ms', '20000');
   await expect(page.locator('#hero-title')).toContainText('Learn AI tools =');
   await expect(page.locator('#hero-title')).toContainText('become Employee');
   await expect(page.locator('#hero-title')).toContainText('of the Year.');
   await expect(page.locator('[data-testid^="hero-phrase-dot-"]')).toHaveCount(5);
+
+  const styleDiff = await page.locator('#hero-title').evaluate(el => {
+    const before = el.querySelector('.hero-before-equals')!;
+    const h1Style = getComputedStyle(el);
+    const beforeStyle = getComputedStyle(before);
+    return {
+      sizeDiffPx: parseFloat(h1Style.fontSize) - parseFloat(beforeStyle.fontSize),
+      h1Color: h1Style.color,
+      beforeColor: beforeStyle.color,
+    };
+  });
+  expect(Math.round(styleDiff.sizeDiffPx)).toBe(8);
+  expect(styleDiff.beforeColor).not.toBe(styleDiff.h1Color);
 
   await page.getByTestId('hero-phrase-dot-1').click();
   await expect(page.locator('#hero-title')).toHaveAttribute('data-phrase-index', '1');

@@ -367,6 +367,7 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 #hero-title { perspective: 900px; min-height: 3.2em; }
 .hero-phrase { display: block; transform-origin: 50% 50%; }
 .hero-phrase > span { display: block; }
+.hero-before-equals { font-size: calc(1em - 0.5rem); color: #4d6753; font-weight: 400; }
 .hero-phrase-dots { display: flex; align-items: center; gap: 6px; margin-top: 22px; flex-wrap: wrap; }
 .phrase-dot { min-width: 44px; min-height: 44px; padding: 0; border: 0; background: transparent; display: grid; place-items: center; cursor: pointer; }
 .phrase-dot::before { content: ''; width: 10px; height: 10px; border-radius: 100px; background: #cbd5bd; border: 1px solid #9eb089; transition: width .25s, background .25s; }
