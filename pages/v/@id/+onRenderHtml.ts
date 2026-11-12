@@ -62,7 +62,7 @@ export function onRenderHtml(pageContext: PageContextServer) {
     `<li><span class="course-name">${c.category}</span><span class="course-count">${c.count}</span></li>`
   ).join('');
   const badgesHtml = cert.badges.map(b => 
-    `<span class="badge">${b}</span>`
+    `<span class="verify-badge">${b}</span>`
   ).join('');
 
   return escapeInject`<!DOCTYPE html>
