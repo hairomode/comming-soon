@@ -202,8 +202,8 @@
         },
         "two": {
           "line1": "Où en sont vos employés avec l'IA ?",
-          "line2": "Le savez-vous ?",
-          "line3": ""
+          "line2": "",
+          "line3": "Le savez-vous ?"
         },
         "three": {
           "line1": "Votre forfait IA est-il adapté,",

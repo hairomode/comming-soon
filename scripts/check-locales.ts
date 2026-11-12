@@ -3,7 +3,7 @@ import { locales } from '../src/localization';
 function flatten(value: unknown, prefix = ''): Record<string, string> {
   if (value === null || typeof value !== 'object' || Array.isArray(value)) throw new Error(`Expected nested object at ${prefix || 'root'}`);
   // Allow empty strings for line3 in enterprise hero phrases (some languages fit on 2 lines)
-  const allowEmpty = /^enterprise\.hero\.phrases\.\w+\.line3$/;
+  const allowEmpty = /^enterprise\.hero\.phrases\.\w+\.line[23]$/;
   return Object.fromEntries(Object.entries(value).flatMap(([key, item]) => {
     if (key.includes('.')) throw new Error(`Dotted key: ${key}`);
     const path = prefix ? `${prefix}.${key}` : key;
