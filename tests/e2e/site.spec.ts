@@ -53,6 +53,11 @@ for (const locale of locales) {
     expect(entResponse?.status()).toBe(200);
     await expect(page).toHaveTitle(/hAIroMode/);
     await expect(page.getByTestId('enterprise-pillars')).toContainText('hAIroes');
+    await expect(page.locator('#ent-hero-title')).not.toContainText('✳');
+    await expect(page.locator('#ent-hero-title .hero-spark')).toHaveCount(0);
+    if (locale.code === 'fr') {
+      await expect(page.getByTestId('brand-subtitle')).toHaveText('devenez le héros de votre boulot');
+    }
     for (const width of [360, 768, 1440]) {
       await page.setViewportSize({ width, height: 900 });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);

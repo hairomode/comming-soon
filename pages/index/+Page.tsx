@@ -464,7 +464,7 @@ function EnterpriseContent() {
       <section className="hero-section shell" aria-labelledby="ent-hero-title">
         <div className="hero-copy">
           <div className="eyebrow hero-eyebrow"><span className="tiny-spark">✳</span>{t('enterprise.hero.badge')}</div>
-          <h1 id="ent-hero-title"><span>{t('enterprise.hero.line1')}</span><span>{t('enterprise.hero.line2')} <span className="hero-spark" aria-hidden="true">✳</span></span><span className="underlined-word">{t('enterprise.hero.line3')}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span></h1>
+          <h1 id="ent-hero-title"><span>{t('enterprise.hero.line1')}</span><span>{t('enterprise.hero.line2')}</span><span className="underlined-word">{t('enterprise.hero.line3')}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span></h1>
           <p className="hero-description">{t('enterprise.hero.description')}</p>
           <div className="hero-action"><a className="btn btn-primary main-cta" href="#pillars">{t('enterprise.hero.ctaPrimary')}<Arrow /></a><p><span className="small-dot" />{t('enterprise.hero.note')}</p></div>
         </div>
