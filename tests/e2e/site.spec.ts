@@ -433,6 +433,5 @@ test('French enterprise hero has correct rotating phrases', async ({ page }) => 
   // Phrase two should NOT have the connector and should show "Le savez-vous ?"
   await page.getByTestId('ent-hero-phrase-dot-1').click();
   await expect(heroTitle.locator('.hero-connector')).toHaveCount(0);
-  await expect(heroTitle).toContainText('Le savez-');
-  await expect(heroTitle).toContainText('vous ?');
+  await expect(heroTitle).toContainText('Le savez-vous ?');
 });
