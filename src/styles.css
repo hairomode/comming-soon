@@ -445,10 +445,3 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .verify-not-found p { color: var(--muted); margin: 8px 0; }
 .verify-not-found code { background: color-mix(in oklab, var(--ink) 8%, var(--paper)); padding: 2px 8px; border-radius: 4px; font-size: var(--type-xs); }
 .verify-hint { font-size: var(--type-xs); }
-@media (max-width: 480px) {
-  .verify-page { padding: 20px 12px; }
-  .verify-card { padding: 24px 20px; }
-  .verify-status { gap: 10px; font-size: var(--type-xs); }
-  .verify-status svg { width: 36px; height: 36px; }
-  .verify-card h1 { font-size: var(--type-xl); }
-}
