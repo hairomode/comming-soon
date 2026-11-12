@@ -169,7 +169,11 @@ export function renderCertificate(
   return documentShell(locale, base, `${m.verified}: ${cert.name} | hAIroMode`, body);
 }
 
-/** Full document for a verification URL, localized. */
+/**
+ * Full document for a verification URL, localized.
+ * The not-found sheet is only reachable in dev/SSR: the static build prerenders
+ * real certificates only, so unknown ids are served as a 404 by the host.
+ */
 export function renderVerifyDocument(id: string, locale: Locale, base: string, m: VerifyMessages) {
   const cert = CERTIFICATES[id];
   return cert ? renderCertificate(cert, id, locale, base, m) : renderNotFound(id, locale, base, m);

@@ -480,14 +480,15 @@ for (const locale of locales) {
   });
 }
 
-test('unprefixed /v/:id stays English for the printed QR code, and unknown ids are rejected', async ({ page }) => {
+test('unprefixed /v/:id stays English for the printed QR code, and unknown ids are not served', async ({ page }) => {
   const response = await page.goto('/v/847291/');
   expect(response?.status()).toBe(200);
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('.cert-title')).toHaveText('Certificate of Achievement');
 
-  await page.goto('/en/v/000000/');
-  await expect(page.locator('.cert-title')).toHaveText('Certificate Not Found');
+  // Only real certificates are prerendered, so an unknown id has no document at all.
+  const missing = await page.goto('/en/v/000000/');
+  expect(missing?.status()).toBe(404);
 });
 
 test('certificate sample link navigates from the home widget to the localized sample', async ({ page }) => {
