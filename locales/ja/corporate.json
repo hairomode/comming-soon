@@ -179,7 +179,8 @@
       "urlLabel": "検証URL",
       "urlValue": "ai.romode.me/v/847291",
       "qrCaption": "QRスキャン → 名前+コード検証",
-      "cvTag": "CVと企業採用に対応"
+      "cvTag": "CVと企業採用に対応",
+      "sampleLink": "サンプルを見る"
     }
   },
   "enterprise": {
@@ -259,6 +260,34 @@
     "repeat": {
       "title": "何度でもコースをやり直す",
       "body": "復習したいときはいつでも戻る。"
+    }
+  },
+  "verify": {
+    "verified": "検証済み",
+    "title": "修了証",
+    "subtitle": "AI ラーニング エクセレンス プログラム",
+    "certifyThat": "次の者が",
+    "completed": "下記の課程を修了したことを証明します",
+    "pathsLabel": "AI 学習パス",
+    "breakdown": "コース内訳",
+    "badgesEarned": "獲得バッジ",
+    "scanToVerify": "スキャンして検証",
+    "codeLabel": "検証コード",
+    "dateLabel": "発行日",
+    "idLabel": "証明書ID",
+    "verifyLabel": "検証",
+    "courses": {
+      "fundamentals": "AI の基礎",
+      "machineLearning": "機械学習",
+      "advanced": "AI 応用実践"
+    },
+    "badges": {
+      "attendance": "皆勤"
+    },
+    "notFound": {
+      "title": "証明書が見つかりません",
+      "body": "このIDの証明書は存在しません",
+      "hint": "QRコードまたはURLをご確認のうえ、もう一度お試しください。"
     }
   }
 }

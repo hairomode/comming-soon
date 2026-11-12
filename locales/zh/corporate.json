@@ -179,7 +179,8 @@
       "urlLabel": "官方核验链接",
       "urlValue": "ai.romode.me/v/847291",
       "qrCaption": "扫码 → 核验姓名 + 6 位验证码",
-      "cvTag": "适配个人简历与企业招聘核验"
+      "cvTag": "适配个人简历与企业招聘核验",
+      "sampleLink": "查看示例"
     }
   },
   "enterprise": {
@@ -259,6 +260,34 @@
     "repeat": {
       "title": "任何课程都可以按需反复学习",
       "body": "无论是复习、加强练习还是再次尝试，你都可以随时回来，课程会一直为你保留。"
+    }
+  },
+  "verify": {
+    "verified": "已验证",
+    "title": "结业证书",
+    "subtitle": "AI 学习卓越计划",
+    "certifyThat": "兹证明",
+    "completed": "已成功完成",
+    "pathsLabel": "条 AI 学习路径",
+    "breakdown": "课程明细",
+    "badgesEarned": "已获徽章",
+    "scanToVerify": "扫码验证",
+    "codeLabel": "验证码",
+    "dateLabel": "日期",
+    "idLabel": "证书编号",
+    "verifyLabel": "验证",
+    "courses": {
+      "fundamentals": "AI 基础",
+      "machineLearning": "机器学习",
+      "advanced": "AI 高级应用"
+    },
+    "badges": {
+      "attendance": "全勤"
+    },
+    "notFound": {
+      "title": "未找到证书",
+      "body": "不存在该编号的证书",
+      "hint": "请检查二维码或网址后重试。"
     }
   }
 }

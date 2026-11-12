@@ -5,6 +5,7 @@ import { useData } from 'vike-react/useData';
 import { useHydrated } from 'vike-react/useHydrated';
 import type { Data } from './+data';
 import { locales, localizedPath, isLocale } from '../../src/localization';
+import { verifyPath } from '../../src/certificate';
 
 function Bolt({ className = '' }: { className?: string }) {
   return <svg className={className} viewBox="0 0 32 40" fill="none" aria-hidden="true"><path d="M19 1 2 23h12l-3 16L30 15H17L19 1Z" fill="currentColor" /></svg>;
@@ -88,7 +89,9 @@ function LanguageSelect() {
 }
 function CertificateCard() {
   const { t } = useTranslation();
+  const { locale } = useData<Data>();
   const reduce = useReducedMotion();
+  const sampleHref = verifyPath(locale, import.meta.env.BASE_URL);
   return (
     <motion.div
       className="certificate-card card"
@@ -144,6 +147,10 @@ function CertificateCard() {
       <div className="cert-card-footer">
         <span className="status-dot" />
         <span>{t('certificate.card.cvTag')}</span>
+        <a className="cert-sample-link" data-testid="certificate-sample-link" href={sampleHref}>
+          {t('certificate.card.sampleLink')}
+          <Arrow />
+        </a>
       </div>
     </motion.div>
   );

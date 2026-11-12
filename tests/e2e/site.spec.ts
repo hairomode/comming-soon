@@ -34,6 +34,8 @@ for (const locale of locales) {
     await expect(page.getByTestId('certificate-section')).toBeVisible();
     await expect(page.getByTestId('certificate-card')).toContainText('482 • 917');
     await expect(page.getByTestId('certificate-card')).toContainText('ai.romode.me/v/847291');
+    await expect(page.getByTestId('certificate-sample-link')).toBeVisible();
+    await expect(page.getByTestId('certificate-sample-link')).toHaveAttribute('href', `/${locale.code}/v/847291/`);
 
     const scriptLocale = ['zh', 'ar', 'hi', 'bn', 'ta'].includes(locale.code);
     await expect(page.locator('link[rel="stylesheet"][href*="/fonts/"]')).toHaveCount(scriptLocale ? 1 : 0);
@@ -434,4 +436,66 @@ test('French enterprise hero has correct rotating phrases', async ({ page }) => 
   await page.getByTestId('ent-hero-phrase-dot-1').click();
   await expect(heroTitle.locator('.hero-connector')).toHaveCount(0);
   await expect(heroTitle).toContainText('Le savez-vous ?');
+});
+
+for (const locale of locales) {
+  test(`${locale.code}: localized certificate sample page renders translated`, async ({ page }) => {
+    const errors: string[] = [];
+    page.on('pageerror', error => errors.push(error.message));
+
+    const response = await page.goto(`/${locale.code}/v/847291/`);
+    expect(response?.status()).toBe(200);
+    const html = await response!.text();
+    expect(html).toContain(`lang="${locale.code}"`);
+    expect(html).toContain(`dir="${locale.code === 'ar' ? 'rtl' : 'ltr'}"`);
+
+    await expect(page.locator('.cert-title')).not.toBeEmpty();
+    await expect(page.locator('.cert-name')).toHaveText('Alex Rivera');
+    await expect(page.locator('.cert-total-num')).toHaveText('30');
+    await expect(page.locator('.cert-courses li')).toHaveCount(3);
+    await expect(page.locator('.verify-badge')).toHaveCount(1);
+    await expect(page.locator('.cert-code-box')).toHaveText('482 917');
+    await expect(page.locator('.cert-qr-img')).toBeVisible();
+
+    // Translated: non-English locales must not show the English title
+    if (!locale.code.startsWith('en')) {
+      await expect(page.locator('.cert-title')).not.toHaveText('Certificate of Achievement');
+    }
+
+    const scriptLocale = ['zh', 'ar', 'hi', 'bn', 'ta'].includes(locale.code);
+    await expect(page.locator('link[rel="stylesheet"][href*="/fonts/"]')).toHaveCount(scriptLocale ? 1 : 0);
+
+    // The verification code pill must be readable, not ink-on-ink
+    const pill = await page.locator('.cert-code-box').evaluate(element => {
+      const style = getComputedStyle(element);
+      return { color: style.color, background: style.backgroundColor };
+    });
+    expect(pill.color).not.toBe(pill.background);
+
+    for (const width of [360, 768, 1440]) {
+      await page.setViewportSize({ width, height: 900 });
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    }
+    expect(errors).toEqual([]);
+  });
+}
+
+test('unprefixed /v/:id stays English for the printed QR code, and unknown ids are rejected', async ({ page }) => {
+  const response = await page.goto('/v/847291/');
+  expect(response?.status()).toBe(200);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('.cert-title')).toHaveText('Certificate of Achievement');
+
+  await page.goto('/en/v/000000/');
+  await expect(page.locator('.cert-title')).toHaveText('Certificate Not Found');
+});
+
+test('certificate sample link navigates from the home widget to the localized sample', async ({ page }) => {
+  await page.goto('/fr/');
+  const link = page.getByTestId('certificate-sample-link');
+  await link.scrollIntoViewIfNeeded();
+  await expect(link).toHaveText(/Voir un exemple/);
+  await link.click();
+  await expect(page).toHaveURL(/\/fr\/v\/847291\/$/);
+  await expect(page.locator('.cert-title')).toHaveText('Certificat de réussite');
 });

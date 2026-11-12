@@ -179,7 +179,8 @@
       "urlLabel": "URL xác minh",
       "urlValue": "ai.romode.me/v/847291",
       "qrCaption": "Quét QR → Xác minh tên + mã",
-      "cvTag": "Sẵn sàng cho CV và tuyển dụng"
+      "cvTag": "Sẵn sàng cho CV và tuyển dụng",
+      "sampleLink": "Xem mẫu"
     }
   },
   "enterprise": {
@@ -259,6 +260,34 @@
     "repeat": {
       "title": "Làm lại bất kỳ khóa học nào nhiều lần",
       "body": "Quay lại bất cứ khi nào bạn muốn ôn tập."
+    }
+  },
+  "verify": {
+    "verified": "Đã xác minh",
+    "title": "Chứng nhận thành tích",
+    "subtitle": "Chương trình xuất sắc về AI",
+    "certifyThat": "Chứng nhận rằng",
+    "completed": "đã hoàn thành xuất sắc",
+    "pathsLabel": "lộ trình học AI",
+    "breakdown": "Chi tiết khóa học",
+    "badgesEarned": "Huy hiệu đạt được",
+    "scanToVerify": "Quét để xác minh",
+    "codeLabel": "Mã xác minh",
+    "dateLabel": "Ngày",
+    "idLabel": "Mã chứng nhận",
+    "verifyLabel": "Xác minh",
+    "courses": {
+      "fundamentals": "Nền tảng AI",
+      "machineLearning": "Học máy",
+      "advanced": "Ứng dụng AI nâng cao"
+    },
+    "badges": {
+      "attendance": "Chuyên cần"
+    },
+    "notFound": {
+      "title": "Không tìm thấy chứng nhận",
+      "body": "Không có chứng nhận nào với mã",
+      "hint": "Vui lòng kiểm tra mã QR hoặc URL rồi thử lại."
     }
   }
 }

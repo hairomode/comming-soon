@@ -179,7 +179,8 @@
       "urlLabel": "URL de vérification",
       "urlValue": "ai.romode.me/v/847291",
       "qrCaption": "Scanner le QR → Vérifier nom + code à 6 chiffres",
-      "cvTag": "Prêt pour votre CV et les recruteurs"
+      "cvTag": "Prêt pour votre CV et les recruteurs",
+      "sampleLink": "Voir un exemple"
     }
   },
   "enterprise": {
@@ -259,6 +260,34 @@
     "repeat": {
       "title": "Refaites chaque cours autant de fois que nécessaire",
       "body": "Revenez pour réviser, vous entraîner davantage ou faire une nouvelle tentative. Vos cours restent à votre disposition."
+    }
+  },
+  "verify": {
+    "verified": "Vérifié",
+    "title": "Certificat de réussite",
+    "subtitle": "Programme d'excellence en IA",
+    "certifyThat": "Nous certifions que",
+    "completed": "a terminé avec succès",
+    "pathsLabel": "parcours d'apprentissage IA",
+    "breakdown": "Détail des cours",
+    "badgesEarned": "Badges obtenus",
+    "scanToVerify": "Scanner pour vérifier",
+    "codeLabel": "Code de vérification",
+    "dateLabel": "Date",
+    "idLabel": "Identifiant du certificat",
+    "verifyLabel": "Vérifier",
+    "courses": {
+      "fundamentals": "Fondamentaux de l'IA",
+      "machineLearning": "Machine learning",
+      "advanced": "Applications avancées de l'IA"
+    },
+    "badges": {
+      "attendance": "Assiduité"
+    },
+    "notFound": {
+      "title": "Certificat introuvable",
+      "body": "Aucun certificat ne correspond à l'identifiant",
+      "hint": "Vérifiez le QR code ou l'URL, puis réessayez."
     }
   }
 }

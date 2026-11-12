@@ -179,7 +179,8 @@
       "urlLabel": "Prüf-URL",
       "urlValue": "ai.romode.me/v/847291",
       "qrCaption": "QR scannen → Name + 6-stelligen Code prüfen",
-      "cvTag": "Bereit für Lebenslauf & Recruiting"
+      "cvTag": "Bereit für Lebenslauf & Recruiting",
+      "sampleLink": "Beispiel ansehen"
     }
   },
   "enterprise": {
@@ -259,6 +260,34 @@
     "repeat": {
       "title": "Wiederhole jeden Kurs so oft du möchtest",
       "body": "Kehre jederzeit zurück, um Wissen aufzufrischen, mehr zu üben oder es erneut zu versuchen. Deine Kurse bleiben verfügbar."
+    }
+  },
+  "verify": {
+    "verified": "Verifiziert",
+    "title": "Leistungszertifikat",
+    "subtitle": "Programm für KI-Exzellenz",
+    "certifyThat": "Hiermit wird bestätigt, dass",
+    "completed": "erfolgreich abgeschlossen hat",
+    "pathsLabel": "KI-Lernpfade",
+    "breakdown": "Kursübersicht",
+    "badgesEarned": "Erhaltene Badges",
+    "scanToVerify": "Zum Prüfen scannen",
+    "codeLabel": "Prüfcode",
+    "dateLabel": "Datum",
+    "idLabel": "Zertifikats-ID",
+    "verifyLabel": "Prüfen",
+    "courses": {
+      "fundamentals": "KI-Grundlagen",
+      "machineLearning": "Maschinelles Lernen",
+      "advanced": "Fortgeschrittene KI-Anwendungen"
+    },
+    "badges": {
+      "attendance": "Teilnahmetreue"
+    },
+    "notFound": {
+      "title": "Zertifikat nicht gefunden",
+      "body": "Es existiert kein Zertifikat mit der ID",
+      "hint": "Bitte prüfen Sie den QR-Code oder die URL und versuchen Sie es erneut."
     }
   }
 }

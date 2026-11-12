@@ -179,7 +179,8 @@
       "urlLabel": "Verification URL",
       "urlValue": "ai.romode.me/v/847291",
       "qrCaption": "Scan QR → Verify name + 6-digit code",
-      "cvTag": "Ready for your CV & enterprise hiring"
+      "cvTag": "Ready for your CV & enterprise hiring",
+      "sampleLink": "See a sample"
     }
   },
   "enterprise": {
@@ -259,6 +260,34 @@
     "repeat": {
       "title": "Redo any course as many times as you need",
       "body": "Come back whenever you want a refresher, more practice or another attempt. Your learning stays available to you."
+    }
+  },
+  "verify": {
+    "verified": "Verified",
+    "title": "Certificate of Achievement",
+    "subtitle": "AI Learning Excellence Program",
+    "certifyThat": "This is to certify that",
+    "completed": "has successfully completed",
+    "pathsLabel": "AI Learning Paths",
+    "breakdown": "Course Breakdown",
+    "badgesEarned": "Badges Earned",
+    "scanToVerify": "Scan to verify",
+    "codeLabel": "Verification Code",
+    "dateLabel": "Date",
+    "idLabel": "Certificate ID",
+    "verifyLabel": "Verify",
+    "courses": {
+      "fundamentals": "AI Fundamentals",
+      "machineLearning": "Machine Learning",
+      "advanced": "Advanced AI Applications"
+    },
+    "badges": {
+      "attendance": "Attendance"
+    },
+    "notFound": {
+      "title": "Certificate Not Found",
+      "body": "No certificate exists with ID",
+      "hint": "Please check the QR code or URL and try again."
     }
   }
 }
