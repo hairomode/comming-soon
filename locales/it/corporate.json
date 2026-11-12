@@ -189,13 +189,28 @@
     },
     "hero": {
       "badge": "hAIroMode per le Aziende",
-      "line1": "Assumi i nostri hAIroes.",
-      "line2": "O trasforma il tuo team",
-      "line3": "in hAIroes.",
       "description": "Fai crescere la tua impresa in due modi: assumi candidati garantiti dal nostro Certificato infalsificabile (QR + codice a 6 cifre) o trasforma i tuoi dipendenti in hAIroes capaci di padroneggiare l’IA.",
       "ctaPrimary": "Scopri i due pilastri",
       "ctaSecondary": "Verifica il Certificato",
-      "note": "Pensato per i team HR moderni e le aziende orientate al futuro."
+      "note": "Pensato per i team HR moderni e le aziende orientate al futuro.",
+      "connector": "o",
+      "phrases": {
+        "one": {
+          "line1": "Assumete i nostri hAIroes.",
+          "line2": "trasformate il vostro team",
+          "line3": "in hAIroes."
+        },
+        "two": {
+          "line1": "A che punto sono i vostri dipendenti con l'IA?",
+          "line2": "Lo sapete",
+          "line3": "davvero?"
+        },
+        "three": {
+          "line1": "Il vostro piano IA è adeguato,",
+          "line2": "dovete passare al",
+          "line3": "livello superiore?"
+        }
+      }
     },
     "pillars": {
       "eyebrow": "DUE MODI PER POTENZIARE LA TUA AZIENDA",

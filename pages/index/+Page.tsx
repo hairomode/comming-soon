@@ -153,6 +153,7 @@ const HERO_PHRASE_KEYS = ['one', 'two', 'three', 'four', 'five'] as const;
 const HERO_ROTATION_MS = 20_000;
 const PREVIEW_EXAMPLE_KEYS = ['one', 'two', 'three', 'four'] as const;
 const PREVIEW_ROTATION_MS = 60_000;
+const ENT_HERO_PHRASE_KEYS = ['one', 'two', 'three'] as const;
 
 function HomeContent() {
   const { t } = useTranslation();
@@ -457,14 +458,63 @@ function HomeContent() {
 function EnterpriseContent() {
   const { t } = useTranslation();
   const { locale } = useData<Data>();
+  const hydrated = useHydrated();
   const reduce = useReducedMotion();
+  const [phraseIndex, setPhraseIndex] = useState(0);
   const base = import.meta.env.BASE_URL;
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setPhraseIndex(current => (current + 1) % ENT_HERO_PHRASE_KEYS.length);
+    }, HERO_ROTATION_MS);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const activeKey = ENT_HERO_PHRASE_KEYS[phraseIndex];
+  const movePhrase = (delta: number) => {
+    setPhraseIndex(current => (current + delta + ENT_HERO_PHRASE_KEYS.length) % ENT_HERO_PHRASE_KEYS.length);
+  };
+
   return (
     <main id="main">
       <section className="hero-section shell" aria-labelledby="ent-hero-title">
         <div className="hero-copy">
           <div className="eyebrow hero-eyebrow"><span className="tiny-spark">✳</span>{t('enterprise.hero.badge')}</div>
-          <h1 id="ent-hero-title"><span>{t('enterprise.hero.line1')}</span><span>{t('enterprise.hero.line2')}</span><span className="underlined-word">{t('enterprise.hero.line3')}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span></h1>
+          <h1 id="ent-hero-title" data-phrase-index={phraseIndex} data-rotation-ms={HERO_ROTATION_MS}>
+            <motion.span
+              key={activeKey}
+              className="hero-phrase"
+              initial={false}
+              animate={reduce ? {} : { y: [14, 0], scale: [0.98, 1] }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.16}
+              onDragEnd={(_, info) => {
+                if (info.offset.x <= -50) movePhrase(1);
+                if (info.offset.x >= 50) movePhrase(-1);
+              }}
+              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <span><span className="hero-before-equals">{t(`enterprise.hero.phrases.${activeKey}.line1`)}</span></span>
+              <span><span className="hero-connector">{t('enterprise.hero.connector')}</span> {t(`enterprise.hero.phrases.${activeKey}.line2`)}</span>
+              <span className="underlined-word">{t(`enterprise.hero.phrases.${activeKey}.line3`)}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span>
+            </motion.span>
+          </h1>
+          <div className="hero-phrase-dots" role="tablist" aria-label={t('enterprise.hero.badge')}>
+            {ENT_HERO_PHRASE_KEYS.map((key, idx) => (
+              <button
+                key={key}
+                type="button"
+                role="tab"
+                disabled={!hydrated}
+                data-testid={`ent-hero-phrase-dot-${idx}`}
+                aria-selected={phraseIndex === idx}
+                aria-label={`${idx + 1} / ${ENT_HERO_PHRASE_KEYS.length}: ${t(`enterprise.hero.phrases.${key}.line1`)} ${t(`enterprise.hero.phrases.${key}.line2`)} ${t(`enterprise.hero.phrases.${key}.line3`)}`}
+                className={`phrase-dot ${phraseIndex === idx ? 'phrase-dot-active' : ''}`}
+                onClick={() => setPhraseIndex(idx)}
+              />
+            ))}
+          </div>
           <p className="hero-description">{t('enterprise.hero.description')}</p>
           <div className="hero-action"><a className="btn btn-primary main-cta" href="#pillars">{t('enterprise.hero.ctaPrimary')}<Arrow /></a><p><span className="small-dot" />{t('enterprise.hero.note')}</p></div>
         </div>

@@ -189,13 +189,28 @@
     },
     "hero": {
       "badge": "hAIroMode pour l’Entreprise",
-      "line1": "Recrutez nos hAIroes.",
-      "line2": "Ou transformez vos équipes",
-      "line3": "en hAIroes.",
+      "connector": "ou",
       "description": "Faites décoller votre entreprise de deux façons : recrutez des candidats munis de notre Certificat infalsifiable (QR code + code à 6 chiffres) ou transformez vos collaborateurs en hAIroes autour de leurs vrais métiers.",
       "ctaPrimary": "Découvrir les deux piliers",
       "ctaSecondary": "Vérifier le Certificat",
-      "note": "Conçu pour les recruteurs exigeants et les organisations tournées vers l’avenir."
+      "note": "Conçu pour les recruteurs exigeants et les organisations tournées vers l'avenir.",
+      "phrases": {
+        "one": {
+          "line1": "Recrutez nos hAIroes.",
+          "line2": "transformez vos équipes",
+          "line3": "en hAIroes."
+        },
+        "two": {
+          "line1": "Où en sont vos employés avec l'IA ?",
+          "line2": "Vous le",
+          "line3": "savez ?"
+        },
+        "three": {
+          "line1": "Votre forfait IA est-il adapté,",
+          "line2": "devez-vous passer au",
+          "line3": "palier supérieur ?"
+        }
+      }
     },
     "pillars": {
       "eyebrow": "DEUX LEVIERS POUR VOTRE ENTREPRISE",

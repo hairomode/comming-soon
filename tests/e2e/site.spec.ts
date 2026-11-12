@@ -136,7 +136,7 @@ for (const locale of ['en', 'ar']) {
   });
 }
 
-test('hero-title rotates through 5 phrases every 20 seconds, styles the prefix line, and switches via indicator dots', async ({ page }) => {
+test('hero-title rotates through 5 phrases every 20 seconds, styles Indigo prefix and Jade main line, and switches via indicator dots', async ({ page }) => {
   await page.goto('/en/');
   await expect(page.locator('#hero-title')).toHaveAttribute('data-rotation-ms', '20000');
   await expect(page.locator('#hero-title')).toContainText('Learn AI tools');
@@ -144,7 +144,18 @@ test('hero-title rotates through 5 phrases every 20 seconds, styles the prefix l
   await expect(page.locator('#hero-title')).toContainText('of the Year !');
   await expect(page.locator('#hero-title')).not.toContainText('=');
   await expect(page.locator('#hero-title')).not.toContainText('✳');
-  await expect(page.locator('[data-testid^="hero-phrase-dot-"]')).toHaveCount(5);
+
+  // Check that hero-before-equals uses Indigo and line2 uses Jade
+  const heroColors = await page.locator('#hero-title').evaluate(el => {
+    const line1 = el.querySelector('.hero-before-equals');
+    const line2 = el.querySelector('.hero-phrase > span:nth-child(2)');
+    return {
+      line1Color: line1 ? getComputedStyle(line1).color : null,
+      line2Color: line2 ? getComputedStyle(line2).color : null,
+    };
+  });
+  expect(heroColors.line1Color).toBe('rgb(35, 42, 92)'); // Indigo #232a5c
+  expect(heroColors.line2Color).toBe('rgb(18, 72, 59)'); // Jade #12483b
 
   const styleDiff = await page.locator('#hero-title').evaluate(el => {
     const before = el.querySelector('.hero-before-equals')!;
@@ -187,7 +198,7 @@ test('hero-title rotates through 5 phrases every 20 seconds, styles the prefix l
   await expect(page.locator('#hero-title')).toContainText('Earn the Certificate');
 });
 
-test('mobile hero title and certificate widget are centered with a larger hero title', async ({ page }) => {
+test('mobile hero title and certificate widget are centered with 6-digit code centered', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 800 });
   await page.goto('/en/');
 
@@ -203,6 +214,16 @@ test('mobile hero title and certificate widget are centered with a larger hero t
   await expect(certificate).toHaveCSS('text-align', 'center');
   await expect(certificate.locator('.cert-card-top')).toHaveCSS('justify-content', 'center');
   await expect(certificate.locator('.cert-qr-box')).toHaveCSS('align-items', 'center');
+  // 6-digit code should be centered on mobile (check it's horizontally centered in its container)
+  const codePill = certificate.locator('.cert-code-pill');
+  const fieldBox = await certificate.locator('.cert-field').last().boundingBox();
+  const pillBox = await codePill.boundingBox();
+  expect(fieldBox).not.toBeNull();
+  expect(pillBox).not.toBeNull();
+  // Pill should be roughly centered within its field container
+  const fieldCenter = fieldBox!.x + fieldBox!.width / 2;
+  const pillCenter = pillBox!.x + pillBox!.width / 2;
+  expect(Math.abs(fieldCenter - pillCenter)).toBeLessThan(10);
 });
 
 test('stage carousel offers four examples and rotates every minute', async ({ page }) => {
@@ -356,4 +377,54 @@ test('reduced motion remains readable', async ({ page }) => {
   await page.goto('/en/');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   await expect(page.getByRole('link', { name: 'See what’s coming' })).toBeVisible();
+});
+
+test('enterprise hero rotates like home page with styled "ou" connector', async ({ page }) => {
+  await page.goto('/en/enterprise/');
+  const heroTitle = page.locator('#ent-hero-title');
+  await expect(heroTitle).toHaveAttribute('data-rotation-ms', '20000');
+  await expect(heroTitle).toHaveAttribute('data-phrase-index', '0');
+  await expect(page.locator('[data-testid^="ent-hero-phrase-dot-"]')).toHaveCount(3);
+
+  // First phrase: "Hire our hAIroes. Or turn your team into hAIroes."
+  await expect(heroTitle).toContainText('Hire our hAIroes');
+  await expect(heroTitle).toContainText('turn your team');
+  await expect(heroTitle).toContainText('into hAIroes');
+
+  // "or" connector should be gray, lowercase, italic
+  const orConnector = heroTitle.locator('.hero-connector');
+  await expect(orConnector).toHaveText('or');
+  const orStyle = await orConnector.evaluate(el => {
+    const style = getComputedStyle(el);
+    return { color: style.color, fontStyle: style.fontStyle, textTransform: style.textTransform };
+  });
+  expect(orStyle.fontStyle).toBe('italic');
+  // Gray color - not the same as Jade or Indigo
+  expect(orStyle.color).not.toBe('rgb(18, 72, 59)');
+  expect(orStyle.color).not.toBe('rgb(35, 42, 92)');
+
+  // Click dot to go to phrase 1
+  await page.getByTestId('ent-hero-phrase-dot-1').click();
+  await expect(heroTitle).toHaveAttribute('data-phrase-index', '1');
+
+  // Click dot to go to phrase 2
+  await page.getByTestId('ent-hero-phrase-dot-2').click();
+  await expect(heroTitle).toHaveAttribute('data-phrase-index', '2');
+});
+
+test('French enterprise hero has correct rotating phrases', async ({ page }) => {
+  await page.goto('/fr/enterprise/');
+  const heroTitle = page.locator('#ent-hero-title');
+  await expect(heroTitle).toContainText('Recrutez nos hAIroes');
+  await expect(heroTitle).toContainText('ou');
+  await expect(heroTitle).toContainText('en hAIroes');
+
+  // Check "ou" connector
+  const ouConnector = heroTitle.locator('.hero-connector');
+  await expect(ouConnector).toHaveText('ou');
+  const ouStyle = await ouConnector.evaluate(el => {
+    const style = getComputedStyle(el);
+    return { fontStyle: style.fontStyle };
+  });
+  expect(ouStyle.fontStyle).toBe('italic');
 });

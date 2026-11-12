@@ -189,13 +189,28 @@
     },
     "hero": {
       "badge": "hAIroMode para Empresas",
-      "line1": "Contrata a nuestros hAIroes.",
-      "line2": "O convierte a tu equipo",
-      "line3": "en hAIroes.",
       "description": "Potencia tu empresa de dos formas: contrata candidatos respaldados por nuestro Certificado infalsificable (QR + código de 6 dígitos) o transforma a tus empleados en hAIroes con IA práctica.",
       "ctaPrimary": "Explorar los dos pilares",
       "ctaSecondary": "Ver verificación del Certificado",
-      "note": "Diseñado para equipos de selección modernos y empresas con visión de futuro."
+      "note": "Diseñado para equipos de selección modernos y empresas con visión de futuro.",
+      "connector": "o",
+      "phrases": {
+        "one": {
+          "line1": "Contrate nuestros hAIroes.",
+          "line2": "transforme su equipo",
+          "line3": "en hAIroes."
+        },
+        "two": {
+          "line1": "¿Dónde están sus empleados con la IA?",
+          "line2": "¿Realmente lo",
+          "line3": "sabe?"
+        },
+        "three": {
+          "line1": "¿Es adecuado su plan de IA,",
+          "line2": "necesita pasar al",
+          "line3": "siguiente nivel?"
+        }
+      }
     },
     "pillars": {
       "eyebrow": "DOS FORMAS DE IMPULSAR TU EMPRESA",

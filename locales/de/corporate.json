@@ -189,13 +189,28 @@
     },
     "hero": {
       "badge": "hAIroMode für Unternehmen",
-      "line1": "Stellen Sie unsere hAIroes ein.",
-      "line2": "Oder machen Sie Ihr Team",
-      "line3": "zu hAIroes.",
       "description": "Bringen Sie Ihr Geschäft auf zwei Wegen voran: Rekrutieren Sie Bewerbende mit fälschungssicherem QR- & 6-Stellen-Zertifikat oder verwandeln Sie Ihre Mitarbeitenden in KI-starke hAIroes.",
       "ctaPrimary": "Beide Säulen entdecken",
       "ctaSecondary": "Zertifikat-Prüfung ansehen",
-      "note": "Entwickelt für modernes Recruiting und zukunftsorientierte Unternehmen."
+      "note": "Entwickelt für modernes Recruiting und zukunftsorientierte Unternehmen.",
+      "connector": "oder",
+      "phrases": {
+        "one": {
+          "line1": "Stellen Sie unsere hAIroes ein.",
+          "line2": "verwandeln Sie Ihr Team",
+          "line3": "in hAIroes."
+        },
+        "two": {
+          "line1": "Wo stehen Ihre Mitarbeiter mit KI?",
+          "line2": "Wissen Sie es",
+          "line3": "wirklich?"
+        },
+        "three": {
+          "line1": "Passt Ihr KI-Tarif,",
+          "line2": "brauchen Sie die",
+          "line3": "nächste Stufe?"
+        }
+      }
     },
     "pillars": {
       "eyebrow": "ZWEI WEGE FÜR IHR UNTERNEHMEN",

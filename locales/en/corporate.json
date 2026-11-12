@@ -189,13 +189,28 @@
     },
     "hero": {
       "badge": "hAIroMode for Enterprise",
-      "line1": "Hire our hAIroes.",
-      "line2": "Or turn your team",
-      "line3": "into hAIroes.",
+      "connector": "or",
       "description": "Power up your business two ways: recruit candidates backed by our unfakable QR + 6-digit Certificate, or transform your own employees into AI-powered hAIroes around their real tasks.",
       "ctaPrimary": "Explore the two pillars",
       "ctaSecondary": "Verify the Certificate",
-      "note": "Built for modern hiring teams and forward-looking organizations."
+      "note": "Built for modern hiring teams and forward-looking organizations.",
+      "phrases": {
+        "one": {
+          "line1": "Hire our hAIroes.",
+          "line2": "turn your team",
+          "line3": "into hAIroes."
+        },
+        "two": {
+          "line1": "Where are your employees with AI?",
+          "line2": "Do you really",
+          "line3": "know?"
+        },
+        "three": {
+          "line1": "Is your AI plan right,",
+          "line2": "do you need the next",
+          "line3": "tier up?"
+        }
+      }
     },
     "pillars": {
       "eyebrow": "TWO WAYS TO POWER UP YOUR BUSINESS",

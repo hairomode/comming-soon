@@ -393,6 +393,7 @@ h2 { font-family: var(--heading); font-weight: 500; letter-spacing: -1.8px; font
   .cert-card-top, .cert-card-footer { justify-content: center; }
   .cert-qr-row { grid-template-columns: 1fr; text-align: start; }
   .cert-qr-box, .cert-fields { align-items: center; text-align: center; }
+  .cert-code-pill { margin-inline: auto; }
 }
 h1, h2, h3 { overflow-wrap: anywhere; }
 .scroll-progress-bar { position: fixed; top: 0; inset-inline: 0; height: 4px; background: linear-gradient(90deg, var(--ink), color-mix(in oklab, var(--amber) 64%, #000), var(--amber)); transform-origin: 0% 50%; z-index: 60; pointer-events: none; }
@@ -401,7 +402,9 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .hero-phrase { display: block; transform-origin: 50% 50%; touch-action: pan-y; cursor: grab; user-select: none; }
 .hero-phrase:active { cursor: grabbing; }
 .hero-phrase > span { display: block; }
-.hero-before-equals { font-size: var(--type-lg); color: color-mix(in oklab, var(--jade) 85%, var(--paper)); font-weight: 400; }
+.hero-before-equals { font-size: var(--type-lg); color: var(--ink); font-weight: 400; }
+.hero-phrase > span:nth-child(2) { color: var(--jade); }
+.hero-connector { color: var(--muted); font-style: italic; font-weight: 400; text-transform: lowercase; }
 .hero-phrase-dots { display: flex; align-items: center; gap: 6px; margin-top: 22px; flex-wrap: wrap; }
 .phrase-dot { min-width: 44px; min-height: 44px; padding: 0; border: 0; background: transparent; display: grid; place-items: center; cursor: pointer; }
 .phrase-dot::before { content: ''; width: 10px; height: 10px; border-radius: 100px; background: color-mix(in oklab, color-mix(in oklab, var(--ink) 59%, var(--amber)) 29%, var(--paper)); border: 1px solid color-mix(in oklab, color-mix(in oklab, var(--ink) 61%, var(--amber)) 59%, var(--paper)); transition: width .25s, background .25s; }

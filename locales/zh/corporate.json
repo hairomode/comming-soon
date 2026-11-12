@@ -189,13 +189,28 @@
     },
     "hero": {
       "badge": "hAIroMode 企业方案",
-      "line1": "聘用我们的 hAIroes。",
-      "line2": "或让您的团队蜕变为",
-      "line3": "hAIroes。",
       "description": "双轨赋能您的业务：直接招募持有不可伪造二维码与 6 位验证码证书的候选人，或围绕日常工作痛点将现有员工培养成精通 AI 的 hAIroes。",
       "ctaPrimary": "了解两大核心支柱",
       "ctaSecondary": "查看证书核验机制",
-      "note": "专为现代招聘团队与前瞻性企业打造。"
+      "note": "专为现代招聘团队与前瞻性企业打造。",
+      "connector": "或",
+      "phrases": {
+        "one": {
+          "line1": "招聘我们的 hAIroes。",
+          "line2": "让您的团队成为",
+          "line3": "hAIroes。"
+        },
+        "two": {
+          "line1": "您的员工 AI 水平如何？",
+          "line2": "您真的",
+          "line3": "了解吗？"
+        },
+        "three": {
+          "line1": "您的 AI 套餐合适吗，",
+          "line2": "是否需要升级到",
+          "line3": "更高级别？"
+        }
+      }
     },
     "pillars": {
       "eyebrow": "赋能企业的两大方式",
