@@ -1,5 +1,6 @@
 import { readFile, writeFile, access } from 'node:fs/promises';
 import { locales } from '../src/localization';
+import { SAMPLE_CERTIFICATE_ID } from '../src/certificate';
 const output = 'dist/client';
 const base = (process.env.BASE_PATH || '/').replace(/\/?$/, '/');
 const site = (process.env.VITE_SITE_URL || '').replace(/\/$/, '');
@@ -9,7 +10,9 @@ await writeFile(`${output}/404.html`, fallback);
 for (const { code } of locales) {
   await access(`${output}/${code}/index.html`);
   await access(`${output}/${code}/enterprise/index.html`);
+  await access(`${output}/${code}/v/${SAMPLE_CERTIFICATE_ID}/index.html`);
 }
+await access(`${output}/v/${SAMPLE_CERTIFICATE_ID}/index.html`);
 if (site) {
   const escape = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('"', '&quot;');
   const homeAlts = locales.map(({ code }) => `<xhtml:link rel="alternate" hreflang="${code}" href="${escape(site)}/${code}/"/>`).join('');
@@ -22,4 +25,4 @@ if (site) {
   await writeFile(`${output}/robots.txt`, 'User-agent: *\nAllow: /\n');
   console.warn('VITE_SITE_URL not set: canonical/hreflang links are relative; sitemap is omitted. CI sets the real Pages URL.');
 }
-console.log(`Static site ready: ${locales.length} locales (home + enterprise), base ${base}.`);
+console.log(`Static site ready: ${locales.length} locales (home + enterprise + certificate sample), base ${base}.`);
