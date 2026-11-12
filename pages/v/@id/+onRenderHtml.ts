@@ -20,7 +20,7 @@ const CERTIFICATES: Record<string, {
       { category: 'Machine Learning', count: 10 },
       { category: 'Advanced AI Applications', count: 15 },
     ],
-    badges: ['Assiduité'],
+    badges: ['Attendance'],
   },
 };
 
@@ -62,7 +62,7 @@ export function onRenderHtml(pageContext: PageContextServer) {
     `<li><span class="course-name">${c.category}</span><span class="course-count">${c.count}</span></li>`
   ).join('');
   const badgesHtml = cert.badges.map(b => 
-    `<span class="verify-badge">${b}</span>`
+    `<span class="verify-badge"><svg class="verify-badge-icon" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 8.9l6.1-.8z"/></svg><span class="verify-badge-label">${b}</span></span>`
   ).join('');
 
   return escapeInject`<!DOCTYPE html>

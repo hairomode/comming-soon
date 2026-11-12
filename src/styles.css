@@ -419,7 +419,7 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .qr-scan-beam { position: absolute; inset-inline: 6px; top: 0; height: 3px; border-radius: 100px; background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--amber) 64%, #000), var(--amber), color-mix(in oklab, var(--amber) 64%, #000), transparent); box-shadow: 0 0 8px color-mix(in oklab, var(--amber) 73%, #000); pointer-events: none; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
 /* Verification page */
-.verify-page { min-height: 100dvh; display: grid; place-items: center; padding: 40px 20px; }
+.verify-page { min-height: 100dvh; display: grid; place-items: center; padding: 40px 20px; background: var(--amber); }
 .verify-card { background: var(--paper); border: 1px solid color-mix(in oklab, var(--ink) 12%, var(--paper)); border-radius: 16px; padding: 40px; max-width: 480px; width: 100%; box-shadow: 0 4px 24px color-mix(in oklab, var(--ink) 8%, transparent); }
 .verify-status { display: flex; align-items: center; gap: 12px; color: var(--jade); font-weight: 600; font-size: var(--type-sm); margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid color-mix(in oklab, var(--ink) 8%, var(--paper)); }
 .verify-status svg { flex-shrink: 0; }
@@ -436,8 +436,11 @@ h1, h2, h3 { overflow-wrap: anywhere; }
 .course-name { font-size: var(--type-xs); color: var(--ink); }
 .course-count { font-size: var(--type-sm); font-weight: 700; color: var(--jade); background: color-mix(in oklab, var(--jade) 12%, var(--paper)); padding: 2px 10px; border-radius: 100px; }
 .verify-badges { margin-bottom: 24px; }
-.badge-list { display: flex; flex-wrap: wrap; gap: 8px; }
-.verify-badge { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: linear-gradient(135deg, var(--amber), color-mix(in oklab, var(--amber) 70%, var(--ink))); color: var(--ink); font-size: var(--type-xs); font-weight: 600; border-radius: 100px; }
+.badge-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; padding-block: 8px; }
+.verify-badge { position: relative; display: grid; place-items: center; align-content: center; gap: 2px; width: 132px; height: 132px; border-radius: 50%; text-align: center; color: var(--ink); background: radial-gradient(circle at 50% 36%, color-mix(in oklab, var(--amber) 45%, #fff), var(--amber) 58%, color-mix(in oklab, var(--amber) 76%, var(--ink)) 100%); box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--amber) 40%, #fff), inset 0 0 0 4px color-mix(in oklab, var(--ink) 30%, var(--amber)), 0 6px 16px color-mix(in oklab, var(--ink) 20%, transparent); }
+.verify-badge::before { content: ""; position: absolute; inset: -10px; border-radius: 50%; background: repeating-conic-gradient(from 0deg, color-mix(in oklab, var(--amber) 72%, var(--ink)) 0deg 9deg, transparent 9deg 18deg); -webkit-mask: radial-gradient(circle at 50% 50%, transparent 0 66px, #000 66px); mask: radial-gradient(circle at 50% 50%, transparent 0 66px, #000 66px); }
+.verify-badge-icon { color: color-mix(in oklab, var(--ink) 70%, var(--amber)); }
+.verify-badge-label { font-size: var(--type-xs); font-weight: 700; letter-spacing: .2px; text-transform: uppercase; line-height: 1.2; max-width: 112px; }
 .verify-footer { font-size: var(--type-xs); color: var(--muted); text-align: center; margin: 0; padding-top: 20px; border-top: 1px solid color-mix(in oklab, var(--ink) 8%, var(--paper)); }
 .verify-not-found { text-align: center; }
 .verify-not-found svg { color: color-mix(in oklab, var(--ink) 30%, var(--paper)); margin-bottom: 16px; }
