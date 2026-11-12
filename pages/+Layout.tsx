@@ -16,7 +16,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       lng: locale, fallbackLng: 'en', defaultNS: 'corporate', ns: ['corporate'],
       initAsync: false, interpolation: { escapeValue: false },
       resources: { en: { corporate: english }, [locale]: { corporate: messages } },
-      returnEmptyString: false,
+      returnEmptyString: true,
     });
     return instance;
   }, [locale, messages, english]);

@@ -497,7 +497,7 @@ function EnterpriseContent() {
             >
               <span><span className="hero-before-equals">{t(`enterprise.hero.phrases.${activeKey}.line1`)}</span></span>
               <span>{activeKey === 'one' && <><span className="hero-connector">{t('enterprise.hero.connector')}</span>{' '}</>}{t(`enterprise.hero.phrases.${activeKey}.line2`)}</span>
-              <span className="underlined-word">{t(`enterprise.hero.phrases.${activeKey}.line3`)}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span>
+              {t(`enterprise.hero.phrases.${activeKey}.line3`).trim() && <span className="underlined-word">{t(`enterprise.hero.phrases.${activeKey}.line3`)}<svg viewBox="0 0 500 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15Q240-4 493 12M29 22Q260 8 465 19" stroke="currentColor" strokeWidth="5" fill="none" strokeLinecap="round" /></svg></span>}
             </motion.span>
           </h1>
           <div className="hero-phrase-dots" role="tablist" aria-label={t('enterprise.hero.badge')}>
