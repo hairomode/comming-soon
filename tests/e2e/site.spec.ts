@@ -379,7 +379,7 @@ test('reduced motion remains readable', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'See what’s coming' })).toBeVisible();
 });
 
-test('enterprise hero rotates like home page with styled "ou" connector', async ({ page }) => {
+test('enterprise hero rotates like home page with styled "ou" connector on first phrase only', async ({ page }) => {
   await page.goto('/en/enterprise/');
   const heroTitle = page.locator('#ent-hero-title');
   await expect(heroTitle).toHaveAttribute('data-rotation-ms', '20000');
@@ -391,7 +391,7 @@ test('enterprise hero rotates like home page with styled "ou" connector', async 
   await expect(heroTitle).toContainText('turn your team');
   await expect(heroTitle).toContainText('into hAIroes');
 
-  // "or" connector should be gray, lowercase, italic
+  // "or" connector should be gray, lowercase, italic - only on phrase one
   const orConnector = heroTitle.locator('.hero-connector');
   await expect(orConnector).toHaveText('or');
   const orStyle = await orConnector.evaluate(el => {
@@ -403,13 +403,15 @@ test('enterprise hero rotates like home page with styled "ou" connector', async 
   expect(orStyle.color).not.toBe('rgb(18, 72, 59)');
   expect(orStyle.color).not.toBe('rgb(35, 42, 92)');
 
-  // Click dot to go to phrase 1
+  // Click dot to go to phrase 1 - connector should NOT appear
   await page.getByTestId('ent-hero-phrase-dot-1').click();
   await expect(heroTitle).toHaveAttribute('data-phrase-index', '1');
+  await expect(heroTitle.locator('.hero-connector')).toHaveCount(0);
 
   // Click dot to go to phrase 2
   await page.getByTestId('ent-hero-phrase-dot-2').click();
   await expect(heroTitle).toHaveAttribute('data-phrase-index', '2');
+  await expect(heroTitle.locator('.hero-connector')).toHaveCount(0);
 });
 
 test('French enterprise hero has correct rotating phrases', async ({ page }) => {
@@ -419,7 +421,7 @@ test('French enterprise hero has correct rotating phrases', async ({ page }) => 
   await expect(heroTitle).toContainText('ou');
   await expect(heroTitle).toContainText('en hAIroes');
 
-  // Check "ou" connector
+  // Check "ou" connector on phrase one
   const ouConnector = heroTitle.locator('.hero-connector');
   await expect(ouConnector).toHaveText('ou');
   const ouStyle = await ouConnector.evaluate(el => {
@@ -427,4 +429,10 @@ test('French enterprise hero has correct rotating phrases', async ({ page }) => 
     return { fontStyle: style.fontStyle };
   });
   expect(ouStyle.fontStyle).toBe('italic');
+
+  // Phrase two should NOT have the connector and should show "Le savez-vous ?"
+  await page.getByTestId('ent-hero-phrase-dot-1').click();
+  await expect(heroTitle.locator('.hero-connector')).toHaveCount(0);
+  await expect(heroTitle).toContainText('Le savez-');
+  await expect(heroTitle).toContainText('vous ?');
 });
