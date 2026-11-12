@@ -20,7 +20,7 @@ const CERTIFICATES: Record<string, {
       { category: 'Machine Learning', count: 10 },
       { category: 'Advanced AI Applications', count: 15 },
     ],
-    badges: ['Assiduité', 'Excellence'],
+    badges: ['Assiduité'],
   },
 };
 
