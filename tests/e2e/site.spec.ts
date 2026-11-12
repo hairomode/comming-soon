@@ -33,7 +33,7 @@ for (const locale of locales) {
     await expect(page).toHaveTitle(/hAIroMode/);
     await expect(page.getByTestId('certificate-section')).toBeVisible();
     await expect(page.getByTestId('certificate-card')).toContainText('482 • 917');
-    await expect(page.getByTestId('certificate-card')).toContainText('ai.romode.me/v/alex-rivera');
+    await expect(page.getByTestId('certificate-card')).toContainText('ai.romode.me/v/847291');
 
     const scriptLocale = ['zh', 'ar', 'hi', 'bn', 'ta'].includes(locale.code);
     await expect(page.locator('link[rel="stylesheet"][href*="/fonts/"]')).toHaveCount(scriptLocale ? 1 : 0);
