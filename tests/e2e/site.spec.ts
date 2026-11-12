@@ -213,6 +213,7 @@ test('stage carousel offers four examples and rotates every minute', async ({ pa
   await expect(stage).toHaveAttribute('data-rotation-ms', '60000');
   await expect(page.locator('[data-testid^="preview-example-dot-"]')).toHaveCount(4);
   await expect(page.getByTestId('hero-challenge-card')).toContainText('meeting notes');
+  await expect(page.getByTestId('preview-example-dot-0')).toBeEnabled();
 
   await page.clock.fastForward(60_000);
   await expect(stage).toHaveAttribute('data-example-index', '1');

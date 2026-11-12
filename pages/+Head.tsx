@@ -1,6 +1,5 @@
 import { useData } from 'vike-react/useData';
 import { locales, localizedPath } from '../src/localization';
-import { paletteBootScript } from '../src/palette';
 import type { Data } from './index/+data';
 
 export default function Head() {
@@ -14,7 +13,7 @@ export default function Head() {
   const defaultUrl = site ? `${site}${page === 'enterprise' ? '/enterprise/' : '/'}` : (page === 'enterprise' ? `${base}enterprise/` : base);
   const fontLocale = ['zh', 'ar', 'hi', 'bn', 'ta'].includes(locale) ? locale : null;
   return <>
-    <meta name="theme-color" content="#f8f9f1" />
+    <meta name="theme-color" content="#f9f8f3" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={locale.replace('-', '_')} />
     <meta property="og:url" content={url(locale)} />
@@ -24,6 +23,5 @@ export default function Head() {
     {locales.map(({ code }) => <link key={code} rel="alternate" hrefLang={code} href={url(code)} />)}
     <link rel="alternate" hrefLang="x-default" href={defaultUrl} />
     {fontLocale && <link rel="stylesheet" href={`${base}fonts/${fontLocale}.css`} />}
-    <script dangerouslySetInnerHTML={{ __html: paletteBootScript }} />
   </>;
 }
