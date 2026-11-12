@@ -29,7 +29,7 @@ for (const locale of locales) {
     }
     await expect(page.locator('#hero-title')).not.toContainText('=');
     await expect(page.locator('#hero-title')).not.toContainText('✳');
-    await expect(page.locator('head link[rel="alternate"]')).toHaveCount(12);
+    await expect(page.locator('head link[rel="alternate"]')).toHaveCount(16);
     await expect(page).toHaveTitle(/hAIroMode/);
     await expect(page.getByTestId('certificate-section')).toBeVisible();
     await expect(page.getByTestId('certificate-card')).toContainText('482 • 917');
