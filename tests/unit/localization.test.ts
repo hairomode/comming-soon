@@ -2,8 +2,8 @@ import { describe, expect, test } from 'bun:test';
 import { localeFromPath, pageFromPath, localizedPath, directionFor, detectLocale, locales } from '../../src/localization';
 
 describe('localized static routes', () => {
-  test('includes exactly the 11 documented locales', () => {
-    expect(locales.map(l => l.code)).toEqual(['en', 'en-IN', 'fr', 'de', 'es', 'it', 'zh', 'ar', 'hi', 'bn', 'ta']);
+  test('includes exactly the 15 documented locales', () => {
+    expect(locales.map(l => l.code)).toEqual(['en', 'en-IN', 'fr', 'de', 'es', 'it', 'zh', 'ar', 'hi', 'bn', 'ta', 'pt-BR', 'vi', 'lo', 'ja']);
   });
   test('matches supported locale homepages and enterprise pages', () => {
     expect(localeFromPath('/')).toBe('en');
@@ -36,6 +36,6 @@ describe('localized static routes', () => {
     expect(detectLocale(['fr-CA', 'en-US'])).toBe('fr');
     expect(detectLocale(['en-IN'])).toBe('en-IN');
     expect(detectLocale(['zh-CN'])).toBe('zh');
-    expect(detectLocale(['ja-JP'])).toBe('en');
+    expect(detectLocale(['ja-JP'])).toBe('ja');
   });
 });

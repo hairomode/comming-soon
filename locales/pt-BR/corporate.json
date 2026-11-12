@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "hAIroMode — Aprenda ferramentas de IA — torne-se o Funcionário do Ano.",
+    "description": "Em breve: aprendizado prático de IA construído em torno do seu trabalho real."
+  },
+  "nav": {
+    "how": "Como funciona",
+    "vision": "A visão maior",
+    "language": "Escolha seu idioma",
+    "explore": "Explore a ideia",
+    "home": "Início hAIroMode",
+    "certificate": "O certificado",
+    "enterprise": "Para Empresas",
+    "subtitle": "torne-se o herói do seu trabalho"
+  },
+  "hero": {
+    "badge": "Uma nova forma de aprender IA",
+    "line1": "Aprenda ferramentas de IA",
+    "line2": "torne-se o Funcionário",
+    "line3": "do Ano.",
+    "description": "Seu trabalho real. Sua próxima conquista. Transforme as tarefas que te atrasam em aprendizado prático de IA.",
+    "cta": "Veja o que está por vir",
+    "note": "Em desenvolvimento. Construído para você.",
+    "aside": "Não é mais um curso para terminar. É um caminho a seguir.",
+    "phrases": {
+      "one": {
+        "line1": "Aprenda ferramentas de IA",
+        "line2": "torne-se o Funcionário",
+        "line3": "do Ano!"
+      },
+      "two": {
+        "line1": "Elimine tarefas repetitivas",
+        "line2": "entregue no prazo",
+        "line3": "adeus horas extras!"
+      },
+      "three": {
+        "line1": "Automatize o tedioso",
+        "line2": "dobre seu impacto",
+        "line3": "no trabalho!"
+      },
+      "four": {
+        "line1": "Domine prompts reais",
+        "line2": "transforme horas de trabalho",
+        "line3": "em minutos!"
+      },
+      "five": {
+        "line1": "Conquiste o Certificado",
+        "line2": "destaque-se em",
+        "line3": "todo currículo!"
+      }
+    }
+  },
+  "preview": {
+    "label": "Um vislumbre do que está por vir",
+    "tag": "Prévia do conceito",
+    "you": "Seu desafio do dia a dia",
+    "path": "Seu caminho de aprendizado pessoal",
+    "footnote": "Desafios reais. Aprendizado prático.",
+    "orbit": "Um pouco de aprendizado. Um verdadeiro powerup.",
+    "examples": {
+      "one": {
+        "task": "Passo horas transformando notas de reunião em e-mails.",
+        "title": "De notas a próximos passos",
+        "step1": "Encontre o fluxo de IA certo",
+        "step2": "Faça funcionar com suas ferramentas",
+        "step3": "Coloque em prática"
+      },
+      "two": {
+        "task": "Perco tempo transformando planilhas em atualizações claras.",
+        "title": "De linhas a decisões",
+        "step1": "Faça a pergunta certa",
+        "step2": "Construa um fluxo reutilizável",
+        "step3": "Transforme descobertas em briefing"
+      },
+      "three": {
+        "task": "Preciso criar uma apresentação forte antes de amanhã.",
+        "title": "De slide em branco a história clara",
+        "step1": "Defina a mensagem principal",
+        "step2": "Rascunhe os slides com IA",
+        "step3": "Revise, refine e apresente"
+      },
+      "four": {
+        "task": "Meu gerente pediu às 17h: precisa de um relatório para amanhã, 10h.",
+        "title": "De dados brutos a relatório pronto",
+        "step1": "Reúna os números do mês passado",
+        "step2": "Deixe a IA elaborar a análise",
+        "step3": "Finalize e envie antes das 10h"
+      }
+    }
+  },
+  "strip": {
+    "first": "Construído em torno do seu trabalho",
+    "second": "Passo a passo, sem sobrecarga",
+    "third": "Aprendizado no seu idioma"
+  },
+  "how": {
+    "eyebrow": "DE \"E SE\" A \"EU CONSIGO\"",
+    "title": "Comece com aquilo\nque te atrasa.",
+    "intro": "Não é um catálogo para se perder. É um caminho de aprendizado que começa com o seu dia.",
+    "one": {
+      "title": "Conte-nos o que demora demais.",
+      "body": "Sua função, suas ferramentas, seus desafios diários. Algumas perguntas focadas ajudam a identificar onde a IA pode fazer a diferença."
+    },
+    "two": {
+      "title": "Encontre seu caminho.",
+      "body": "Descubra um curso relevante na base de conhecimento. Quando nada se encaixa, a plataforma cria um curso para sua necessidade específica."
+    },
+    "three": {
+      "title": "Aprenda. Experimente. Faça seu.",
+      "body": "Siga passos práticos, teste prompts e atividades, e compartilhe o que ajudou."
+    }
+  },
+  "vision": {
+    "eyebrow": "PEQUENAS VITÓRIAS. GRANDES POSSIBILIDADES.",
+    "title": "Um powerup para você.\nUm passo à frente para sua equipe.",
+    "body": "Estamos construindo para pessoas curiosas e as equipes das quais fazem parte. Aprendizado pessoal primeiro.",
+    "tag1": "Para solucionadores de problemas do dia a dia",
+    "tag2": "Para equipes com visão de futuro"
+  },
+  "faq": {
+    "eyebrow": "ALGUMAS COISAS QUE VALE A PENA SABER",
+    "title": "Curioso? Ótimo.",
+    "one": {
+      "question": "Posso usar o hAIroMode hoje?",
+      "answer": "Ainda não. A plataforma está sendo construída. Esta página é uma primeira visão da ideia."
+    },
+    "two": {
+      "question": "Preciso ser especialista em IA?",
+      "answer": "A ideia começa com seu trabalho, não com jargão técnico."
+    },
+    "three": {
+      "question": "Vai falar meu idioma?",
+      "answer": "Estamos planejando inglês, francês, alemão, espanhol, italiano, chinês, árabe, hindi, bengali, tâmil, português (Brasil), vietnamita, laosiano e japonês."
+    },
+    "four": {
+      "question": "Como funciona o Certificado hAIroMode?",
+      "answer": "Cada certificado inclui um código QR que leva a uma URL de verificação com o nome do candidato e um código de 6 dígitos."
+    }
+  },
+  "closing": {
+    "badge": "Em breve",
+    "title": "Seu próximo \"consegui\"\nestá a caminho.",
+    "body": "Menos tempo no repetitivo. Mais espaço para o que você faz de melhor.",
+    "back": "Voltar ao topo"
+  },
+  "footer": {
+    "description": "Aprendizado prático de IA. Possibilidade humana.",
+    "status": "Algo útil está tomando forma.",
+    "privacy": "Sem cadastro. Sem rastreamento. Apenas uma primeira visão."
+  },
+  "a11y": {
+    "skip": "Pular para o conteúdo",
+    "menu": "Abrir navegação",
+    "close": "Fechar navegação"
+  },
+  "certificate": {
+    "eyebrow": "POTENCIALIZE SEU CURRÍCULO COM O CERTIFICADO HAIROMODE",
+    "title": "Seja contratado por suas\nhabilidades em IA.",
+    "intro": "Cada caminho concluído no hAIroMode emite um Certificado impossível de falsificar que você pode anexar diretamente ao seu currículo.",
+    "one": {
+      "title": "Escaneie o código QR.",
+      "body": "Cada certificado carrega um código QR único que leva a uma URL de verificação oficial."
+    },
+    "two": {
+      "title": "Confira nome e código de 6 dígitos.",
+      "body": "A URL exibe o nome completo do candidato junto com um código de segurança de 6 dígitos."
+    },
+    "three": {
+      "title": "Destaque-se em todo processo seletivo.",
+      "body": "Leve com seu currículo para cada entrevista."
+    },
+    "card": {
+      "badge": "Credencial Impossível de Falsificar",
+      "title": "Certificado hAIroMode",
+      "candidateLabel": "Candidato",
+      "candidateValue": "Alex Rivera",
+      "codeLabel": "Código de segurança de 6 dígitos",
+      "codeValue": "482 • 917",
+      "urlLabel": "URL de verificação",
+      "urlValue": "ai.romode.me/v/alex-rivera",
+      "qrCaption": "Escaneie QR → Verifique nome + código",
+      "cvTag": "Pronto para seu currículo"
+    }
+  },
+  "enterprise": {
+    "meta": {
+      "title": "hAIroMode Enterprise — Contrate nossos hAIroes ou transforme seus funcionários em hAIroes.",
+      "description": "Potencialize seu negócio com hAIroMode."
+    },
+    "hero": {
+      "badge": "hAIroMode para Empresas",
+      "connector": "ou",
+      "description": "Potencialize seu negócio de duas formas: recrute candidatos ou transforme seus funcionários em hAIroes.",
+      "ctaPrimary": "Explore os dois pilares",
+      "ctaSecondary": "Verifique o Certificado",
+      "note": "Construído para equipes de recrutamento modernas.",
+      "phrases": {
+        "one": {
+          "line1": "Contrate nossos hAIroes.",
+          "line2": "transforme sua equipe",
+          "line3": "em hAIroes."
+        },
+        "two": {
+          "line1": "Onde estão seus funcionários com IA?",
+          "line2": "Você realmente",
+          "line3": "sabe?"
+        },
+        "three": {
+          "line1": "Seu plano de IA está certo,",
+          "line2": "precisa do próximo",
+          "line3": "nível?"
+        }
+      }
+    },
+    "pillars": {
+      "eyebrow": "DUAS FORMAS DE POTENCIALIZAR SEU NEGÓCIO",
+      "title": "Recrute talentos comprovados.\nCapacite a equipe que você tem.",
+      "intro": "hAIroMode transforma gargalos diários em capacidade mensurável de IA.",
+      "hire": {
+        "tag": "Pilar 01 · Recrutamento",
+        "title": "Contrate nossos hAIroes",
+        "body": "Pare de adivinhar quem sabe usar IA no trabalho.",
+        "point1": "Escaneie o código QR do currículo",
+        "point2": "Confirme o nome e código de 6 dígitos",
+        "point3": "Contrate hAIroes pré-verificados"
+      },
+      "upskill": {
+        "tag": "Pilar 02 · Transformação",
+        "title": "Transforme seus funcionários em hAIroes",
+        "body": "Integre suas equipes por formulário, CSV ou SCIM.",
+        "point1": "Integração baseada em função",
+        "point2": "Análises de adoção de equipe",
+        "point3": "Funcionários ganham seus próprios Certificados"
+      }
+    },
+    "verify": {
+      "eyebrow": "VERIFICAÇÃO INSTANTÂNEA",
+      "title": "Por que toda empresa vai pedir\no Certificado.",
+      "body": "O Certificado hAIroMode dá aos recrutadores uma verificação impossível de falsificar.",
+      "step1": "Candidato anexa o Certificado ao currículo",
+      "step2": "Recrutador escaneia o código QR",
+      "step3": "Nome + código confirmam a pessoa e habilidade"
+    },
+    "closing": {
+      "badge": "Enterprise Em Breve",
+      "title": "Pronto para potencializar seu negócio\ncom hAIroes?",
+      "body": "Contrate ou transforme funcionários em hAIroes—tudo no hAIroMode.",
+      "cta": "Voltar para visão do aprendiz"
+    }
+  },
+  "evergreen": {
+    "eyebrow": "SEMPRE PRONTO PARA O QUE VEM",
+    "title": "Nunca fique para trás.\nContinue crescendo com IA.",
+    "intro": "A IA continua evoluindo, e seu aprendizado pode evoluir com ela.",
+    "current": {
+      "title": "Novos cursos de IA mantêm você atualizado",
+      "body": "Descubra novos caminhos de aprendizado conforme ferramentas evoluem."
+    },
+    "repeat": {
+      "title": "Refaça qualquer curso quantas vezes precisar",
+      "body": "Volte sempre que quiser uma revisão."
+    }
+  }
+}

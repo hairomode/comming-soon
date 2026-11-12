@@ -10,6 +10,10 @@ export const locales = [
   { code: 'hi', label: 'हिन्दी' },
   { code: 'bn', label: 'বাংলা' },
   { code: 'ta', label: 'தமிழ்' },
+  { code: 'pt-BR', label: 'Português (Brasil)' },
+  { code: 'vi', label: 'Tiếng Việt' },
+  { code: 'lo', label: 'ພາສາລາວ' },
+  { code: 'ja', label: '日本語' },
 ] as const;
 export type Locale = (typeof locales)[number]['code'];
 export type PageKind = 'home' | 'enterprise';

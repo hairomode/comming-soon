@@ -1,0 +1,264 @@
+{
+  "meta": {
+    "title": "hAIroMode — Học công cụ AI — trở thành Nhân viên xuất sắc nhất.",
+    "description": "Sắp ra mắt: học AI thực tế xây dựng quanh công việc thực của bạn."
+  },
+  "nav": {
+    "how": "Cách hoạt động",
+    "vision": "Tầm nhìn lớn hơn",
+    "language": "Chọn ngôn ngữ",
+    "explore": "Khám phá ý tưởng",
+    "home": "Trang chủ hAIroMode",
+    "certificate": "Chứng chỉ",
+    "enterprise": "Dành cho Doanh nghiệp",
+    "subtitle": "trở thành anh hùng công việc của bạn"
+  },
+  "hero": {
+    "badge": "Cách học AI mới",
+    "line1": "Học công cụ AI",
+    "line2": "trở thành Nhân viên",
+    "line3": "xuất sắc nhất.",
+    "description": "Công việc thực của bạn. Bước đột phá tiếp theo.",
+    "cta": "Xem những gì sắp tới",
+    "note": "Đang phát triển. Xây dựng cho bạn.",
+    "aside": "Không phải khóa học để hoàn thành. Đó là con đường phía trước.",
+    "phrases": {
+      "one": {
+        "line1": "Học công cụ AI",
+        "line2": "trở thành Nhân viên",
+        "line3": "xuất sắc nhất!"
+      },
+      "two": {
+        "line1": "Loại bỏ công việc lặp lại",
+        "line2": "giao hàng đúng hạn",
+        "line3": "tạm biệt tăng ca!"
+      },
+      "three": {
+        "line1": "Tự động hóa nhàm chán",
+        "line2": "nhân đôi tác động",
+        "line3": "tại nơi làm việc!"
+      },
+      "four": {
+        "line1": "Thành thạo prompt thực",
+        "line2": "biến giờ làm việc",
+        "line3": "thành phút!"
+      },
+      "five": {
+        "line1": "Đạt được Chứng chỉ",
+        "line2": "nổi bật trong",
+        "line3": "mọi CV!"
+      }
+    }
+  },
+  "preview": {
+    "label": "Xem trước những gì sắp tới",
+    "tag": "Xem trước khái niệm",
+    "you": "Thách thức hàng ngày của bạn",
+    "path": "Lộ trình học tập cá nhân",
+    "footnote": "Thách thức thực. Học tập thực tế.",
+    "orbit": "Một chút học tập. Một sức mạnh thực sự.",
+    "examples": {
+      "one": {
+        "task": "Tôi mất hàng giờ biến ghi chú cuộc họp thành email.",
+        "title": "Từ ghi chú đến bước tiếp theo",
+        "step1": "Tìm quy trình AI phù hợp",
+        "step2": "Làm cho nó hoạt động với công cụ của bạn",
+        "step3": "Đưa vào thực hành"
+      },
+      "two": {
+        "task": "Tôi mất thời gian biến bảng tính thành cập nhật.",
+        "title": "Từ hàng đến quyết định",
+        "step1": "Đặt câu hỏi phân tích đúng",
+        "step2": "Xây dựng quy trình tái sử dụng",
+        "step3": "Biến phát hiện thành bản tóm tắt"
+      },
+      "three": {
+        "task": "Tôi cần tạo bài thuyết trình mạnh mẽ trước ngày mai.",
+        "title": "Từ slide trống đến câu chuyện",
+        "step1": "Định hình thông điệp cốt lõi",
+        "step2": "Phác thảo slide với AI",
+        "step3": "Xem lại, tinh chỉnh và trình bày"
+      },
+      "four": {
+        "task": "Quản lý yêu cầu lúc 5 giờ chiều: cần báo cáo cho sáng mai.",
+        "title": "Từ dữ liệu thô đến báo cáo",
+        "step1": "Thu thập số liệu tháng trước",
+        "step2": "Để AI phác thảo phân tích",
+        "step3": "Hoàn thiện và gửi trước 10 giờ"
+      }
+    }
+  },
+  "strip": {
+    "first": "Xây dựng quanh công việc của bạn",
+    "second": "Từng bước, không quá tải",
+    "third": "Học bằng ngôn ngữ của bạn"
+  },
+  "how": {
+    "eyebrow": "TỪ \"NẾU\" ĐẾN \"TÔI CÓ THỂ\"",
+    "title": "Bắt đầu với điều\nlàm chậm bạn.",
+    "intro": "Không phải danh mục để lạc lối. Lộ trình học tập bắt đầu từ ngày của bạn.",
+    "one": {
+      "title": "Cho chúng tôi biết điều gì mất quá lâu.",
+      "body": "Vai trò, công cụ, thách thức hàng ngày của bạn."
+    },
+    "two": {
+      "title": "Tìm con đường phía trước.",
+      "body": "Khám phá khóa học phù hợp từ cơ sở kiến thức."
+    },
+    "three": {
+      "title": "Học. Thử. Làm của riêng bạn.",
+      "body": "Làm theo các bước thực tế, thử prompt và hoạt động."
+    }
+  },
+  "vision": {
+    "eyebrow": "CHIẾN THẮNG NHỎ. KHẢ NĂNG LỚN.",
+    "title": "Sức mạnh cho bạn.\nBước tiến cho đội của bạn.",
+    "body": "Chúng tôi đang xây dựng cho những người tò mò và các đội họ thuộc về.",
+    "tag1": "Cho người giải quyết vấn đề hàng ngày",
+    "tag2": "Cho các đội nhìn xa trông rộng"
+  },
+  "faq": {
+    "eyebrow": "MỘT SỐ ĐIỀU ĐÁNG BIẾT",
+    "title": "Tò mò? Tốt.",
+    "one": {
+      "question": "Tôi có thể sử dụng hAIroMode hôm nay không?",
+      "answer": "Chưa. Nền tảng đang được xây dựng."
+    },
+    "two": {
+      "question": "Tôi có cần là chuyên gia AI không?",
+      "answer": "Ý tưởng bắt đầu từ công việc của bạn, không phải thuật ngữ kỹ thuật."
+    },
+    "three": {
+      "question": "Nó sẽ nói ngôn ngữ của tôi chứ?",
+      "answer": "Chúng tôi đang lên kế hoạch nhiều ngôn ngữ bao gồm tiếng Việt."
+    },
+    "four": {
+      "question": "Chứng chỉ hAIroMode hoạt động như thế nào?",
+      "answer": "Mỗi chứng chỉ bao gồm mã QR liên kết đến URL xác minh với tên và mã 6 chữ số."
+    }
+  },
+  "closing": {
+    "badge": "Sắp ra mắt",
+    "title": "\"Tôi đã làm được\"\ntiếp theo đang đến.",
+    "body": "Ít thời gian cho việc lặp lại. Nhiều không gian hơn cho điều bạn làm tốt nhất.",
+    "back": "Về đầu trang"
+  },
+  "footer": {
+    "description": "Học AI thực tế. Khả năng con người.",
+    "status": "Điều hữu ích đang hình thành.",
+    "privacy": "Không đăng ký. Không theo dõi. Chỉ là cái nhìn đầu tiên."
+  },
+  "a11y": {
+    "skip": "Chuyển đến nội dung",
+    "menu": "Mở điều hướng",
+    "close": "Đóng điều hướng"
+  },
+  "certificate": {
+    "eyebrow": "NÂNG CẤP CV VỚI CHỨNG CHỈ HAIROMODE",
+    "title": "Được tuyển dụng vì\nkỹ năng AI của bạn.",
+    "intro": "Mỗi lộ trình hoàn thành trên hAIroMode cấp Chứng chỉ không thể làm giả.",
+    "one": {
+      "title": "Quét mã QR.",
+      "body": "Mỗi chứng chỉ mang mã QR duy nhất dẫn đến URL xác minh chính thức."
+    },
+    "two": {
+      "title": "Đối chiếu tên và mã 6 chữ số.",
+      "body": "URL xác minh hiển thị tên đầy đủ và mã bảo mật 6 chữ số."
+    },
+    "three": {
+      "title": "Nổi bật trong mọi quy trình tuyển dụng.",
+      "body": "Mang theo CV đến mọi cuộc phỏng vấn."
+    },
+    "card": {
+      "badge": "Chứng chỉ Không thể Làm giả",
+      "title": "Chứng chỉ hAIroMode",
+      "candidateLabel": "Ứng viên",
+      "candidateValue": "Alex Rivera",
+      "codeLabel": "Mã bảo mật 6 chữ số",
+      "codeValue": "482 • 917",
+      "urlLabel": "URL xác minh",
+      "urlValue": "ai.romode.me/v/alex-rivera",
+      "qrCaption": "Quét QR → Xác minh tên + mã",
+      "cvTag": "Sẵn sàng cho CV và tuyển dụng"
+    }
+  },
+  "enterprise": {
+    "meta": {
+      "title": "hAIroMode Enterprise — Tuyển hAIroes hoặc biến nhân viên thành hAIroes.",
+      "description": "Nâng cấp doanh nghiệp với hAIroMode."
+    },
+    "hero": {
+      "badge": "hAIroMode cho Doanh nghiệp",
+      "connector": "hoặc",
+      "description": "Nâng cấp doanh nghiệp hai cách: tuyển ứng viên hoặc biến nhân viên thành hAIroes.",
+      "ctaPrimary": "Khám phá hai trụ cột",
+      "ctaSecondary": "Xác minh Chứng chỉ",
+      "note": "Được xây dựng cho các đội tuyển dụng hiện đại.",
+      "phrases": {
+        "one": {
+          "line1": "Tuyển hAIroes của chúng tôi.",
+          "line2": "biến đội của bạn",
+          "line3": "thành hAIroes."
+        },
+        "two": {
+          "line1": "Nhân viên của bạn ở đâu với AI?",
+          "line2": "Bạn thực sự",
+          "line3": "biết không?"
+        },
+        "three": {
+          "line1": "Kế hoạch AI của bạn đúng chưa,",
+          "line2": "bạn có cần cấp",
+          "line3": "tiếp theo?"
+        }
+      }
+    },
+    "pillars": {
+      "eyebrow": "HAI CÁCH NÂNG CẤP DOANH NGHIỆP",
+      "title": "Tuyển tài năng đã chứng minh.\nNâng cao đội bạn có.",
+      "intro": "hAIroMode biến nút thắt hàng ngày thành khả năng AI có thể đo lường.",
+      "hire": {
+        "tag": "Trụ cột 01 · Tuyển dụng",
+        "title": "Tuyển hAIroes của chúng tôi",
+        "body": "Ngừng đoán ai thực sự biết sử dụng AI.",
+        "point1": "Quét mã QR CV",
+        "point2": "Xác nhận tên và mã 6 chữ số",
+        "point3": "Tuyển hAIroes đã được xác minh"
+      },
+      "upskill": {
+        "tag": "Trụ cột 02 · Chuyển đổi",
+        "title": "Biến nhân viên thành hAIroes",
+        "body": "Đưa đội vào hệ thống qua biểu mẫu, CSV hoặc SCIM.",
+        "point1": "Đưa vào dựa trên vai trò",
+        "point2": "Phân tích áp dụng nhóm",
+        "point3": "Nhân viên kiếm được Chứng chỉ"
+      }
+    },
+    "verify": {
+      "eyebrow": "XÁC MINH TỨC THÌ",
+      "title": "Tại sao mọi doanh nghiệp sẽ yêu cầu\nChứng chỉ.",
+      "body": "Chứng chỉ hAIroMode cho nhà tuyển dụng kiểm tra không thể làm giả.",
+      "step1": "Ứng viên đính kèm Chứng chỉ vào CV",
+      "step2": "Nhà tuyển dụng quét mã QR",
+      "step3": "Tên + mã xác nhận đúng người và kỹ năng"
+    },
+    "closing": {
+      "badge": "Enterprise Sắp Ra Mắt",
+      "title": "Sẵn sàng nâng cấp doanh nghiệp\nvới hAIroes?",
+      "body": "Tuyển hoặc biến nhân viên thành hAIroes—tất cả trên hAIroMode.",
+      "cta": "Quay lại tổng quan người học"
+    }
+  },
+  "evergreen": {
+    "eyebrow": "LUÔN SẴN SÀNG CHO ĐIỀU TIẾP THEO",
+    "title": "Không bao giờ bị tụt lại.\nTiếp tục phát triển với AI.",
+    "intro": "AI tiếp tục phát triển, và việc học của bạn có thể phát triển theo.",
+    "current": {
+      "title": "Các khóa học AI mới giữ bạn cập nhật",
+      "body": "Khám phá lộ trình học tập mới khi công cụ phát triển."
+    },
+    "repeat": {
+      "title": "Làm lại bất kỳ khóa học nào nhiều lần",
+      "body": "Quay lại bất cứ khi nào bạn muốn ôn tập."
+    }
+  }
+}
